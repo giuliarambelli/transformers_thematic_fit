@@ -1,0 +1,20 @@
+version: 1
+formatters:
+  brief:
+    format: '%(levelname)s - %(message)s'
+  simple:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: simple
+loggers:
+  tfm.core:
+    level: DEBUG
+    handlers: [console]
+  tfm.main:
+    level: INFO
+    handlers: [console]
+  tfm.utils:
+    level: INFO
+    handlers: [console]
