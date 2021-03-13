@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Dec  8 15:24:05 2020
-
-@author: pedin
-"""
 from tfm.utils.data_utils import load_data_sequences
 from transformers import XLNetTokenizer, TFXLNetLMHeadModel, RobertaTokenizer, TFRobertaForMaskedLM, BertTokenizer, TFBertForMaskedLM
 import pandas as pd
@@ -29,137 +23,106 @@ BATCH_SIZE = 256
 
 class TransformerModel:
     def __init__(self, transf_model):
-        self.model_name = transf_model
+        self.model_name = transf_model  
         self.tokenizer = dict_tokenizers[transf_model]
         self.mlm_model = dict_mlm_models[transf_model]
 
-    def prepare_input(self, d_sequences, tokenized_data):
-        target_tokens = []
-        sentences_with_mask = []
-        heads_indices = []
-        dependents_indices = []
-        lengths_for_each_sentence = []
-        i = 0
-        for sentence in tokenized_data:
-            #  save targets
-            if self.model_name.startswith("bert"):
-                target_tokens.append(sentence[1][(d_sequences.iloc[i, 4])-1])
-            if self.model_name.startswith("roberta"):
-                if (d_sequences.iloc[i, 4])-1 == 0:
-                    target_tokens.append(sentence[1][(d_sequences.iloc[i, 4])-1])
-                else:
-                    target_tokens.append("Ġ"+(sentence[1][(d_sequences.iloc[i, 4])-1]))
-                #  since roberta and gpt tokens incorporate space when they occur in positions differents than the first
-            if self.model_name.startswith("xlnet"):
-                target_tokens.append(u"\u2581"+(sentence[1][(d_sequences.iloc[i, 4])-1]))
-                #  since in sentencepiece tokenizer this symbol is used for whitespace
-            #  sentence masking - necessary for passing inputs to the model
-            if self.model_name.startswith("bert"):
-                sentence[1][(d_sequences.iloc[i, 4]) - 1] = "[MASK]"
-            if self.model_name.startswith("roberta") or self.model_name.startswith("xlnet"):
-                # since roberta model does not recognize token "[MASK]"
-                sentence[1][(d_sequences.iloc[i, 4]) - 1] = "<mask>"
-            masked_sentence = " ".join([token for token in sentence[1]])  # for gpt the unmasked sentence is maintained
-            sentences_with_mask.append(masked_sentence)
-            #  save position head and dependent in model tokenization
-            #  - necessary for reading output of the model and creating attention mask arrays
-            model_tokenization = self.tokenizer.tokenize(masked_sentence)
-            other_tokens_2_model_tokens, model_tokens_2_other_tokens = tokenizations.\
-                get_alignments(sentence[1], model_tokenization)
-            if self.model_name.startswith("xlnet"):
-                head_index = [index for index in other_tokens_2_model_tokens[(d_sequences.iloc[i, 3]) - 1]]
+    def prepare_input(self, d_sequences, tokenized_data):  #  my dataset and the tokenization
+      #   only a row - sentence, id to mask. Must find target token.
+      target_tokens = []
+      sentences_with_mask = []
+      dependents_indices = []
+      for i in range(len(d_sequences)):
+        sent = d_sequences.iloc[i,0]
+        target_token = sent.split(" ")[d_sequences.iloc[i,1] - 1]
+        #  check if target token is in dictionary - otherwise add None to the lists
+        if self.model_name.startswith("bert"):
+          if self.tokenizer.convert_ids_to_tokens(self.tokenizer.convert_tokens_to_ids(target_token)) == "[UNK]":
+            target_tokens.append(None)
+           else:
+            target_tokens.append(target_token)
+        if self.model_name.startswith("roberta"):
+          if self.tokenizer.convert_ids_to_tokens(self.tokenizer.convert_tokens_to_ids(target_token)) == "<unk>":
+            target_tokens.append(None)
+           else:
+            if d_sequences.iloc[i,1] - 1 == 0:
+              target_tokens.append(target_token)
             else:
-                head_index = [index + 1 for index in other_tokens_2_model_tokens[(d_sequences.iloc[i, 3]) - 1]]
-            heads_indices.append(head_index)
+              target_tokens.append("Ġ"+target_token)
+        if self.model_name.startswith("gpt"):
+          if self.tokenizer.convert_ids_to_tokens(self.tokenizer.convert_tokens_to_ids(target_token)) == "<|endoftext|>":
+            target_tokens.append(None)
+           else:
+            if d_sequences.iloc[i,1] - 1 == 0:
+              target_tokens.append(target_token)
+           else:
+              target_tokens.append("Ġ"+target_token)
+        #   mask the sentence
+        list_words = []
+        for w in range(len(sent.split(" "))):
+          if sent.split(" ")[w] != d_sequences.iloc[i,1] - 1:
+            list_words.append(sent.split(" ")[w])
+          else:
             if self.model_name.startswith("bert"):
-                dependent_index = model_tokenization.index("[MASK]") + 1  # take into account token [CLS]
+              list_words.append("[MASK]")
             if self.model_name.startswith("roberta"):
-                dependent_index = model_tokenization.index("<mask>") + 1
-            if self.model_name.startswith("xlnet"):
-                dependent_index = model_tokenization.index("<mask>")  # since xlnet tokenizer does not add cls token at the beginning of the sequence
-            dependents_indices.append(dependent_index)
-            # save sentence length in model tokenization - necessary for avoiding masking [SEP] token in context setting
-            length_sentence = len(model_tokenization) + 2  # take into account tokens [CLS] and [SEP]
-            lengths_for_each_sentence.append(length_sentence)
-            i += 1
-        return target_tokens, sentences_with_mask, heads_indices, dependents_indices, lengths_for_each_sentence
+              list_words.append("<mask>")
+            if self.model_name.startswith("gpt"):
+              list_words.append(sent.split(" ")[w])  #  mask is not really needed for gpt
+        masked_sent = join(list_words)
+        sentences_with_mask.append(masked_sent)
+        model_tokenization = self.tokenizer.tokenize(masked_sent)
+        if self.model_name.startswith("bert"):
+          dependent_index = model_tokenization.index("[MASK]") + 1  # take into account token [CLS]
+        if self.model_name.startswith("roberta"):
+          dependent_index = model_tokenization.index("<mask>") + 1
+        if self.model_name.startswith("gpt"):
+          our_tokenization = masked_sent.split(" ")
+          other_tokens_2_model_tokens, model_tokens_2_other_tokens = tokenizations.get_alignments(our_tokenization, model_tokenization)
+          dependent_index = other_tokens_2_model_tokens[d_sequences.iloc[i,1] - 1][0]  #  gpt tokenizer add something at the beginning of the sentence?
+        dependents_indices.append(dependent_index)
+        i += 1  
+        return target_tokens, sentences_with_mask, dependents_indices
+      
+      
+      
 
-    def compute_filler_probability(self, list_sentences, list_target_words, list_masked_sentences, list_heads_indexes,
-                                   list_dependents_indexes, list_lengths_sentences, masking_setting):
-        #  try:
-        targets_indexes = self.tokenizer.convert_tokens_to_ids(list_target_words)
-        if self.model_name.startswith("xlnet"):
-            self.tokenizer.padding_side = "right"  #  since instances of xlnet tokenizer by default apply padding to the left
-            inputs = self.tokenizer(list_masked_sentences, padding=True, return_tensors="tf")
-        else:
-            inputs = self.tokenizer(list_masked_sentences, padding=True, return_tensors="tf")
-        #  a new attention mask is created depending on the setting (if setting = "standard" no substitution is performed)
-        if self.model_name.startswith("xlnet"):  #  prevents the model from performing attention on the last token of the sequence
-            new_attention_mask = []
-            for mask, sentence_length in zip(inputs["attention_mask"], list_lengths_sentences):
-                mask_array = np.array(mask)
-                mask_array[sentence_length - 1] = 0
-                new_attention_mask.append(tf.convert_to_tensor(mask_array))
-            inputs["attention_mask"] = tf.convert_to_tensor(new_attention_mask)
-        if masking_setting == "head":
-            new_attention_mask = []
-            for mask, index_head in zip(inputs["attention_mask"], list_heads_indexes):
-                mask_array = np.array(mask)
-                mask_array[index_head] = 0
-                new_attention_mask.append(tf.convert_to_tensor(mask_array))
-            inputs["attention_mask"] = tf.convert_to_tensor(new_attention_mask)
-        if (masking_setting == "context") or (masking_setting == "control"):
-            new_attention_mask = []
-            for mask, head_index, dependent_index, masked_sentence, \
-                length_sentence_model in zip(inputs["attention_mask"], list_heads_indexes, list_dependents_indexes,
-                                             list_masked_sentences, list_lengths_sentences):
-                mask = [0 for elem in mask]
-                mask_array = np.array(mask)
-                if masking_setting == "context":
-                    mask_array[head_index] = 1
-                mask_array[dependent_index] = 1
-                if not self.model_name.startswith("xlnet"):
-                    mask_array[0] = 1  # since xlnet tokenizer does not add cls token at the beginning of the sequence
-                    mask_array[length_sentence_model - 1] = 1
-                new_attention_mask.append(tf.convert_to_tensor(mask_array))
-            inputs["attention_mask"] = tf.convert_to_tensor(new_attention_mask)
+    def compute_filler_probability(self, list_sentences, list_target_words, list_masked_sentences, list_dependents_indexes):
+        inputs = self.tokenizer(list_masked_sentences, padding=True, return_tensors="tf")
         probabilities_fillers = []
         print("Executing model for batch...")
         print()
-        outputs = self.mlm_model(inputs)[0]
-        list_for_indexing1 = [[n, list_dependents_indexes[n]] for n in range(len(list_dependents_indexes))]
-        list_for_indexing2 = [[n, targets_indexes[n]] for n in range(len(targets_indexes))]
-        selected_outputs = tf.gather_nd(outputs, list_for_indexing1)
-        all_probabilities = tf.nn.softmax(selected_outputs)
-        probabilities_targets = tf.gather_nd(all_probabilities, list_for_indexing2)
-        for probability in probabilities_targets:
-            probabilities_fillers.append(probability.numpy())  # class numpy.float32
-        #  except:
-        #  list_probs = [None]*len(targets)
+        outputs = self.mlm_model(inputs)[0]  #   (batch_size, sequence_length, config.vocab_size)
+        for batch_elem, target_word, dep_index in zip(range(outputs.shape(0)), list_target_words, list_dependents_indexes):
+          if target_word == None:
+            probabilities_fillers.append(None)
+          else:
+            all_probabilities = tf.nn.softmax(outputs[batch_elem, dep_index]).numpy()
+            probabilities_fillers.append(all_probabilities[self.tokenizer.convert_tokens_to_ids(target_word)])  #  check for gpt
         return probabilities_fillers
+        
+        
 
-    def compute_fillers_scores(self, data_sequences, splitted_sentences, settings=['standard'], batch_dimension=64):
-        num_sentences = len(data_sequences)
+    def compute_fillers_scores(self, data_sequences, splitted_sentences, settings=['standard'], batch_dimension=64):  #  only standard now - ok
+        num_sentences = len(data_sequences)  #  num sentences in my dataset
         if num_sentences % batch_dimension == 0:
             num_batches = num_sentences // batch_dimension
         else:
             num_batches = num_sentences // batch_dimension + 1
-        #settings = ["standard", "head", "context", "control"]
-        total_scores = {"standard": [], "head": [], "context": [], "control": []}
+        total_scores = {"standard": [], "head": [], "context": [], "control": []}  #  dictionary with scores
         for batch in range(num_batches):
             print()
             logger.info("Processing batch {} of {} . Progress: {} ...".format(batch + 1, num_batches,
                                                                         np.round((100 / num_batches) * (batch + 1), 2)))
-            if batch != num_batches - 1:
+            if batch != num_batches - 1:  #  if batch is not the last batch
                 target_words, masked_sentences, positions_heads, positions_dependents, lengths_sentences = self.\
                     prepare_input(data_sequences[batch * batch_dimension : (batch + 1) * batch_dimension],
-                                  splitted_sentences[batch * batch_dimension : (batch + 1) * batch_dimension])
+                                  splitted_sentences[batch * batch_dimension : (batch + 1) * batch_dimension])  #  prepare input
                 for setting in settings:
                     scores = self.compute_filler_probability([sentence[0] for sentence
                                                               in splitted_sentences[batch * batch_dimension :
                                                                                     (batch + 1) * batch_dimension]],
-                                                             target_words, masked_sentences, positions_heads,
-                                                             positions_dependents, lengths_sentences, setting)
+                                                             target_words, masked_sentences, positions_dependents)
                     total_scores[setting].extend(scores)
             else:
                 target_words, masked_sentences, positions_heads, positions_dependents, lengths_sentences = self.\
@@ -175,16 +138,11 @@ class TransformerModel:
 
 
 
-def build_model(path_data, path_tokenized_sentences, syn_rel, output_directory, settings, transformers, name):
-    #TODO: model to perform
-    #  Load data for each sequence (sentences, original scores) and a file containing tokenized sentences
+def build_model(path_data, path_tokenized_sentences, syn_rel, output_directory, settings, transformers, name):  
     data, tokenizations = load_data_sequences(path_data, path_tokenized_sentences)
-    #  Create Transformer-based models objects (models have also to be imported at line 9 and added in dict_tokenizers - line - and dict_mlm_models - line )
-    #transformers = ["bert-large-cased", "roberta-large", "xlnet-large-cased"]  #  add or remove models here
     for transformer in transformers:
         model = TransformerModel(transformer)
-        #settings = ["standard", "head", "context", "control"]
-        model_fillers_scores = model.compute_fillers_scores(data, tokenizations, settings, BATCH_SIZE)
+        model_fillers_scores = model.compute_fillers_scores(data, tokenizations, settings, BATCH_SIZE) 
         for setting in settings:
             data, tokenizations = load_data_sequences(path_data, path_tokenized_sentences)
             data["computed_score"] = model_fillers_scores[setting]
