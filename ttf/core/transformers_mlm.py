@@ -9,14 +9,16 @@ import tensorflow as tf  #  TensorFlow 2.0 is required (Python 3.5-3.7, Pip 19.0
 
 logger = logging.getLogger(__name__)
 
-dict_tokenizers = {"xlnet-large-cased": XLNetTokenizer.from_pretrained("xlnet-large-cased"),
+dict_tokenizers = {"bert-base-cased": BertTokenizer.from_pretrained('bert-base-cased'),
+                   "bert-large-cased": BertTokenizer.from_pretrained('bert-large-cased'),
                    "roberta-large": RobertaTokenizer.from_pretrained('roberta-large'),
-                   "bert-large-cased": BertTokenizer.from_pretrained('bert-large-cased')}
+                   "gpt2-medium": GPT2Tokenizer.from_pretrained('gpt2-medium')}
 
 
-dict_mlm_models = {"xlnet-large-cased": TFXLNetLMHeadModel.from_pretrained('xlnet-large-cased'),
+dict_mlm_models = {"bert-base-cased": TFBertForMaskedLM.from_pretrained('bert-base-cased'),
+                   "bert-large-cased": TFBertForMaskedLM.from_pretrained('bert-large-cased')
                    "roberta-large": TFRobertaForMaskedLM.from_pretrained('roberta-large'),
-                   "bert-large-cased": TFBertForMaskedLM.from_pretrained('bert-large-cased')}
+                   "gpt2-medium": TFGPT2LMHeadModel.from_pretrained('gpt2-medium')}
 
 BATCH_SIZE = 256
 
@@ -27,14 +29,15 @@ class TransformerModel:
         self.tokenizer = dict_tokenizers[transf_model]
         self.mlm_model = dict_mlm_models[transf_model]
 
-    def prepare_input(self, d_sequences, tokenized_data):  #  my dataset and the tokenization
+    def prepare_input(self, d_sequences):  #  my dataset
       #   only a row - sentence, id to mask. Must find target token.
       target_tokens = []
       sentences_with_mask = []
       dependents_indices = []
       for i in range(len(d_sequences)):
         sent = d_sequences.iloc[i,0]
-        target_token = sent.split(" ")[d_sequences.iloc[i,1] - 1]
+        id_dep = d_sequences.iloc[i,1] - 1   #  remove -1 if Giulia gives files where index starts from zero
+        target_token = sent.split(" ")[id_dep]  
         #  check if target token is in dictionary - otherwise add None to the lists
         if self.model_name.startswith("bert"):
           if self.tokenizer.convert_ids_to_tokens(self.tokenizer.convert_tokens_to_ids(target_token)) == "[UNK]":
@@ -45,7 +48,7 @@ class TransformerModel:
           if self.tokenizer.convert_ids_to_tokens(self.tokenizer.convert_tokens_to_ids(target_token)) == "<unk>":
             target_tokens.append(None)
            else:
-            if d_sequences.iloc[i,1] - 1 == 0:
+            if id_dep == 0:  
               target_tokens.append(target_token)
             else:
               target_tokens.append("Ġ"+target_token)
@@ -53,14 +56,14 @@ class TransformerModel:
           if self.tokenizer.convert_ids_to_tokens(self.tokenizer.convert_tokens_to_ids(target_token)) == "<|endoftext|>":
             target_tokens.append(None)
            else:
-            if d_sequences.iloc[i,1] - 1 == 0:
+            if id_dep == 0:  
               target_tokens.append(target_token)
            else:
               target_tokens.append("Ġ"+target_token)
         #   mask the sentence
         list_words = []
         for w in range(len(sent.split(" "))):
-          if sent.split(" ")[w] != d_sequences.iloc[i,1] - 1:
+          if sent.split(" ")[w] != id_dep:  
             list_words.append(sent.split(" ")[w])
           else:
             if self.model_name.startswith("bert"):
@@ -68,7 +71,7 @@ class TransformerModel:
             if self.model_name.startswith("roberta"):
               list_words.append("<mask>")
             if self.model_name.startswith("gpt"):
-              list_words.append(sent.split(" ")[w])  #  mask is not really needed for gpt
+              list_words.append(sent.split(" ")[w])  #  mask is not needed for gpt
         masked_sent = join(list_words)
         sentences_with_mask.append(masked_sent)
         model_tokenization = self.tokenizer.tokenize(masked_sent)
@@ -79,7 +82,7 @@ class TransformerModel:
         if self.model_name.startswith("gpt"):
           our_tokenization = masked_sent.split(" ")
           other_tokens_2_model_tokens, model_tokens_2_other_tokens = tokenizations.get_alignments(our_tokenization, model_tokenization)
-          dependent_index = other_tokens_2_model_tokens[d_sequences.iloc[i,1] - 1][0]  #  gpt tokenizer add something at the beginning of the sentence?
+          dependent_index = other_tokens_2_model_tokens[id_dep][0]  
         dependents_indices.append(dependent_index)
         i += 1  
         return target_tokens, sentences_with_mask, dependents_indices
@@ -87,67 +90,56 @@ class TransformerModel:
       
       
 
-    def compute_filler_probability(self, list_sentences, list_target_words, list_masked_sentences, list_dependents_indexes):
+    def compute_filler_probability(self, list_target_words, list_masked_sentences, list_dependents_indexes):
         inputs = self.tokenizer(list_masked_sentences, padding=True, return_tensors="tf")
         probabilities_fillers = []
         print("Executing model for batch...")
         print()
         outputs = self.mlm_model(inputs)[0]  #   (batch_size, sequence_length, config.vocab_size)
-        for batch_elem, target_word, dep_index in zip(range(outputs.shape(0)), list_target_words, list_dependents_indexes):
-          if target_word == None:
-            probabilities_fillers.append(None)
-          else:
-            all_probabilities = tf.nn.softmax(outputs[batch_elem, dep_index]).numpy()
-            probabilities_fillers.append(all_probabilities[self.tokenizer.convert_tokens_to_ids(target_word)])  #  check for gpt
-        return probabilities_fillers
+        if (self.model_name.startswith("bert")) or (self.model_name.startswith("roberta")):
+          for batch_elem, target_word, dep_index in zip(range(outputs.shape(0)), list_target_words, list_dependents_indexes):
+            if target_word == None:
+              probabilities_fillers.append(None)
+            else:
+              all_probabilities = tf.nn.softmax(outputs[batch_elem, dep_index]).numpy()
+              probabilities_fillers.append(all_probabilities[self.tokenizer.convert_tokens_to_ids(target_word)]) 
+       if self.model_name.startswith("gpt"):   #  check for gpt
+       return probabilities_fillers
+        
         
         
 
-    def compute_fillers_scores(self, data_sequences, splitted_sentences, settings=['standard'], batch_dimension=64):  #  only standard now - ok
+    def compute_fillers_scores(self, data_sequences, batch_dimension=64):
         num_sentences = len(data_sequences)  #  num sentences in my dataset
         if num_sentences % batch_dimension == 0:
             num_batches = num_sentences // batch_dimension
         else:
             num_batches = num_sentences // batch_dimension + 1
-        total_scores = {"standard": [], "head": [], "context": [], "control": []}  #  dictionary with scores
+        total_scores = []
         for batch in range(num_batches):
             print()
             logger.info("Processing batch {} of {} . Progress: {} ...".format(batch + 1, num_batches,
                                                                         np.round((100 / num_batches) * (batch + 1), 2)))
             if batch != num_batches - 1:  #  if batch is not the last batch
-                target_words, masked_sentences, positions_heads, positions_dependents, lengths_sentences = self.\
-                    prepare_input(data_sequences[batch * batch_dimension : (batch + 1) * batch_dimension],
-                                  splitted_sentences[batch * batch_dimension : (batch + 1) * batch_dimension])  #  prepare input
-                for setting in settings:
-                    scores = self.compute_filler_probability([sentence[0] for sentence
-                                                              in splitted_sentences[batch * batch_dimension :
-                                                                                    (batch + 1) * batch_dimension]],
-                                                             target_words, masked_sentences, positions_dependents)
-                    total_scores[setting].extend(scores)
-            else:
-                target_words, masked_sentences, positions_heads, positions_dependents, lengths_sentences = self.\
-                    prepare_input(data_sequences[batch * batch_dimension : ],
-                                  splitted_sentences[batch * batch_dimension : ])
-                for setting in settings:
-                    scores = self.compute_filler_probability([sentence[0] for sentence in
-                                                          splitted_sentences[batch * batch_dimension : ]],
-                                                         target_words, masked_sentences, positions_heads,
-                                                         positions_dependents, lengths_sentences, setting)
-                    total_scores[setting].extend(scores)
+                target_words, masked_sentences, positions_dependents = self.\
+                    prepare_input(data_sequences[batch * batch_dimension : (batch + 1) * batch_dimension])
+                scores = self.compute_filler_probability(target_words, masked_sentences, positions_dependents)
+            else:  #  if batch is the last batch 
+                target_words, masked_sentences, positions_dependents = self.prepare_input(data_sequences[batch * batch_dimension : ])
+                scores = self.compute_filler_probability(target_words, masked_sentences, positions_dependents)
+            total_scores.extend(scores)
         return total_scores
 
 
 
-def build_model(path_data, path_tokenized_sentences, syn_rel, output_directory, settings, transformers, name):  
-    data, tokenizations = load_data_sequences(path_data, path_tokenized_sentences)
+def build_model(path_data, thematic_role, output_directory, transformers, name):  
+    data = load_data_sequences(path_data)  #  sentence, id_dep, human_score
     for transformer in transformers:
         model = TransformerModel(transformer)
-        model_fillers_scores = model.compute_fillers_scores(data, tokenizations, settings, BATCH_SIZE) 
-        for setting in settings:
-            data, tokenizations = load_data_sequences(path_data, path_tokenized_sentences)
-            data["computed_score"] = model_fillers_scores[setting]
-            data.to_csv("{}/{}.transformers_mlm_{}_{}_{}".
-                        format(output_directory, name, transformer, syn_rel, setting),
+        model_fillers_scores = model.compute_fillers_scores(data, BATCH_SIZE) 
+        data["computed_score"] = model_fillers_scores
+        data.to_csv("{}/{}.transformers_mlm_{}_{}_{}".
+                        format(output_directory, name, transformer, thematic_role),
                         header=None, index=None, sep='\t', mode='a')
 
 
