@@ -1,5 +1,5 @@
 from tfm.utils.data_utils import load_data_sequences
-from transformers import XLNetTokenizer, TFXLNetLMHeadModel, RobertaTokenizer, TFRobertaForMaskedLM, BertTokenizer, TFBertForMaskedLM
+from transformers import BertTokenizer, TFBertForMaskedLM, RobertaTokenizer, TFRobertaForMaskedLM, GPT2Tokenizer, TFGPT2LMHeadModel
 import pandas as pd
 import numpy as np
 import logging
