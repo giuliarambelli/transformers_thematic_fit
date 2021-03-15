@@ -23,12 +23,10 @@ def _run_transformers_mlm(args):
     models = [models_dict[m] for m in args.model]
     name = args.name
 
-    if sorted(sets)[0]=='all':  #  sorted function to list of settings. If lists starts with all, execute for all settings
-        sets = ['standard', 'head', 'context', 'control']
     if os.path.isfile(data_sequences_path) and os.path.isfile(tokenized_sentences_path):
         transformers_mlm_model.build_model(data_sequences_path, synrel, outdir, models,name)  #  don't check whether the input files exist
     else:
-        logger.info('Input path {} or {} does not exist'.format(data_sequences_path, tokenized_sentences_path))
+        logger.info('Input path {} or {} does not exist'.format(data_sequences_path))
 
 
 def main():
