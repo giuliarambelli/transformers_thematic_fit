@@ -22,13 +22,6 @@ BATCH_SIZE = 256
 N_PREDICTIONS = 5
 
 
-#  to remove in the final version
-def load_data_sequences(path1):
-    df = pd.read_csv(path1, sep="\t")
-    print(df)
-    return df
-
-
 class TransformerModel:
     def __init__(self, transf_model):
         self.model_name = transf_model
