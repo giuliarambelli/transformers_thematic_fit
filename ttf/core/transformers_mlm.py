@@ -82,10 +82,8 @@ class TransformerModel:
                     if self.model_name.startswith("gpt"):
                         list_words.append(sent.split(" ")[w])  #  mask is not needed for gpt
             masked_sent = " ".join(list_words)
-            print(masked_sent)
             sentences_with_mask.append(masked_sent)
             model_tokenization = self.tokenizer.tokenize(masked_sent)
-            print(model_tokenization)
             if self.model_name.startswith("bert"):
                 dependent_index = model_tokenization.index("[MASK]") + 1  # take into account token [CLS]
             if self.model_name.startswith("roberta"):
@@ -97,9 +95,6 @@ class TransformerModel:
                 dependent_index = other_tokens_2_model_tokens[id_dep][0] + 1
             dependents_indices.append(dependent_index)
             i += 1
-        print(target_tokens)
-        print(sentences_with_mask)
-        print(dependents_indices)
         return target_tokens, sentences_with_mask, dependents_indices
 
     def compute_filler_probability(self, list_target_words, list_masked_sentences, list_dependents_indexes):
@@ -132,7 +127,6 @@ class TransformerModel:
                 for word, index in zip(predictions, idxs_predictions):
                     string_predicted_fillers += word.replace("Ġ", "")+"_("+str(all_probabilities[index])+")"+";"
                 predicted_fillers.append(string_predicted_fillers)
-        print(predicted_fillers)
         return probabilities_fillers, predicted_fillers
 
     def compute_fillers_scores(self, data_sequences, batch_dimension=64):
