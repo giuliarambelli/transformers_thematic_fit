@@ -1,4 +1,4 @@
-from tfm.utils.data_utils import load_data_sequences
+from ttf.utils.data_utils import load_data_sequences
 from transformers import BertTokenizer, TFBertForMaskedLM, RobertaTokenizer, TFRobertaForMaskedLM, GPT2Tokenizer, \
     TFGPT2LMHeadModel
 import pandas as pd

@@ -12,11 +12,11 @@ setup(
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'tfm = ttf.main:main'
+            'ttf = ttf.main:main'
         ],
     },
     install_requires=['pyyaml==4.2b1', 'numpy==1.19.2', 'tqdm==4.45',
                         'scipy==1.4.1', 'pandas==0.23.0', 'scikit-learn>=0.23.1',
                         'pytokenizations==0.7.2', 'transformers==4.2.2', 'sentencepiece==0.1.95',
-                        'tensorflow==2.4.1'],
+                        'tensorflow==2.4.1', 'pyinflect==0.5.1'],
 )

@@ -9,12 +9,12 @@ handlers:
     class: logging.StreamHandler
     formatter: simple
 loggers:
-  tfm.core:
+  ttf.core:
     level: DEBUG
     handlers: [console]
-  tfm.main:
+  ttf.main:
     level: INFO
     handlers: [console]
-  tfm.utils:
+  ttf.utils:
     level: INFO
     handlers: [console]
