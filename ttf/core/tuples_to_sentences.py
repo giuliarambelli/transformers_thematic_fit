@@ -26,13 +26,13 @@ def to_sentences(data_path, out_dir, v_tag):
 		sentence = ''
 		sentence+= triple_to_sentence((row['SUBJECT'], row['VERB'], row['OBJECT']), v_tag)
 		if "LOCATION" in data.columns:
-			sentence += ' {} {}'.format(row['LM'], row['LOCATION'])
+			sentence += ' {} the {}'.format(row['LM'], row['LOCATION'])
 		elif "TIME" in data.columns:
-			sentence += ' {} {}'.format(row['LM'], row['TIME'])
+			sentence += ' {} the {}'.format(row['LM'], row['TIME'])
 		elif "RECIPIENT" in data.columns:
-			sentence += ' to {}'.format(row['RECIPIENT'])
+			sentence += ' to the {}'.format(row['RECIPIENT'])
 		elif "INSTRUMENT" in data.columns:
-			sentence += ' with {}'.format(row['INSTRUMENT'])
+			sentence += ' with the {}'.format(row['INSTRUMENT'])
 		sentence += ' .'
 		sentences.append(sentence)
 

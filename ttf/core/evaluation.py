@@ -40,8 +40,12 @@ def _accuracy_with_thresh(df, group_dict):
 	return pairs, diffs
 
 
-#def _correlation(df, group_dict):
+def _correlation(df):
+	scores = df['mean_rat']
+	probs = df['computed_score']
+	print(spearmanr(scores, probs))
 
+"""
 def rank(df, group_dict, delim=';'):
 	#il rango dell’elemento tipico e atipico nella distribuzione 
 	#di probabilità (p.es., elemento tipico è decimo elemento 
@@ -49,31 +53,33 @@ def rank(df, group_dict, delim=';'):
 	for tup, idx in group_dict.items():
 		if len(idx) == 2:
 			fillers = df['best_completions'][idx[0]].split(delim)
-			"""
 			if df['typicality'][idx[0]] == 'T':
 				diff_rank = fillers.index(df[]) - df['probability'][idx[1]]
 			else:
 				diff_rank = df['probability'][idx[1]] - df['probability'][idx[0]]
-			"""
+"""
 
 def evaluation(data_path, etype, thresh):
-	acc_functions = {'simple': _simple_accuracy, 'diff': _accuracy_with_thresh}
+	acc_functions = {'simple': _simple_accuracy, 'diff': _accuracy_with_thresh, 'corr': _correlation}
 
 	data = pd.read_csv(data_path, sep='\t')
 	data_covered = data.dropna()
 
-	if any(c in data.columns for c in roles):
-		#{('spy', 'information', 'pass'): [1, 3], ('volunteer', 'food', 'bring'): [0, 2]}
-		groups = data.groupby(['SUBJECT', 'VERB', 'OBJECT']).groups
+	if etype == 'corr':
+		acc_functions[etype](data_covered)
 	else:
-		groups = data.groupby(['SUBJECT', 'VERB']).groups
+		if any(c in data.columns for c in roles):
+			#{('spy', 'information', 'pass'): [1, 3], ('volunteer', 'food', 'bring'): [0, 2]}
+			groups = data.groupby(['SUBJECT', 'VERB', 'OBJECT']).groups
+		else:
+			groups = data.groupby(['SUBJECT', 'VERB']).groups
 
-	tuples, accs = acc_functions[etype](data_covered, groups)
-	if etype == 'diff':
-		l_func = lambda x: 1 if x > thresh else 0
-		accs = [l_func(i) for i in accs]
-	accuracy = sum(accs)/len(accs)
-	print(accuracy)
+		tuples, accs = acc_functions[etype](data_covered, groups)
+		if etype == 'diff':
+			l_func = lambda x: 1 if x > thresh else 0
+			accs = [l_func(i) for i in accs]
+		accuracy = sum(accs)/len(accs)
+		print(accuracy)
 
 if __name__ == '__main__':
     evaluation('/home/giulia/Scaricati/test_input.txt', 'diff', 1)
