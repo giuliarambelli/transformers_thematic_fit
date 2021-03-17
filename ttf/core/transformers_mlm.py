@@ -33,9 +33,11 @@ class TransformerModel:
         sentences_with_mask = []
         dependents_indices = []
         for i in range(len(d_sequences)):
-            sent = d_sequences["sentence"][i].replace(".", " .")  #  remove the replace if Giulia adjusts the input
+            sent = d_sequences["sentence"][i]#.replace(".", " .")  #  remove the replace if Giulia adjusts the input
             id_dep = d_sequences["id_dep"][i] - 1
             #  remove -1 if Giulia gives files where index starts from zero - da cambiare in base al nome della colonna
+            # GIULIA: alla fine è sempre la parola in posizione -1, l'unico problema è con il soggetto, però fare una colonna in cui 
+            # l'indice è sempre lo stesso per tutti forse è un po' ridondante
             target_token = sent.split(" ")[id_dep]
             #  check if target token is in dictionary - otherwise add None to the lists
             if self.model_name.startswith("bert"):
