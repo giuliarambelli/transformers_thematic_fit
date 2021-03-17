@@ -2,7 +2,7 @@ import argparse
 import os
 import logging.config
 
-#from ttf.core import transformers_mlm
+from ttf.core import transformers_mlm
 from ttf.core.tuples_to_sentences import to_sentences 
 
 from ttf.utils import config as cutils
@@ -24,7 +24,7 @@ def _tuples_to_sentences(args):
     for input_file in outils.get_filenames(data_paths):
         to_sentences(input_file,out_path, verb_inflection)
 
-"""
+
 def _run_transformers_mlm(args):
     data_sequences_path = args.input_file_data_sequences
     tokenized_sentences_path = args.input_file_tokenized_sentences
@@ -40,7 +40,7 @@ def _run_transformers_mlm(args):
         transformers_mlm_model.build_model(data_sequences_path, tokenized_sentences_path, synrel, outdir, sets, models,name)  #  don't check whether the input files exist
     else:
         logger.info('Input path {} or {} does not exist'.format(data_sequences_path, tokenized_sentences_path))
-"""
+
 
 def _evaluation(args):
     #TODO: load arguments
