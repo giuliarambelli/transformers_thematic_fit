@@ -4,6 +4,7 @@ import logging.config
 
 from ttf.core import transformers_mlm
 from ttf.core.tuples_to_sentences import to_sentences 
+from ttf.core.evaluation import evaluation
 
 from ttf.utils import config as cutils
 from ttf.utils import os_utils as outils
@@ -43,8 +44,12 @@ def _run_transformers_mlm(args):
 
 
 def _evaluation(args):
-    #TODO: load arguments
-    print()
+    data_paths = args.input_path
+    eval_type = args.eval
+    thresh = args.thresh
+    for input_file in outils.get_filenames(data_paths):
+        evaluation(input_file, eval_type, thresh)
+    
 
 
 def main():
@@ -54,8 +59,8 @@ def main():
     parser_build_sentences = subparsers.add_parser('build-sentences',
                                                     help='Transform tuples into sentences.')
     parser_build_sentences.add_argument('-o', '--output-dir', default='../data/', help='output folder')
-    parser_build_sentences.add_argument('-i', '--input-path', nargs='+', help='input files')
-    parser_build_sentences.add_argument('-v', '--verb-tense', choices=['VBD', 'VBZ'], help="inflection of the verb")
+    parser_build_sentences.add_argument('-i', '--input-path', nargs='+', required=True, help='input files')
+    parser_build_sentences.add_argument('-v', '--verb-tense', choices=['VBD', 'VBZ'], default='VBD', help="inflection of the verb")
     parser_build_sentences.set_defaults(func=_tuples_to_sentences)
     """
     # TRANSFORMERS MODELS - WORD PREDICTION TASK (BERT, RoBERTa, XLnet)
@@ -77,6 +82,11 @@ def main():
     parser_transformers_mlm.add_argument('-n', '--name', required=True, help='dataset name')
     parser_transformers_mlm.set_defaults(func=_run_transformers_mlm)
     """
+    parser_evaluation = subparser.add_parser('evaluation', help='compute evaluation measures')
+    parser_evaluation.add_argument('-i', '--input-path', nargs='+', required=True, help='input files')
+    parser_evaluation.add_argument('-e', '--eval', required=True, help='output folder')
+    parser_evaluation.add_argument('-t','--thresh', default=0, help='threshold for probabilities difference')
+    parser_evaluation.set_defaults(func=_evaluation)
 
     args = parser.parse_args()
     if 'func' not in args:
