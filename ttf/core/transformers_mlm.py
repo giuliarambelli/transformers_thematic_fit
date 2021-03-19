@@ -6,16 +6,22 @@ import numpy as np
 import logging
 import tokenizations   #   pip install pytokenizations  (https://pypi.org/project/pytokenizations/)
 import tensorflow as tf  #  TensorFlow 2.0 is required (Python 3.5-3.7, Pip 19.0 or later)
+import os.path
 
 
 logger = logging.getLogger(__name__)
 
-dict_tokenizers = {"gpt2-medium": GPT2Tokenizer.from_pretrained('gpt2-medium'),
-                   "roberta-large": RobertaTokenizer.from_pretrained('roberta-large')}
+dict_tokenizers = {"bert-base-cased": BertTokenizer.from_pretrained('bert-base-cased'),
+                   "bert-large-cased": BertTokenizer.from_pretrained('bert-large-cased'),
+                   "roberta-large": RobertaTokenizer.from_pretrained('roberta-large'),
+                   "gpt2-medium": GPT2Tokenizer.from_pretrained('gpt2-medium')}
 
 
-dict_mlm_models = {"gpt2-medium": TFGPT2LMHeadModel.from_pretrained('gpt2-medium'),
-                   "roberta-large": TFRobertaForMaskedLM.from_pretrained('roberta-large')}
+dict_mlm_models = {"bert-base-cased": TFBertForMaskedLM.from_pretrained('bert-base-cased'),
+                   "bert-large-cased": TFBertForMaskedLM.from_pretrained('bert-large-cased'),
+                   "roberta-large": TFRobertaForMaskedLM.from_pretrained('roberta-large'),
+                   "gpt2-medium": TFGPT2LMHeadModel.from_pretrained('gpt2-medium')}
+
 
 BATCH_SIZE = 256
 
@@ -28,16 +34,16 @@ class TransformerModel:
         self.tokenizer = dict_tokenizers[transf_model]
         self.mlm_model = dict_mlm_models[transf_model]
 
-    def prepare_input(self, d_sequences):
+    def prepare_input(self, d_sequences, th_role):
         target_tokens = []
         sentences_with_mask = []
         dependents_indices = []
         for i in range(len(d_sequences)):
-            sent = d_sequences["sentence"][i]#.replace(".", " .")  #  remove the replace if Giulia adjusts the input
-            id_dep = d_sequences["id_dep"][i] - 1
-            #  remove -1 if Giulia gives files where index starts from zero - da cambiare in base al nome della colonna
-            # GIULIA: alla fine è sempre la parola in posizione -1, l'unico problema è con il soggetto, però fare una colonna in cui 
-            # l'indice è sempre lo stesso per tutti forse è un po' ridondante
+            sent = d_sequences["sentence"][i]
+            if th_role != "Agent":
+                id_dep = len(sent.split(" ")) - 2
+            else:
+                id_dep = 1
             target_token = sent.split(" ")[id_dep]
             #  check if target token is in dictionary - otherwise add None to the lists
             if self.model_name.startswith("bert"):
@@ -131,7 +137,7 @@ class TransformerModel:
                 predicted_fillers.append(string_predicted_fillers)
         return probabilities_fillers, predicted_fillers
 
-    def compute_fillers_scores(self, data_sequences, batch_dimension=64):
+    def compute_fillers_scores(self, data_sequences, role, batch_dimension=64):
         num_sentences = len(data_sequences)
         if num_sentences % batch_dimension == 0:
             num_batches = num_sentences // batch_dimension
@@ -146,11 +152,11 @@ class TransformerModel:
                                                                                        , 2)))
             if batch != num_batches - 1:
                 target_words, masked_sentences, positions_dependents = self.\
-                    prepare_input(data_sequences[batch * batch_dimension: (batch + 1) * batch_dimension])
+                    prepare_input(data_sequences[batch * batch_dimension: (batch + 1) * batch_dimension], role)
                 scores = self.compute_filler_probability(target_words, masked_sentences, positions_dependents)
             else:
                 target_words, masked_sentences, positions_dependents = self.\
-                    prepare_input(data_sequences[batch * batch_dimension:])
+                    prepare_input(data_sequences[batch * batch_dimension:], role)
                 scores, best_fillers = self.compute_filler_probability(target_words, masked_sentences,
                                                                        positions_dependents)
             total_scores.extend(scores)
@@ -158,11 +164,12 @@ class TransformerModel:
         return total_scores, total_best_fillers
 
 
-def build_model(path_data, thematic_role, output_directory, transformers, name):  
-    data = load_data_sequences(path_data)  #  sentence, id_dep (da adattare id_dep al nome che verrà dato da Giulia)
+def build_model(path_data, output_directory, transformers, name):
+    data = load_data_sequences(path_data)
+    thematic_role = os.path.basename(path_data).split("_")[1].split(".")[0]  # funziona solo se lasciamo i nomi dei file con le frasi come sono adesso
     for transformer in transformers:
         model = TransformerModel(transformer)
-        model_fillers_scores, model_completions = model.compute_fillers_scores(data, BATCH_SIZE)
+        model_fillers_scores, model_completions = model.compute_fillers_scores(data, thematic_role, BATCH_SIZE)
         data["computed_score"] = model_fillers_scores
         data["best_completions"] = model_completions
         data.to_csv("{}/{}_transformers_mlm_{}_{}.txt".
@@ -170,4 +177,4 @@ def build_model(path_data, thematic_role, output_directory, transformers, name):
 
 
 if __name__ == '__main__':
-    build_model('test_input.txt', 'recipient', 'results', ['gpt2-medium'], 'vassallo')
+    build_model('TypicalityRatings_Recipient.sentences', 'results', ['gpt2-medium'], 'vassallo')
