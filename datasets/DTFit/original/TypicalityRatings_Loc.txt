@@ -22,28 +22,28 @@ refugee	find	shelter	church	T	4.8	1.81  in
 president	deliver	speech	parliament	T	6.3	1.31    in
 lumberjack	cut	tree	forest	T	6.55	1.16  in
 policeman	capture	thief	street	T	6.3	1.35    in
-veterinarian	examine	dog	clinic	T	6.5	1.24
+veterinarian	examine	dog	clinic	T	6.5	1.24  at
 monkey	grab	banana	zoo	T	6.2	0.75  at
 burglar	climb	wall	garden	T	4.95	2.04  in
 surgeon	examine	patient	hospital	T	6.55	1.32  at
 policeman	check	bag	airport	T	5.95	1.32  at
-chemist	mix	substance	laboratory	T	6.65	1.11
-cyclist	complete	race	peak	T	4.2	2.2
-botanist	examine	plant	greenhouse	T	6.05	1.2
+chemist	mix	substance	laboratory	T	6.65	1.11  in
+cyclist	complete	race	peak	T	4.2	2.2 on
+botanist	examine	plant	greenhouse	T	6.05	1.2 in
 engineer	complete	project	office	T	6.1	0.99  in
 passenger	buy	ticket	station	T	6.55	0.86  at
 porter	carry	bag	room	T	4.25	2.61  in
 priest	celebrate	marriage	church	T	6.15	1.39  in
 scoutmaster	assemble	tent	forest	T	6.4	0.66  in
-soldier	gather	ammunition	armory	T	6.2	1.36
+soldier	gather	ammunition	armory	T	6.2	1.36  in
 musician	entertain	crowd	theater	T	6.4	1.36  in
 fisherman	catch	fish	sea	T	6.7	1.1  in
 soldier	dig	trench	battlefield	T	5.7	1.76  in
-child	draw	flower	school	T	6.35	1.01
+child	draw	flower	school	T	6.35	1.01  at
 singer	hold	microphone	stage	T	6.75	0.62  on
 professor	deliver	lecture	university	T	6.65	0.65  at
 soldier	celebrate	victory	battlefield	T	5.6	1.85  in
-carver	build	sculpture	workshop	T	6.2	0.75
+carver	build	sculpture	workshop	T	6.2	0.75  in
 philologist	examine	book	library	T	6.2	1.12  in
 spectator	buy	ticket	box_office	T	6.55	0.59  in
 cook	clean	fish	kitchen	T	6.7	0.71  in
@@ -51,41 +51,41 @@ mother	hang	laundry	terrace	T	5.65	1.24  in
 soldier	carry	rifle	battlefield	T	6.55	1.32  in
 actor	win	award	theater	T	5.6	1.43  in
 farmer	use	shovel	field	T	6.2	1.6  in
-skater	ride	skateboard	sidewalk	T	6.15	1.49
+skater	ride	skateboard	sidewalk	T	6.15	1.49  on
 programmer	use	computer	office	T	6.65	1.11  in
 sailor	tie	rope	boat	T	6.2	1.5 on
 cook	mix	ingredients	kitchen	T	6.85	0.36  in
-policeman	hit	demonstrator	square	T	4.55	1.99
-guard	tie	prisoner	jail	T	5.7	1.85
+policeman	hit	demonstrator	square	T	4.55	1.99  in
+guard	tie	prisoner	jail	T	5.7	1.85  in
 demonstrator	throw	stone	street	T	5.7	1.0  in
 student	read	book	library	T	6.5	0.5  in
 pyromaniac	start	fire	forest	T	4.2	2.32  in
-author	sign	book	bookshop	T	5.75	1.76
+author	sign	book	bookshop	T	5.75	1.76  at
 horse	move	cart	field	T	5.1	1.79  in
 businessman	wear	tie	office	T	6.45	1.2  in
-doctor	visit	patient	clinic	T	6.1	1.34
-politician	sign	agreement	parliament	T	6.05	1.2
+doctor	visit	patient	clinic	T	6.1	1.34  at
+politician	sign	agreement	parliament	T	6.05	1.2 
 gardener	push	mower	garden	T	6.05	1.91  in
 guest	hold	drink	bar	T	6.05	1.2 in
-businessman	read	report	office	T	6.65	0.57
+businessman	read	report	office	T	6.65	0.57  in
 turist	read	map	street	T	6.2	1.63  in
 illusionist	perform	trick	circus	T	6.1	1.41
 soldier	throw	bomb	battlefield	T	6.45	0.92  in
-librarian	stack	books	shelf	T	6.4	0.58
+librarian	stack	books	shelf	T	6.4	0.58  on
 champion	hold	cup	podium	T	6.5	0.87  on
-porter	stack	suitcases	lobby	T	5.0	2.43
-deejay	mix	music	discoteque	T	6.25	1.61
-athlete	win	cup	stadium	T	5.45	1.63
+porter	stack	suitcases	lobby	T	5.0	2.43  in
+deejay	mix	music	discoteque	T	6.25	1.61  at
+athlete	win	cup	stadium	T	5.45	1.63  in
 violinist	wear	tuxedo	theater	T	5.35	1.88  in
 turist	ride	camel	desert	T	5.25	1.64  in
-spectator	watch	game	stadium	T	6.9	0.44
-hairstylist	wash	hair	salon	T	5.75	1.41
-lumberjack	stack	wood	truck	T	5.35	1.49
-child	visit	grandmother	hospice	T	4.85	1.59
+spectator	watch	game	stadium	T	6.9	0.44  at
+hairstylist	wash	hair	salon	T	5.75	1.41  at
+lumberjack	stack	wood	truck	T	5.35	1.49  on
+child	visit	grandmother	hospice	T	4.85	1.59  at
 teacher	use	blackboard	classroom	T	6.9	0.3  in
 singer	perform	music	stage	T	6.6	0.97  on
 doctor	sew	wound	clinic	T	5.65	1.42  in
-chemist	sell	drug	pharmacy	T	5.6	1.74
+chemist	sell	drug	pharmacy	T	5.6	1.74  at
 climber	use	rope	mountain	T	6.3	1.42
 professor	open	congress	university	T	5.1	1.79  at
 violinist	play	violin	theater	T	5.4	2.03  in
