@@ -84,7 +84,7 @@ def main():
     """
     parser_evaluation = subparser.add_parser('evaluation', help='compute evaluation measures')
     parser_evaluation.add_argument('-i', '--input-path', nargs='+', required=True, help='input files')
-    parser_evaluation.add_argument('-e', '--eval', required=True, help='output folder')
+    parser_evaluation.add_argument('-e', '--eval', choices=['simple','diff','corr'], required=True, help='output folder')
     parser_evaluation.add_argument('-t','--thresh', default=0, help='threshold for probabilities difference')
     parser_evaluation.set_defaults(func=_evaluation)
 
