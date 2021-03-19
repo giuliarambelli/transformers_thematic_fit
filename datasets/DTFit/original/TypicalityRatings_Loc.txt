@@ -1,301 +1,301 @@
-SUBJECT	VERB	OBJECT	LOCATION	typicality	mean_rat	std_rat
-boxer	deliver	punch	ring	T	6.85	0.48
-singer	begin	performance	theater	T	5.35	1.96
-mechanic	assemble	bicycle	garage	T	4.2	2.29
-waiter	clear	table	restaurant	T	6.4	1.28
-mechanic	check	tire	garage	T	6.7	0.46
-surfer	catch	wave	sea	T	6.75	0.54
-player	begin	match	stadium	T	6.25	1.41
-guide	describe	monument	square	T	5.75	1.81
-student	drink	beer	pub	T	4.95	2.29
-guest	hang	coat	passageway	T	5.2	2.16
-gardener	cut	grass	garden	T	6.9	0.3
-hound	fetch	bird	forest	T	3.9	2.39
-soldier	fight	enemy	battlefield	T	5.85	1.82
-surfer	grab	board	beach	T	6.65	1.11
-demonstrator	carry	flag	square	T	5.05	1.77
-librarian	climb	ladder	library	T	6.4	0.8
-coach	check	team	locker_room	T	5.85	1.65
-athlete	celebrate	victory	podium	T	6.5	0.67
-child	climb	tree	garden	T	5.0	1.87
-refugee	find	shelter	church	T	4.8	1.81
-president	deliver	speech	parliament	T	6.3	1.31
-lumberjack	cut	tree	forest	T	6.55	1.16
-policeman	capture	thief	street	T	6.3	1.35
+SUBJECT	VERB	OBJECT	LOCATION	typicality	mean_rat	std_rat LM
+boxer	deliver	punch	ring	T	6.85	0.48  on
+singer	begin	performance	theater	T	5.35	1.96  in
+mechanic	assemble	bicycle	garage	T	4.2	2.29  in
+waiter	clear	table	restaurant	T	6.4	1.28  at
+mechanic	check	tire	garage	T	6.7	0.46  in
+surfer	catch	wave	sea	T	6.75	0.54  in
+player	begin	match	stadium	T	6.25	1.41  in
+guide	describe	monument	square	T	5.75	1.81  in
+student	drink	beer	pub	T	4.95	2.29  at
+guest	hang	coat	passageway	T	5.2	2.16  in
+gardener	cut	grass	garden	T	6.9	0.3 in
+hound	fetch	bird	forest	T	3.9	2.39  in
+soldier	fight	enemy	battlefield	T	5.85	1.82  in
+surfer	grab	board	beach	T	6.65	1.11  at
+demonstrator	carry	flag	square	T	5.05	1.77  in
+librarian	climb	ladder	library	T	6.4	0.8 in
+coach	check	team	locker_room	T	5.85	1.65  in
+athlete	celebrate	victory	podium	T	6.5	0.67  on
+child	climb	tree	garden	T	5.0	1.87  in
+refugee	find	shelter	church	T	4.8	1.81  in
+president	deliver	speech	parliament	T	6.3	1.31    in
+lumberjack	cut	tree	forest	T	6.55	1.16  in
+policeman	capture	thief	street	T	6.3	1.35    in
 veterinarian	examine	dog	clinic	T	6.5	1.24
-monkey	grab	banana	zoo	T	6.2	0.75
-burglar	climb	wall	garden	T	4.95	2.04
-surgeon	examine	patient	hospital	T	6.55	1.32
-policeman	check	bag	airport	T	5.95	1.32
+monkey	grab	banana	zoo	T	6.2	0.75  at
+burglar	climb	wall	garden	T	4.95	2.04  in
+surgeon	examine	patient	hospital	T	6.55	1.32  at
+policeman	check	bag	airport	T	5.95	1.32  at
 chemist	mix	substance	laboratory	T	6.65	1.11
 cyclist	complete	race	peak	T	4.2	2.2
 botanist	examine	plant	greenhouse	T	6.05	1.2
-engineer	complete	project	office	T	6.1	0.99
-passenger	buy	ticket	station	T	6.55	0.86
-porter	carry	bag	room	T	4.25	2.61
-priest	celebrate	marriage	church	T	6.15	1.39
-scoutmaster	assemble	tent	forest	T	6.4	0.66
+engineer	complete	project	office	T	6.1	0.99  in
+passenger	buy	ticket	station	T	6.55	0.86  at
+porter	carry	bag	room	T	4.25	2.61  in
+priest	celebrate	marriage	church	T	6.15	1.39  in
+scoutmaster	assemble	tent	forest	T	6.4	0.66  in
 soldier	gather	ammunition	armory	T	6.2	1.36
-musician	entertain	crowd	theater	T	6.4	1.36
-fisherman	catch	fish	sea	T	6.7	1.1
-soldier	dig	trench	battlefield	T	5.7	1.76
+musician	entertain	crowd	theater	T	6.4	1.36  in
+fisherman	catch	fish	sea	T	6.7	1.1  in
+soldier	dig	trench	battlefield	T	5.7	1.76  in
 child	draw	flower	school	T	6.35	1.01
-singer	hold	microphone	stage	T	6.75	0.62
-professor	deliver	lecture	university	T	6.65	0.65
-soldier	celebrate	victory	battlefield	T	5.6	1.85
+singer	hold	microphone	stage	T	6.75	0.62  on
+professor	deliver	lecture	university	T	6.65	0.65  at
+soldier	celebrate	victory	battlefield	T	5.6	1.85  in
 carver	build	sculpture	workshop	T	6.2	0.75
-philologist	examine	book	library	T	6.2	1.12
-spectator	buy	ticket	box_office	T	6.55	0.59
-cook	clean	fish	kitchen	T	6.7	0.71
-mother	hang	laundry	terrace	T	5.65	1.24
-soldier	carry	rifle	battlefield	T	6.55	1.32
-actor	win	award	theater	T	5.6	1.43
-farmer	use	shovel	field	T	6.2	1.6
+philologist	examine	book	library	T	6.2	1.12  in
+spectator	buy	ticket	box_office	T	6.55	0.59  in
+cook	clean	fish	kitchen	T	6.7	0.71  in
+mother	hang	laundry	terrace	T	5.65	1.24  in
+soldier	carry	rifle	battlefield	T	6.55	1.32  in
+actor	win	award	theater	T	5.6	1.43  in
+farmer	use	shovel	field	T	6.2	1.6  in
 skater	ride	skateboard	sidewalk	T	6.15	1.49
-programmer	use	computer	office	T	6.65	1.11
-sailor	tie	rope	boat	T	6.2	1.5
-cook	mix	ingredients	kitchen	T	6.85	0.36
+programmer	use	computer	office	T	6.65	1.11  in
+sailor	tie	rope	boat	T	6.2	1.5 on
+cook	mix	ingredients	kitchen	T	6.85	0.36  in
 policeman	hit	demonstrator	square	T	4.55	1.99
 guard	tie	prisoner	jail	T	5.7	1.85
-demonstrator	throw	stone	street	T	5.7	1.0
-student	read	book	library	T	6.5	0.5
-pyromaniac	start	fire	forest	T	4.2	2.32
+demonstrator	throw	stone	street	T	5.7	1.0  in
+student	read	book	library	T	6.5	0.5  in
+pyromaniac	start	fire	forest	T	4.2	2.32  in
 author	sign	book	bookshop	T	5.75	1.76
-horse	move	cart	field	T	5.1	1.79
-businessman	wear	tie	office	T	6.45	1.2
+horse	move	cart	field	T	5.1	1.79  in
+businessman	wear	tie	office	T	6.45	1.2  in
 doctor	visit	patient	clinic	T	6.1	1.34
 politician	sign	agreement	parliament	T	6.05	1.2
-gardener	push	mower	garden	T	6.05	1.91
-guest	hold	drink	bar	T	6.05	1.2
+gardener	push	mower	garden	T	6.05	1.91  in
+guest	hold	drink	bar	T	6.05	1.2 in
 businessman	read	report	office	T	6.65	0.57
-turist	read	map	street	T	6.2	1.63
+turist	read	map	street	T	6.2	1.63  in
 illusionist	perform	trick	circus	T	6.1	1.41
-soldier	throw	bomb	battlefield	T	6.45	0.92
+soldier	throw	bomb	battlefield	T	6.45	0.92  in
 librarian	stack	books	shelf	T	6.4	0.58
-champion	hold	cup	podium	T	6.5	0.87
+champion	hold	cup	podium	T	6.5	0.87  on
 porter	stack	suitcases	lobby	T	5.0	2.43
 deejay	mix	music	discoteque	T	6.25	1.61
 athlete	win	cup	stadium	T	5.45	1.63
-violinist	wear	tuxedo	theater	T	5.35	1.88
-turist	ride	camel	desert	T	5.25	1.64
+violinist	wear	tuxedo	theater	T	5.35	1.88  in
+turist	ride	camel	desert	T	5.25	1.64  in
 spectator	watch	game	stadium	T	6.9	0.44
 hairstylist	wash	hair	salon	T	5.75	1.41
 lumberjack	stack	wood	truck	T	5.35	1.49
 child	visit	grandmother	hospice	T	4.85	1.59
-teacher	use	blackboard	classroom	T	6.9	0.3
-singer	perform	music	stage	T	6.6	0.97
-doctor	sew	wound	clinic	T	5.65	1.42
+teacher	use	blackboard	classroom	T	6.9	0.3  in
+singer	perform	music	stage	T	6.6	0.97  on
+doctor	sew	wound	clinic	T	5.65	1.42  in
 chemist	sell	drug	pharmacy	T	5.6	1.74
 climber	use	rope	mountain	T	6.3	1.42
-professor	open	congress	university	T	5.1	1.79
-violinist	play	violin	theater	T	5.4	2.03
-passenger	pass	check	airport	T	4.15	2.22
-sailor	mop	deck	boat	T	6.3	1.23
+professor	open	congress	university	T	5.1	1.79  at
+violinist	play	violin	theater	T	5.4	2.03  in
+passenger	pass	check	airport	T	4.15	2.22  at
+sailor	mop	deck	boat	T	6.3	1.23  on
 surgeon	perform	surgery	hospital	T	6.45	1.32
-passenger	pull	suitcase	station	T	6.25	1.13
-waiter	prepare	drink	bar	T	6.15	1.62
+passenger	pull	suitcase	station	T	6.25	1.13  at
+waiter	prepare	drink	bar	T	6.15	1.62  in
 farmer	pick	vegetables	greenhouse	T	4.75	2.14
-guard	open	jail	prison	T	6.35	0.91
-terrorist	release	hostage	desert	T	4.15	1.31
+guard	open	jail	prison	T	6.35	0.91  in
+terrorist	release	hostage	desert	T	4.15	1.31  in
 cameraman	record	video	set	T	6.35	1.01
 customer	read	menu	restaurant	T	6.65	0.91
 nurse	push	wheelchair	hospital	T	5.9	1.37
-nurse	wash	infant	hospital	T	6.15	1.56
-binman	pick	trash	street	T	6.25	1.13
-student	pass	exam	university	T	6.35	1.01
+nurse	wash	infant	hospital	T	6.15	1.56  at
+binman	pick	trash	street	T	6.25	1.13  in
+student	pass	exam	university	T	6.35	1.01  at
 singer	record	song	studio	T	6.95	0.22
 smuggler	sell	weapon	black_market	T	6.1	0.94
-soldier	wear	helmet	battlefield	T	6.8	0.4
-surfer	wear	swimsuit	beach	T	6.5	0.92
+soldier	wear	helmet	battlefield	T	6.8	0.4  in
+surfer	wear	swimsuit	beach	T	6.5	0.92  at
 bodybuilder	lift	weight	gym	T	5.25	2.28
 dog	pull	sled	mountain	T	4.4	1.91
 child	throw	snowball	courtyard	T	5.25	1.92
-undertaker	dig	grave	cemetery	T	6.55	0.97
+undertaker	dig	grave	cemetery	T	6.55	0.97  in
 student	wear	jeans	pub	T	6.05	0.86
 housewife	clean	table	kitchen	T	6.95	0.22
 mechanic	fix	tire	garage	T	6.65	0.65
-dog	dig	hole	garden	T	6.45	0.8
+dog	dig	hole	garden	T	6.45	0.8  in
 artist	hang	picture	gallery	T	6.55	0.86
-musician	hold	guitar	stage	T	6.8	0.4
-journalist	write	article	newsroom	T	6.6	0.49
-dog	chase	ball	park	T	6.5	0.59
+musician	hold	guitar	stage	T	6.8	0.4 on
+journalist	write	article	newsroom	T	6.6	0.49  in
+dog	chase	ball	park	T	6.5	0.59  at
 soldier	hang	rifle	armory	T	6.0	0.77
 painter	paint	picture	square	T	5.8	0.98
-gardener	gather	grass	garden	T	6.7	0.56
+gardener	gather	grass	garden	T	6.7	0.56  in
 cheerleader	shake	flag	stadium	T	5.95	1.24
 sculptor	carve	stone	workshop	T	5.85	1.53
 teenager	hear	music	bus	T	5.95	0.8
 ant	stack	supply	burrow	T	5.2	1.83
 mother	push	stroller	sidewalk	T	5.6	1.85
 spectator	hear	speech	auditorium	T	6.4	0.97
-gardener	decorate	garden	mansion	T	4.9	1.79
+gardener	decorate	garden	mansion	T	4.9	1.79  in
 cook	check	grocery	pantry	T	5.65	1.62
-artist	assemble	art	museum	T	6.05	0.74
+artist	assemble	art	museum	T	6.05	0.74  in
 painter	decorate	wall	mansion	T	5.45	1.4
 biologist	use	microscope	laboratory	T	6.65	0.48
-fisherman	check	net	boat	T	6.75	0.7
-student	celebrate	graduation	restaurant	T	5.2	1.6
-comedian	entertain	audience	theater	T	6.4	1.36
-truck	plow	snow	street	T	5.7	1.42
+fisherman	check	net	boat	T	6.75	0.7 on
+student	celebrate	graduation	restaurant	T	5.2	1.6 at
+comedian	entertain	audience	theater	T	6.4	1.36  in
+truck	plow	snow	street	T	5.7	1.42  in
 truck	hit	car	highway	T	5.45	1.24
 jockey	ride	horse	racetrack	T	6.35	0.85
 housemaid	clean	dish	kitchen	T	6.9	0.3
 driver	hear	horn	crossroad	T	5.85	1.11
-child	pick	flower	park	T	6.3	0.84
-student	use	computer	library	T	6.55	1.32
-student	hear	lecture	university	T	6.65	0.48
+child	pick	flower	park	T	6.3	0.84  at
+student	use	computer	library	T	6.55	1.32  in
+student	hear	lecture	university	T	6.65	0.48  at
 thief	grab	money	supermarket	T	5.55	1.24
-animal	find	food	dump	T	5.6	1.5
+animal	find	food	dump	T	5.6	1.5 in
 policeman	examine	car	parking	T	5.9	0.7
 traveller	check	watch	platform	T	5.5	1.83
-waiter	open	bottle	restaurant	T	6.8	0.4
-guide	describe	monument	bar	AT	2.85	2.06
+waiter	open	bottle	restaurant	T	6.8	0.4 at
+guide	describe	monument	bar	AT	2.85	2.06  in
 philologist	examine	book	pub	AT	3.05	1.72
 burglar	climb	wall	mountain	AT	2.3	2.05
 professor	deliver	lecture	gym	AT	3.15	1.93
-priest	celebrate	marriage	discotheque	AT	2.15	1.39
+priest	celebrate	marriage	discotheque	AT	2.15	1.39  at
 musician	entertain	crowd	mountain	AT	3.05	1.94
-demonstrator	carry	flag	bar	AT	3.35	2.5
+demonstrator	carry	flag	bar	AT	3.35	2.5 in
 singer	begin	performance	supermarket	AT	2.35	1.56
 soldier	carry	rifle	cinema	AT	1.4	0.58
 fisherman	catch	fish	swimming_pool	AT	3.5	2.56
-engineer	complete	project	restaurant	AT	2.95	1.83
-mechanic	assemble	bicycle	theater	AT	3.05	2.46
-president	deliver	speech	mountain	AT	2.45	1.8
-gardener	cut	grass	beach	AT	4.2	2.48
-soldier	celebrate	victory	university	AT	2.1	1.48
-librarian	climb	ladder	bar	AT	4.25	2.55
+engineer	complete	project	restaurant	AT	2.95	1.83  at
+mechanic	assemble	bicycle	theater	AT	3.05	2.46  in
+president	deliver	speech	mountain	AT	2.45	1.8 in
+gardener	cut	grass	beach	AT	4.2	2.48  at
+soldier	celebrate	victory	university	AT	2.1	1.48  at
+librarian	climb	ladder	bar	AT	4.25	2.55  in
 veterinarian	examine	dog	cinema	AT	1.7	1.52
 surfer	grab	board	shipyard	AT	2.5	1.32
-guest	hang	coat	supermarket	AT	1.75	1.3
-mechanic	check	tire	hospital	AT	1.6	1.32
-cyclist	complete	race	garden	AT	2.6	1.53
-porter	carry	bag	forest	AT	1.75	1.26
-student	drink	beer	classroom	AT	1.8	1.25
-hound	fetch	bird	hospital	AT	3.05	2.5
-cook	clean	fish	battlefield	AT	2.2	1.81
+guest	hang	coat	supermarket	AT	1.75	1.3  in
+mechanic	check	tire	hospital	AT	1.6	1.32  at
+cyclist	complete	race	garden	AT	2.6	1.53  in
+porter	carry	bag	forest	AT	1.75	1.26  in
+student	drink	beer	classroom	AT	1.8	1.25  in
+hound	fetch	bird	hospital	AT	3.05	2.5  at
+cook	clean	fish	battlefield	AT	2.2	1.81  in
 policeman	check	bag	kitchen	AT	3.55	1.96
-athlete	celebrate	victory	church	AT	1.65	0.79
-player	begin	match	restaurant	AT	2.2	1.86
+athlete	celebrate	victory	church	AT	1.65	0.79  in
+player	begin	match	restaurant	AT	2.2	1.86  at
 lumberjack	cut	tree	parliament	AT	1.95	1.75
-soldier	gather	ammunition	nursery	AT	1.35	0.57
+soldier	gather	ammunition	nursery	AT	1.35	0.57  in
 surfer	catch	wave	lake	AT	3.6	2.48
-mother	hang	laundry	office	AT	2.95	1.86
-carver	build	sculpture	boat	AT	3.65	2.33
-scoutmaster	assemble	tent	office	AT	1.85	1.49
+mother	hang	laundry	office	AT	2.95	1.86  in
+carver	build	sculpture	boat	AT	3.65	2.33  on
+scoutmaster	assemble	tent	office	AT	1.85	1.49  in
 refugee	find	shelter	bakery	AT	2.4	1.28
-singer	hold	microphone	battlefield	AT	2.15	1.74
-soldier	dig	trench	library	AT	3.3	2.61
+singer	hold	microphone	battlefield	AT	2.15	1.74  in
+soldier	dig	trench	library	AT	3.3	2.61  in
 waiter	clear	table	barracks	AT	4.1	2.26
 child	climb	tree	savannah	AT	3.5	2.36
-chemist	mix	substance	airport	AT	1.95	1.16
+chemist	mix	substance	airport	AT	1.95	1.16  at
 coach	check	team	auditorium	AT	3.2	2.14
-policeman	capture	thief	nursery	AT	2.55	1.6
-monkey	grab	banana	university	AT	3.7	2.35
+policeman	capture	thief	nursery	AT	2.55	1.6  in
+monkey	grab	banana	university	AT	3.7	2.35  at
 passenger	buy	ticket	bakery	AT	1.25	0.54
-surgeon	examine	patient	library	AT	1.65	1.35
+surgeon	examine	patient	library	AT	1.65	1.35  in
 soldier	fight	enemy	kitchen	AT	2.2	2.06
 spectator	buy	ticket	clinic	AT	2.85	2.2
-boxer	deliver	punch	church	AT	1.7	1.1
+boxer	deliver	punch	church	AT	1.7	1.1 in
 child	draw	flower	armory	AT	2.35	1.96
 botanist	examine	plant	stadium	AT	2.25	1.84
 programmer	use	computer	savannah	AT	2.95	1.77
 sailor	mop	deck	theater	AT	1.7	0.9
 student	pass	exam	supermarket	AT	1.4	0.8
-sailor	tie	rope	bar	AT	2.45	1.16
-politician	sign	agreement	station	AT	2.2	1.36
-waiter	prepare	drink	forest	AT	2.35	1.28
+sailor	tie	rope	bar	AT	2.45	1.16  in
+politician	sign	agreement	station	AT	2.2	1.36  at
+waiter	prepare	drink	forest	AT	2.35	1.28  in
 dog	pull	sled	clinic	AT	1.2	0.6
 climber	use	rope	elevator	AT	2.5	1.94
-surgeon	perform	surgery	beach	AT	1.65	0.79
-spectator	watch	game	church	AT	2.2	1.81
+surgeon	perform	surgery	beach	AT	1.65	0.79  at
+spectator	watch	game	church	AT	2.2	1.81  in
 doctor	visit	patient	mountain	AT	2.35	1.42
-smuggler	sell	weapon	hospital	AT	1.9	1.48
+smuggler	sell	weapon	hospital	AT	1.9	1.48  at
 actor	win	award	armory	AT	2.05	1.2
-farmer	pick	vegetables	boat	AT	1.95	1.02
+farmer	pick	vegetables	boat	AT	1.95	1.02  on
 customer	read	menu	stadium	AT	3.75	2.09
 child	visit	grandmother	barracks	AT	2.7	1.68
-pyromaniac	start	fire	beach	AT	2.5	1.96
+pyromaniac	start	fire	beach	AT	2.5	1.96  at
 violinist	wear	tuxedo	workshop	AT	3.3	2.53
 nurse	push	wheelchair	discoteque	AT	1.95	0.92
 guard	tie	prisoner	tobacconist	AT	3.05	2.04
-author	sign	book	battlefield	AT	2.1	0.94
-hairstylist	wash	hair	bar	AT	1.75	1.09
+author	sign	book	battlefield	AT	2.1	0.94  in
+hairstylist	wash	hair	bar	AT	1.75	1.09  in
 gardener	push	mower	supermarket	AT	2.9	2.14
-librarian	stack	books	oven	AT	2.35	1.8
+librarian	stack	books	oven	AT	2.35	1.8 in
 passenger	pass	check	nursery	AT	1.5	0.59
 soldier	wear	helmet	auditorium	AT	1.95	1.4
 cameraman	record	video	greenhouse	AT	2.35	1.39
-doctor	sew	wound	restaurant	AT	2.5	1.36
+doctor	sew	wound	restaurant	AT	2.5	1.36  at
 policeman	hit	demonstrator	greenhouse	AT	3.0	1.73
 deejay	mix	music	shipyard	AT	2.2	1.75
-singer	perform	music	battlefield	AT	2.2	1.44
+singer	perform	music	battlefield	AT	2.2	1.44  in
 surfer	wear	swimsuit	clinic	AT	2.0	0.89
-champion	hold	cup	hospital	AT	2.85	1.98
+champion	hold	cup	hospital	AT	2.85	1.98  at
 student	read	book	grocery	AT	3.95	2.06
-turist	read	map	classroom	AT	1.8	0.93
-illusionist	perform	trick	office	AT	3.2	1.36
+turist	read	map	classroom	AT	1.8	0.93  in
+illusionist	perform	trick	office	AT	3.2	1.36  in
 farmer	use	shovel	parliament	AT	1.9	1.79
-nurse	wash	infant	airport	AT	2.8	2.06
+nurse	wash	infant	airport	AT	2.8	2.06  at
 athlete	win	cup	bank	AT	2.85	2.37
 singer	record	song	bakery	AT	1.55	0.97
-guest	hold	drink	forest	AT	2.7	1.68
+guest	hold	drink	forest	AT	2.7	1.68  in
 horse	move	cart	school	AT	2.7	2.03
 professor	open	congress	circus	AT	2.9	2.36
-businessman	read	report	beach	AT	2.95	1.47
-chemist	sell	drug	museum	AT	2.25	1.37
-passenger	pull	suitcase	library	AT	2.25	1.51
+businessman	read	report	beach	AT	2.95	1.47  at
+chemist	sell	drug	museum	AT	2.25	1.37  in
+passenger	pull	suitcase	library	AT	2.25	1.51  in
 skater	ride	skateboard	savannah	AT	1.95	1.12
 binman	pick	trash	lake	AT	2.95	1.66
 violinist	play	violin	swimming_pool	AT	1.8	1.25
 demonstrator	throw	stone	lake	AT	3.1	1.79
-lumberjack	stack	wood	university	AT	2.7	1.71
-businessman	wear	tie	zoo	AT	3.05	1.69
+lumberjack	stack	wood	university	AT	2.7	1.71  at
+businessman	wear	tie	zoo	AT	3.05	1.69  at
 teacher	use	blackboard	pharmacy	AT	1.35	0.73
-guard	open	jail	restaurant	AT	2.8	2.34
-turist	ride	camel	beach	AT	2.7	1.58
+guard	open	jail	restaurant	AT	2.8	2.34  at
+turist	ride	camel	beach	AT	2.7	1.58  at
 soldier	throw	bomb	circus	AT	1.5	0.92
 terrorist	release	hostage	lake	AT	3.3	1.82
 porter	stack	suitcases	playground	AT	2.1	1.22
 cook	mix	ingredients	cinema	AT	1.95	1.75
-bodybuilder	lift	weight	classroom	AT	2.85	1.46
+bodybuilder	lift	weight	classroom	AT	2.85	1.46  in
 ant	stack	supply	shelf	AT	1.7	0.95
-mother	push	stroller	desert	AT	1.9	1.22
+mother	push	stroller	desert	AT	1.9	1.22  in
 artist	assemble	art	dump	AT	2.1	1.45
 dog	dig	hole	stadium	AT	2.55	1.36
 student	hear	lecture	subway	AT	2.25	1.13
-teenager	hear	music	classroom	AT	4.55	1.53
-traveller	check	watch	prison	AT	1.75	1.13
-jockey	ride	horse	hospital	AT	1.3	0.46
+teenager	hear	music	classroom	AT	4.55	1.53  in
+traveller	check	watch	prison	AT	1.75	1.13  in
+jockey	ride	horse	hospital	AT	1.3	0.46  at
 gardener	gather	grass	savannah	AT	3.0	1.84
 housewife	clean	table	armory	AT	2.05	1.16
-child	throw	snowball	theater	AT	1.55	0.67
-truck	plow	snow	shop	AT	1.5	0.59
-gardener	decorate	garden	skyscraper	AT	2.2	1.4
-comedian	entertain	audience	submarine	AT	1.65	0.96
+child	throw	snowball	theater	AT	1.55	0.67  in
+truck	plow	snow	shop	AT	1.5	0.59  in
+gardener	decorate	garden	skyscraper	AT	2.2	1.4  in
+comedian	entertain	audience	submarine	AT	1.65	0.96    in
 animal	find	food	supermarket	AT	2.75	1.84
-dog	chase	ball	museum	AT	1.6	0.73
-driver	hear	horn	library	AT	2.15	1.62
-painter	decorate	wall	restroom	AT	3.75	1.84
-journalist	write	article	forest	AT	2.35	1.06
-soldier	hang	rifle	terrace	AT	2.35	1.49
+dog	chase	ball	museum	AT	1.6	0.73  in
+driver	hear	horn	library	AT	2.15	1.62  in
+painter	decorate	wall	restroom	AT	3.75	1.84  in
+journalist	write	article	forest	AT	2.35	1.06  in
+soldier	hang	rifle	terrace	AT	2.35	1.49  in
 spectator	hear	speech	barn	AT	2.1	1.09
 biologist	use	microscope	bookshop	AT	1.75	1.18
 painter	paint	picture	barracks	AT	2.45	1.36
-waiter	open	bottle	battlefield	AT	1.5	1.16
+waiter	open	bottle	battlefield	AT	1.5	1.16  in
 student	wear	jeans	swimmin_pool	AT	1.55	0.59
-musician	hold	guitar	kitchen	AT	3.3	1.65
-undertaker	dig	grave	park	AT	2.15	1.42
+musician	hold	guitar	kitchen	AT	3.3	1.65  in
+undertaker	dig	grave	park	AT	2.15	1.42  at
 artist	hang	picture	factory	AT	2.3	1.1
-truck	hit	car	beach	AT	2.0	1.34
+truck	hit	car	beach	AT	2.0	1.34  at
 housemaid	clean	dish	cinema	AT	1.35	0.73
-thief	grab	money	nursery	AT	2.35	1.24
+thief	grab	money	nursery	AT	2.35	1.24  in
 cheerleader	shake	flag	garage	AT	2.05	1.36
 child	pick	flower	canyon	AT	2.85	1.01
-student	celebrate	graduation	cemetery	AT	1.4	0.58
-sculptor	carve	stone	discotheque	AT	1.45	0.5
+student	celebrate	graduation	cemetery	AT	1.4	0.58  in
+sculptor	carve	stone	discotheque	AT	1.45	0.5 at
 student	use	computer	helicopter	AT	1.7	0.9
-cook	check	grocery	church	AT	2.05	1.32
+cook	check	grocery	church	AT	2.05	1.32  in
 fisherman	check	net	airplane	AT	1.55	0.59
 mechanic	fix	tire	bakery	AT	1.75	1.09
-policeman	examine	car	desert	AT	2.75	1.7
+policeman	examine	car	desert	AT	2.75	1.7  in
