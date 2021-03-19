@@ -1,0 +1,7 @@
+SBJ nsubj
+OBJ dobj
+ROOT    None
+LOCATION nmod:in
+INSTRUMENT nmod:with
+RECIPIENT nmod:to
+TIME nmod:during,nmod:before,nmod:after
