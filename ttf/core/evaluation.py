@@ -72,7 +72,12 @@ def evaluation(data_path, etype, thresh):
 			#{('spy', 'information', 'pass'): [1, 3], ('volunteer', 'food', 'bring'): [0, 2]}
 			groups = data.groupby(['SUBJECT', 'VERB', 'OBJECT']).groups
 		else:
-			groups = data.groupby(['SUBJECT', 'VERB']).groups
+			# PAIRS
+			if 'OBJECT' not in data.columns:
+				groups = data.groupby(['SUBJECT']).groups
+			# TRIPLES
+			else:
+				groups = data.groupby(['SUBJECT', 'VERB']).groups
 
 		tuples, accs = acc_functions[etype](data_covered, groups)
 		if etype == 'diff':
