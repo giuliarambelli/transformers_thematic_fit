@@ -17,6 +17,13 @@ def triple_to_sentence(tup, verb_tag):
 	return s
 
 
+def pair_to_sentence(tup, verb_tag):
+	sbj, verb = tup
+	verb = getInflection(verb, tag=verb_tag)[0]
+	s = 'The {} {}'.format(sbj, verb)
+	return s
+
+
 def to_sentences(data_path, out_dir, v_tag):
 	data = pd.read_csv(data_path, sep='\t')
 
@@ -24,15 +31,18 @@ def to_sentences(data_path, out_dir, v_tag):
 
 	for index, row in data.iterrows(): 
 		sentence = ''
-		sentence+= triple_to_sentence((row['SUBJECT'], row['VERB'], row['OBJECT']), v_tag)
-		if "LOCATION" in data.columns:
-			sentence += ' {} the {}'.format(row['LM'], row['LOCATION'])
-		elif "TIME" in data.columns:
-			sentence += ' {} the {}'.format(row['LM'], row['TIME'])
-		elif "RECIPIENT" in data.columns:
-			sentence += ' to the {}'.format(row['RECIPIENT'])
-		elif "INSTRUMENT" in data.columns:
-			sentence += ' with the {}'.format(row['INSTRUMENT'])
+		if 'OBJECT' not in data.columns:
+			sentence += pair_to_sentence((row['SUBJECT'], row['VERB']), v_tag)
+		else:
+			sentence+= triple_to_sentence((row['SUBJECT'], row['VERB'], row['OBJECT']), v_tag)
+			if "LOCATION" in data.columns:
+				sentence += ' {} the {}'.format(row['LM'], row['LOCATION'])
+			elif "TIME" in data.columns:
+				sentence += ' {} the {}'.format(row['LM'], row['TIME'])
+			elif "RECIPIENT" in data.columns:
+				sentence += ' to the {}'.format(row['RECIPIENT'])
+			elif "INSTRUMENT" in data.columns:
+				sentence += ' with the {}'.format(row['INSTRUMENT'])
 		sentence += ' .'
 		sentences.append(sentence)
 
