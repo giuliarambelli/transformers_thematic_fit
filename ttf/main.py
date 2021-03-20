@@ -1,4 +1,3 @@
-#  sono riuscito a collegare github a pycharm!!!
 import argparse
 import os
 import logging.config
