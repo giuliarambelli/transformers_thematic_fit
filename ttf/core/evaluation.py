@@ -1,6 +1,8 @@
 from scipy.stats import spearmanr
 import re
 import pandas as pd
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
 
 roles = ["LOCATION", "TIME", "RECIPIENT", "INSTRUMENT"]
 
@@ -44,6 +46,14 @@ def _correlation(df):
 	scores = df['mean_rat']
 	probs = df['computed_score']
 	print(spearmanr(scores, probs))
+	scores_for_regr = scores.reshape(-1, 1)
+	probs_for_regr = scores.reshape(-1, 1)
+	reg = LinearRegression().fit(scores_for_regr, probs_for_regr)
+	probs_predicted = reg.predict(scores_for_regr)
+	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
+	plt.plot(scores_for_regr, probs_predicted, color='blue')
+	plt.title("Actuals vs Regression Line")
+
 
 """
 def rank(df, group_dict, delim=';'):
