@@ -33,7 +33,7 @@ def _run_transformers_mlm(args):
     name = args.name
 
     if os.path.isfile(data_sequences_path):
-        transformers_mlm_model.build_model(data_sequences_path, outdir, models, name)  # don't check whether the input files exist
+        transformers_mlm.build_model(data_sequences_path, outdir, models, name)  # don't check whether the input files exist
     else:
         logger.info('Input path {} does not exist'.format(data_sequences_path))
 
