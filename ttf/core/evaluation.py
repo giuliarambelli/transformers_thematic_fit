@@ -1,5 +1,6 @@
 from scipy.stats import spearmanr
-import re
+import os
+import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
@@ -46,8 +47,8 @@ def _correlation(df, output_location, path_data):
 	scores = df['mean_rat']
 	probs = df['computed_score']
 	print(spearmanr(scores, probs))
-	scores_for_regr = scores.reshape(-1, 1)
-	probs_for_regr = scores.reshape(-1, 1)
+	scores_for_regr = np.array(scores).reshape(-1, 1)
+	probs_for_regr = np.array(scores).reshape(-1, 1)
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
 	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
@@ -55,7 +56,7 @@ def _correlation(df, output_location, path_data):
 	plt.xlabel('human typicality scores')
 	plt.ylabel('model probabilities')
 	plt.title("Actuals vs Regression Line")
-	plt.savefig(output_location+path_data+".png")
+	plt.savefig(os.path.join(output_location,os.path.basename(path_data).split('.')[0]+"_correl.png"))
 
 
 """
