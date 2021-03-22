@@ -11,7 +11,7 @@ def _simple_accuracy(df, group_dict):
 	scores = []
 	for tup, idx in group_dict.items():
 		if len(idx) == 2:
-			
+			#print(df.loc[[idx[0]]])
 			if df['typicality'][idx[0]] == 'T':
 				if df['computed_score'][idx[0]] > df['computed_score'][idx[1]]:
 					a = 1
@@ -73,7 +73,7 @@ def rank(df, group_dict, delim=';'):
 """
 
 def evaluation(data_path, etype, thresh, output_plot):
-	print("Exec functions..")
+	print("Exec functions..", data_path)
 	acc_functions = {'simple': _simple_accuracy, 'diff': _accuracy_with_thresh, 'corr': _correlation}
 
 	data = pd.read_csv(data_path, sep='\t')
@@ -84,14 +84,14 @@ def evaluation(data_path, etype, thresh, output_plot):
 	else:
 		if any(c in data.columns for c in roles):
 			#{('spy', 'information', 'pass'): [1, 3], ('volunteer', 'food', 'bring'): [0, 2]}
-			groups = data.groupby(['SUBJECT', 'VERB', 'OBJECT']).groups
+			groups = data_covered.groupby(['SUBJECT', 'VERB', 'OBJECT']).groups
 		else:
 			# PAIRS
 			if 'OBJECT' not in data.columns:
-				groups = data.groupby(['SUBJECT']).groups
+				groups = data_covered.groupby(['SUBJECT']).groups
 			# TRIPLES
 			else:
-				groups = data.groupby(['SUBJECT', 'VERB']).groups
+				groups = data_covered.groupby(['SUBJECT', 'VERB']).groups
 
 		tuples, accs = acc_functions[etype](data_covered, groups)
 		if etype == 'diff':
@@ -101,4 +101,4 @@ def evaluation(data_path, etype, thresh, output_plot):
 		print(accuracy)
 
 if __name__ == '__main__':
-    evaluation('/home/giulia/Scaricati/test_input.txt', 'diff', 1)
+   evaluation('../../datasets/DTFit/sdm_result/TypicalityRatings_Triples.sdm-res', 'corr', 0.1, '../../')
