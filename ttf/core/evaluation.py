@@ -42,7 +42,7 @@ def _accuracy_with_thresh(df, group_dict):
 	return pairs, diffs
 
 
-def _correlation(df, output_location):
+def _correlation(df, output_location, path_data):
 	scores = df['mean_rat']
 	probs = df['computed_score']
 	print(spearmanr(scores, probs))
@@ -55,7 +55,7 @@ def _correlation(df, output_location):
 	plt.xlabel('human typicality scores')
 	plt.ylabel('model probabilities')
 	plt.title("Actuals vs Regression Line")
-	plt.savefig(output_location)
+	plt.savefig(output_location+path_data+".png")
 
 
 """
@@ -79,7 +79,7 @@ def evaluation(data_path, etype, thresh, output_plot):
 	data_covered = data.dropna()
 
 	if etype == 'corr':
-		acc_functions[etype](data_covered, output_plot)
+		acc_functions[etype](data_covered, output_plot, data_path)
 	else:
 		if any(c in data.columns for c in roles):
 			#{('spy', 'information', 'pass'): [1, 3], ('volunteer', 'food', 'bring'): [0, 2]}
