@@ -310,8 +310,8 @@ tourist	visit	6.2	1.5
 traveller	check	5.8	1.12
 truck	hit	3.9	2.0
 truck	plow	4.6	1.83
-turist	read	3.95	2.13
-turist	ride	5.7	1.62
+tourist	read	3.95	2.13
+tourist	ride	5.7	1.62
 undertaker	dig	4.5	2.31
 veterinarian	examine	6.75	0.43
 violinist	wear	5.55	1.2

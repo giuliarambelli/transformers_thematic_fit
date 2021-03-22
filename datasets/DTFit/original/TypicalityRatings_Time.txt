@@ -146,7 +146,7 @@ professor	deliver	lecture	walk	AT	during	3.6	1.93
 priest	celebrate	marriage	race	AT	during	2.0	1.52
 soldier	carry	rifle	mass	AT	during	1.9	1.41
 burglar	climb	wall	competition	AT	during	1.85	0.85
-dealer	check	car	bombardament	AT	before	2.65	1.88
+dealer	check	car	bombardment	AT	before	2.65	1.88
 skier	gain	speed	storm	AT	during	2.0	1.45
 candidate	celebrate	victory	surgery	AT	after	2.65	1.49
 photographer	capture	image	surgery	AT	during	3.35	1.65

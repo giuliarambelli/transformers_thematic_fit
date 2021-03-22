@@ -179,7 +179,7 @@ cook	check	grocery	T	6.2	1.21
 cook	mix	ingredient	T	6.15	1.59
 surfer	ride	wave	T	6.2	1.44
 spectator	hear	speech	T	4.4	1.83
-turist	ride	camel	T	4.55	1.47
+tourist	ride	camel	T	4.55	1.47
 illustrator	draw	picture	T	6.3	1.65
 student	pass	exam	T	6.35	0.91
 cook	clean	fish	T	6.1	0.77
@@ -253,7 +253,7 @@ milkman	carry	bottle	T	6.7	0.46
 child	visit	zoo	T	6.3	1.0
 doctor	visit	patient	T	6.05	1.53
 soldier	hang	rifle	T	5.8	1.75
-surfer	wear	sunglass	T	5.95	1.28
+surfer	wear	sunglasses	T	5.95	1.28
 goalkeeper	grab	ball	T	5.6	1.88
 waiter	cut	cake	T	4.85	1.53
 student	use	computer	T	6.35	1.53
@@ -315,7 +315,7 @@ cowboy	ride	bull	T	5.7	1.0
 student	drink	beer	T	4.6	1.43
 butcher	carve	meat	T	5.75	1.97
 violinist	play	violin	T	6.9	0.3
-turist	read	map	T	6.4	1.02
+tourist	read	map	T	6.4	1.02
 traveller	check	bag	T	6.0	1.14
 soldier	release	prisoner	T	4.3	1.82
 gardener	push	mower	T	5.65	1.71
@@ -517,7 +517,7 @@ waiter	mix	cement	AT	1.5	1.12
 housewife	clean	shoe	AT	5.45	0.86
 student	enjoy	marriage	AT	3.6	1.83
 teenager	hear	lecture	AT	4.65	2.06
-turist	read	bible	AT	3.0	1.64
+tourist	read	bible	AT	3.0	1.64
 author	sign	check	AT	3.4	1.74
 secretary	write	sonnet	AT	3.55	2.44
 child	build	sculpture	AT	3.95	1.88
@@ -528,7 +528,7 @@ child	grab	tyre	AT	2.3	1.68
 policeman	check	groceries	AT	2.0	1.48
 poet	write	menu	AT	1.75	1.26
 goalkeeper	throw	bomb	AT	1.05	0.22
-turist	ride	skate	AT	3.7	2.17
+tourist	ride	skate	AT	3.7	2.17
 waiter	clear	road	AT	2.9	2.62
 cyclist	complete	project	AT	2.7	1.35
 student	drink	gasoline	AT	1.6	1.5
