@@ -86,7 +86,7 @@ journalist	write	article	computer	T	6.7	0.56
 pyromaniac	start	fire	matchstick	T	6.35	1.19
 sweeper	clean	street	broom	T	6.4	1.07
 dog	dig	hole	paw	T	6.75	0.54
-skier	gain 	speed	poles	T	6.2	1.21
+skier	gain	speed	poles	T	6.2	1.21
 deejay	mix	music	console	T	6.45	0.8
 tailor	sew	dress	needle	T	6.45	0.97
 surfer	catch	wave	board	T	6.35	1.53
