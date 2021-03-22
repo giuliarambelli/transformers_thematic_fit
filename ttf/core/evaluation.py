@@ -73,6 +73,7 @@ def rank(df, group_dict, delim=';'):
 """
 
 def evaluation(data_path, etype, thresh, output_plot):
+	print("Exec functions..")
 	acc_functions = {'simple': _simple_accuracy, 'diff': _accuracy_with_thresh, 'corr': _correlation}
 
 	data = pd.read_csv(data_path, sep='\t')
