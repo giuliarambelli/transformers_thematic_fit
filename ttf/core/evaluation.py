@@ -56,7 +56,7 @@ def _correlation(df, output_location, path_data):
 	plt.xlabel('human typicality scores')
 	plt.ylabel('model probabilities')
 	plt.title("Actuals vs Regression Line")
-	plt.savefig(os.path.join(output_location,os.path.basename(path_data).split('.')[0]+"_correl.png"))
+	plt.savefig(os.path.join(output_location,os.path.basename(path_data)+".correl.png"))
 
 
 """
