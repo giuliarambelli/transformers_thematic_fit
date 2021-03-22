@@ -1,4 +1,4 @@
-from ttf.utils.data_utils import load_data_sequences
+from ttf.utils.data_utils import load_data_sequences, get_thematic_role
 from transformers import BertTokenizer, TFBertForMaskedLM, RobertaTokenizer, TFRobertaForMaskedLM, GPT2Tokenizer, \
     TFGPT2LMHeadModel
 import pandas as pd
@@ -7,6 +7,7 @@ import logging
 import tokenizations   #   pip install pytokenizations  (https://pypi.org/project/pytokenizations/)
 import tensorflow as tf  #  TensorFlow 2.0 is required (Python 3.5-3.7, Pip 19.0 or later)
 import os.path
+
 
 
 logger = logging.getLogger(__name__)
@@ -164,16 +165,20 @@ class TransformerModel:
         return total_scores, total_best_fillers
 
 
-def build_model(path_data, output_directory, transformers, name):
-    data = load_data_sequences(path_data)
-    thematic_role = os.path.basename(path_data).split("_")[1].split(".")[0]  # funziona solo se lasciamo i nomi dei file con le frasi come sono adesso
+def build_model(path_data, output_directory, transformers):
+    #data = load_data_sequences(path_data) #GIULIA: la funzione prende 2 file, non avendo più il pile in pickle non dovremmo importare solo un file csv classico?
+    data = pd.read_csv(path_data, sep='\t')
+    #thematic_role = os.path.basename(path_data).split("_")[1].split(".")[0]  # funziona solo se lasciamo i nomi dei file con le frasi come sono adesso
+    thematic_role = get_thematic_role()
     for transformer in transformers:
         model = TransformerModel(transformer)
         model_fillers_scores, model_completions = model.compute_fillers_scores(data, thematic_role, BATCH_SIZE)
         data["computed_score"] = model_fillers_scores
         data["best_completions"] = model_completions
-        data.to_csv("{}/{}_transformers_mlm_{}_{}.txt".
-                    format(output_directory, name, transformer, thematic_role), index=None, sep='\t', mode='a')
+        out_path = os.path.join(output_directory, os.path.basename(path_data).split('.')[0]+'_transformers_mlm_{}.txt'.format(transformer))
+        data.to_csv(out_path, index=None, sep='\t', mode='a')
+        #data.to_csv("{}/{}_transformers_mlm_{}_{}.txt".
+        #            format(output_directory, name, transformer, thematic_role), index=None, sep='\t', mode='a')
 
 
 if __name__ == '__main__':
