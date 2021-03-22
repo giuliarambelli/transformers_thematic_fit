@@ -112,10 +112,10 @@ dog	pull	sled	mountain	T	4.4	1.91  up
 child	throw	snowball	courtyard	T	5.25	1.92  in
 undertaker	dig	grave	cemetery	T	6.55	0.97  in
 student	wear	jeans	pub	T	6.05	0.86  in
-housewife	clean	table	kitchen	T	6.95	0.22
-mechanic	fix	tire	garage	T	6.65	0.65
+housewife	clean	table	kitchen	T	6.95	0.22  in
+mechanic	fix	tire	garage	T	6.65	0.65  in
 dog	dig	hole	garden	T	6.45	0.8  in
-artist	hang	picture	gallery	T	6.55	0.86
+artist	hang	picture	gallery	T	6.55	0.86  in
 musician	hold	guitar	stage	T	6.8	0.4 on
 journalist	write	article	newsroom	T	6.6	0.49  in
 dog	chase	ball	park	T	6.5	0.59  at
