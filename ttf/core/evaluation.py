@@ -42,7 +42,7 @@ def _accuracy_with_thresh(df, group_dict):
 	return pairs, diffs
 
 
-def _correlation(df):
+def _correlation(df, output_loc):
 	scores = df['mean_rat']
 	probs = df['computed_score']
 	print(spearmanr(scores, probs))
@@ -52,7 +52,10 @@ def _correlation(df):
 	probs_predicted = regr.predict(scores_for_regr)
 	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
 	plt.plot(scores_for_regr, probs_predicted, color='blue')
+	plt.xlabel('human typicality scores')
+	plt.ylabel('model probabilities')
 	plt.title("Actuals vs Regression Line")
+	plt.savefig(output_loc)
 
 
 """
@@ -69,14 +72,14 @@ def rank(df, group_dict, delim=';'):
 				diff_rank = df['probability'][idx[1]] - df['probability'][idx[0]]
 """
 
-def evaluation(data_path, etype, thresh):
+def evaluation(data_path, etype, thresh, output_plot):
 	acc_functions = {'simple': _simple_accuracy, 'diff': _accuracy_with_thresh, 'corr': _correlation}
 
 	data = pd.read_csv(data_path, sep='\t')
 	data_covered = data.dropna()
 
 	if etype == 'corr':
-		acc_functions[etype](data_covered)
+		acc_functions[etype](data_covered, output_plot)
 	else:
 		if any(c in data.columns for c in roles):
 			#{('spy', 'information', 'pass'): [1, 3], ('volunteer', 'food', 'bring'): [0, 2]}
