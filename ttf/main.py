@@ -42,8 +42,9 @@ def _evaluation(args):
     data_paths = args.input_path
     eval_type = args.eval
     thresh = args.thresh
+    out_dir = args.output_dir
     for input_file in outils.get_filenames(data_paths):
-        evaluation(input_file, eval_type, thresh)
+        evaluation(input_file, eval_type, thresh, out_dir)
 
 
 def main():
@@ -76,6 +77,7 @@ def main():
     parser_evaluation.add_argument('-e', '--eval', choices=['simple', 'diff', 'corr'], required=True,
                                    help='output folder')
     parser_evaluation.add_argument('-t', '--thresh', default=0, help='threshold for probabilities difference')
+    parser_evaluation.add_argument('-o', '--output-dir', default='results/', help='output folder')
     parser_evaluation.set_defaults(func=_evaluation)
 
     args = parser.parse_args()
