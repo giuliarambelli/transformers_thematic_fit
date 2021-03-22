@@ -1,8 +1,11 @@
+import logging
 import os
+
 import numpy as np
 import pandas as pd
-import logging
 
+from os_utils import get_filenames
+from data_utils import load_vectors
 from vector_utils import cosine
 
 logger = logging.getLogger(__name__)
@@ -10,16 +13,20 @@ logger = logging.getLogger(__name__)
 
 roles = ["LOCATION", "TIME", "RECIPIENT", "INSTRUMENT"]
 
-def tup_to_string(row, columns):
+def tup_to_string(row, columns, inverse=False):
 	if any(c in columns for c in roles):
 		# OTHER RELATIONS
 		target_rel = list(set(columns).intersection(set(roles)))[0]
 		item = "{}@N@SBJ {}@V@ROOT {}@N@OBJ".format(row['SUBJECT'], row['VERB'], row['OBJECT'])
 	else:
-		if 'OBJECT' in data.columns:
+		if 'OBJECT' in columns:
 			# TRIPLES
-			target_rel = 'OBJ'
-			item = "{}@N@SBJ {}@V@ROOT".format(row['SUBJECT'], row['VERB'])
+			if inverse:
+				target_rel = 'SBJ'
+				item = "{}@V@ROOT {}@N@OBJ".format(row['VERB'], row['OBJECT'])
+			else:
+				target_rel = 'OBJ'
+				item = "{}@N@SBJ {}@V@ROOT".format(row['SUBJECT'], row['VERB'])
 		else:
 			# PAIRS
 			target_rel = 'ROOT'
@@ -27,18 +34,21 @@ def tup_to_string(row, columns):
 	return item, target_rel
 
 
-def prepare_input_file(data_path, out_dir):
+def prepare_input_file(data_path, out_dir, sbj=False):
 	#TODO: change input argument order?
 	data = pd.read_csv(data_path, delimiter="\t")
 	items = []
 	for _, row in data.iterrows():
-		item, target_rel = tup_to_string(row, data.columns)
+		item, target_rel = tup_to_string(row, data.columns, sbj)
 		items.append(item)
 	items = list(set(items))
 
 	# write file
 	df = pd.DataFrame(data={"item": items, "target-relation": [target_rel for _ in range(0, len(items))]})
-	out_path = os.path.join(out_dir, os.path.basename(data_path).split('.')[0]+'.sdm')
+	if sbj:
+		out_path = os.path.join(out_dir, os.path.basename(data_path).split('.')[0] + '_SBJ.sdm')
+	else:
+		out_path = os.path.join(out_dir, os.path.basename(data_path).split('.')[0]+'.sdm')
 	df.to_csv(out_path, sep="\t", index=False)
 
 
@@ -61,7 +71,7 @@ def compute_sdm_function(data_path, sdm_outpath, out_dir, vecs):
 
 		try:
 			idx = groups[item][0]
-			d= data_sdm["LC_vector"][idx]#.to_string()
+			#d = data_sdm["LC_vector"][idx]#.to_string()
 			v_LC = np.array([float(x) for x in data_sdm["LC_vector"][idx].split()])
 		except ValueError:
 			v_LC = None
@@ -71,23 +81,27 @@ def compute_sdm_function(data_path, sdm_outpath, out_dir, vecs):
 			v_AC = None
 
 		if target_rel == 'ROOT':
-			target = data_original['VERB']
+			target = row['VERB']
 		elif target_rel == 'OBJ':
-			target = data_original['OBJECT']
+			target = row['OBJECT']
+		elif target_rel == 'SBJ':
+			target = row['SUBJECT']
 		else:
-			target = data_original[target_rel]
+			target = row[target_rel]
 		try:
-			v_target = vecs[(target, 'N')]
+			v_target = vecs[(target, '_')]
 			if v_LC is not None and v_AC is not None:
 				sim_LC = cosine(v_target, v_LC)
 				sim_AC = cosine(v_target, v_AC)
 				sum = sim_LC + sim_AC
+			elif v_LC is not None and v_AC is None:
+				sim_LC = cosine(v_target, v_LC)
+				sim_AC = None
+				sum = sim_LC
 			else:
-				# LC or AC vector are None
-				if sim_LC is not None:
-					sum = sim_LC
-				else:
-					sum = None
+				sim_LC = None
+				sim_AC = None
+				sum = None
 			sims_LC.append(sim_LC)
 			sims_AC.append(sim_AC)
 			scores.append(sum)
@@ -98,16 +112,11 @@ def compute_sdm_function(data_path, sdm_outpath, out_dir, vecs):
 			sims_LC.append(None)
 			sims_AC.append(None)
 			scores.append(None)
-		# write scores
-		data_original['LC_sim'] = sims_LC
-		data_original['AC_sim'] = sims_AC
-		data_original['computed_score'] = scores
-		out_path = os.path.join(out_dir, os.path.basename(data_path).split('.')[0] + '.sdm-res')
-		data_original.to_csv(out_path, sep='\t', index=False)
+	print(len(sims_LC), len(sims_AC), len(scores), data_original.size)
+	# write scores
+	data_original['LC_sim'] = sims_LC
+	data_original['AC_sim'] = sims_AC
+	data_original['computed_score'] = scores
+	out_path = os.path.join(out_dir, os.path.basename(data_path).split('.')[0] + '.sdm-res')
+	data_original.to_csv(out_path, sep='\t', index=False)
 
-if __name__ == '__main__':
-	compute_sdm_function('../../datasets/DTFit/original/TypicalityRatings_Instr.txt',
-	                     '../../datasets/DTFit/sdm_result/TypicalityRatings_Instr.sdm.out',
-	                     '../../datasets/DTFit/sdm_result/',
-	                     '/home/giulia.rambelli/to_backup/spaces/wiki-news-300d-1M.vec')
-	#prepare_input_file('/home/giulia.rambelli/transformers_thematic_fit/datasets/DTFit/original/TypicalityRatings_Loc.txt', '/home/giulia.rambelli/transformers_thematic_fit/datasets/DTFit/sdm/')
