@@ -1,6 +1,7 @@
 import logging
 import pandas as pd
 from pickle import load, dump
+import numpy as np
 logger = logging.getLogger(__name__)
 
 roles = ["LOCATION", "TIME", "RECIPIENT", "INSTRUMENT"]
