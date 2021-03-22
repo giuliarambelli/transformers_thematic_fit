@@ -42,7 +42,7 @@ def _accuracy_with_thresh(df, group_dict):
 	return pairs, diffs
 
 
-def _correlation(df, output_loc):
+def _correlation(df, output_location):
 	scores = df['mean_rat']
 	probs = df['computed_score']
 	print(spearmanr(scores, probs))
@@ -55,7 +55,7 @@ def _correlation(df, output_loc):
 	plt.xlabel('human typicality scores')
 	plt.ylabel('model probabilities')
 	plt.title("Actuals vs Regression Line")
-	plt.savefig(output_loc)
+	plt.savefig(output_location)
 
 
 """
