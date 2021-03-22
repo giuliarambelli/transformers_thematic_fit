@@ -48,7 +48,7 @@ def _correlation(df, output_location, path_data):
 	probs = df['computed_score']
 	print(spearmanr(scores, probs))
 	scores_for_regr = np.array(scores).reshape(-1, 1)
-	probs_for_regr = np.array(scores).reshape(-1, 1)
+	probs_for_regr = np.array(probs).reshape(-1, 1)
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
 	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
