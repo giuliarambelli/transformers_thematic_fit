@@ -179,7 +179,7 @@ cook	check	grocery	T	6.2	1.21	The cook checked the grocery .
 cook	mix	ingredient	T	6.15	1.59	The cook mixed the ingredient .
 surfer	ride	wave	T	6.2	1.44	The surfer rode the wave .
 spectator	hear	speech	T	4.4	1.83	The spectator heard the speech .
-turist	ride	camel	T	4.55	1.47	The turist rode the camel .
+tourist	ride	camel	T	4.55	1.47	The tourist rode the camel .
 illustrator	draw	picture	T	6.3	1.65	The illustrator drew the picture .
 student	pass	exam	T	6.35	0.91	The student passed the exam .
 cook	clean	fish	T	6.1	0.77	The cook cleaned the fish .
@@ -253,7 +253,7 @@ milkman	carry	bottle	T	6.7	0.46	The milkman carried the bottle .
 child	visit	zoo	T	6.3	1.0	The child visited the zoo .
 doctor	visit	patient	T	6.05	1.53	The doctor visited the patient .
 soldier	hang	rifle	T	5.8	1.75	The soldier hung the rifle .
-surfer	wear	sunglass	T	5.95	1.28	The surfer wore the sunglass .
+surfer	wear	sunglasses	T	5.95	1.28	The surfer wore the sunglasses .
 goalkeeper	grab	ball	T	5.6	1.88	The goalkeeper grabbed the ball .
 waiter	cut	cake	T	4.85	1.53	The waiter cut the cake .
 student	use	computer	T	6.35	1.53	The student used the computer .
@@ -315,7 +315,7 @@ cowboy	ride	bull	T	5.7	1.0	The cowboy rode the bull .
 student	drink	beer	T	4.6	1.43	The student drank the beer .
 butcher	carve	meat	T	5.75	1.97	The butcher carved the meat .
 violinist	play	violin	T	6.9	0.3	The violinist played the violin .
-turist	read	map	T	6.4	1.02	The turist read the map .
+tourist	read	map	T	6.4	1.02	The tourist read the map .
 traveller	check	bag	T	6.0	1.14	The traveller checked the bag .
 soldier	release	prisoner	T	4.3	1.82	The soldier released the prisoner .
 gardener	push	mower	T	5.65	1.71	The gardener pushed the mower .
@@ -517,7 +517,7 @@ waiter	mix	cement	AT	1.5	1.12	The waiter mixed the cement .
 housewife	clean	shoe	AT	5.45	0.86	The housewife cleaned the shoe .
 student	enjoy	marriage	AT	3.6	1.83	The student enjoyed the marriage .
 teenager	hear	lecture	AT	4.65	2.06	The teenager heard the lecture .
-turist	read	bible	AT	3.0	1.64	The turist read the bible .
+tourist	read	bible	AT	3.0	1.64	The tourist read the bible .
 author	sign	check	AT	3.4	1.74	The author signed the check .
 secretary	write	sonnet	AT	3.55	2.44	The secretary wrote the sonnet .
 child	build	sculpture	AT	3.95	1.88	The child built the sculpture .
@@ -528,7 +528,7 @@ child	grab	tyre	AT	2.3	1.68	The child grabbed the tyre .
 policeman	check	groceries	AT	2.0	1.48	The policeman checked the groceries .
 poet	write	menu	AT	1.75	1.26	The poet wrote the menu .
 goalkeeper	throw	bomb	AT	1.05	0.22	The goalkeeper threw the bomb .
-turist	ride	skate	AT	3.7	2.17	The turist rode the skate .
+tourist	ride	skate	AT	3.7	2.17	The tourist rode the skate .
 waiter	clear	road	AT	2.9	2.62	The waiter cleared the road .
 cyclist	complete	project	AT	2.7	1.35	The cyclist completed the project .
 student	drink	gasoline	AT	1.6	1.5	The student drank the gasoline .
