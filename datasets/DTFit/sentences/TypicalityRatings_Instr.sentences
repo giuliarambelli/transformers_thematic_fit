@@ -86,7 +86,7 @@ journalist	write	article	computer	T	6.7	0.56	The journalist wrote the article wi
 pyromaniac	start	fire	matchstick	T	6.35	1.19	The pyromaniac started the fire with the matchstick .
 sweeper	clean	street	broom	T	6.4	1.07	The sweeper cleaned the street with the broom .
 dog	dig	hole	paw	T	6.75	0.54	The dog dug the hole with the paw .
-skier	gain 	speed	poles	T	6.2	1.21	The skier NONE the speed with the poles .
+skier	gain	speed	poles	T	6.2	1.21	The skier gained the speed with the poles .
 deejay	mix	music	console	T	6.45	0.8	The deejay mixed the music with the console .
 tailor	sew	dress	needle	T	6.45	0.97	The tailor sewed the dress with the needle .
 surfer	catch	wave	board	T	6.35	1.53	The surfer caught the wave with the board .
@@ -107,7 +107,7 @@ painter	paint	picture	napkin	AT	3.1	2.32	The painter painted the picture with th
 hairstylist	flip	hair	fork	AT	1.3	0.9	The hairstylist flipped the hair with the fork .
 porter	carry	bag	tractor	AT	1.1	0.3	The porter carried the bag with the tractor .
 child	cross	park	truck	AT	1.8	1.44	The child crossed the park with the truck .
-soldier	cross	river	lifeboard	AT	4.15	2.35	The soldier crossed the river with the lifeboard .
+soldier	cross	river	lifeboat	AT	4.15	2.35	The soldier crossed the river with the lifeboat .
 farmer	plow	field	bicycle	AT	2.45	2.25	The farmer plowed the field with the bicycle .
 hairstylist	fix	hair	plaster	AT	3.55	2.77	The hairstylist fixed the hair with the plaster .
 fisherman	catch	fish	hammer	AT	1.2	0.4	The fisherman caught the fish with the hammer .
