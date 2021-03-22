@@ -223,79 +223,79 @@ author	sign	book	battlefield	AT	2.1	0.94  in
 hairstylist	wash	hair	bar	AT	1.75	1.09  in
 gardener	push	mower	supermarket	AT	2.9	2.14 in
 librarian	stack	books	oven	AT	2.35	1.8 in
-passenger	pass	check	nursery	AT	1.5	0.59
-soldier	wear	helmet	auditorium	AT	1.95	1.4
-cameraman	record	video	greenhouse	AT	2.35	1.39
+passenger	pass	check	nursery	AT	1.5	0.59  at
+soldier	wear	helmet	auditorium	AT	1.95	1.4 in
+cameraman	record	video	greenhouse	AT	2.35	1.39  in
 doctor	sew	wound	restaurant	AT	2.5	1.36  at
-policeman	hit	demonstrator	greenhouse	AT	3.0	1.73
-deejay	mix	music	shipyard	AT	2.2	1.75
+policeman	hit	demonstrator	greenhouse	AT	3.0	1.73  in
+deejay	mix	music	shipyard	AT	2.2	1.75  at
 singer	perform	music	battlefield	AT	2.2	1.44  in
-surfer	wear	swimsuit	clinic	AT	2.0	0.89
+surfer	wear	swimsuit	clinic	AT	2.0	0.89  at
 champion	hold	cup	hospital	AT	2.85	1.98  at
-student	read	book	grocery	AT	3.95	2.06
+student	read	book	grocery	AT	3.95	2.06  at
 tourist	read	map	classroom	AT	1.8	0.93  in
 illusionist	perform	trick	office	AT	3.2	1.36  in
-farmer	use	shovel	parliament	AT	1.9	1.79
+farmer	use	shovel	parliament	AT	1.9	1.79  in
 nurse	wash	infant	airport	AT	2.8	2.06  at
-athlete	win	cup	bank	AT	2.85	2.37
-singer	record	song	bakery	AT	1.55	0.97
+athlete	win	cup	bank	AT	2.85	2.37  at
+singer	record	song	bakery	AT	1.55	0.97  in
 guest	hold	drink	forest	AT	2.7	1.68  in
-horse	move	cart	school	AT	2.7	2.03
-professor	open	congress	circus	AT	2.9	2.36
+horse	move	cart	school	AT	2.7	2.03  at
+professor	open	congress	circus	AT	2.9	2.36  in
 businessman	read	report	beach	AT	2.95	1.47  at
 chemist	sell	drug	museum	AT	2.25	1.37  in
 passenger	pull	suitcase	library	AT	2.25	1.51  in
-skater	ride	skateboard	savannah	AT	1.95	1.12
-binman	pick	trash	lake	AT	2.95	1.66
-violinist	play	violin	swimming-pool	AT	1.8	1.25
-demonstrator	throw	stone	lake	AT	3.1	1.79
+skater	ride	skateboard	savannah	AT	1.95	1.12  in
+binman	pick	trash	lake	AT	2.95	1.66  at
+violinist	play	violin	swimming-pool	AT	1.8	1.25  at
+demonstrator	throw	stone	lake	AT	3.1	1.79  in
 lumberjack	stack	wood	university	AT	2.7	1.71  at
 businessman	wear	tie	zoo	AT	3.05	1.69  at
-teacher	use	blackboard	pharmacy	AT	1.35	0.73
+teacher	use	blackboard	pharmacy	AT	1.35	0.73  at
 guard	open	jail	restaurant	AT	2.8	2.34  at
 tourist	ride	camel	beach	AT	2.7	1.58  at
-soldier	throw	bomb	circus	AT	1.5	0.92
-terrorist	release	hostage	lake	AT	3.3	1.82
-porter	stack	suitcases	playground	AT	2.1	1.22
-cook	mix	ingredients	cinema	AT	1.95	1.75
+soldier	throw	bomb	circus	AT	1.5	0.92  in
+terrorist	release	hostage	lake	AT	3.3	1.82  at  
+porter	stack	suitcases	playground	AT	2.1	1.22  on
+cook	mix	ingredients	cinema	AT	1.95	1.75  at
 bodybuilder	lift	weight	classroom	AT	2.85	1.46  in
-ant	stack	supply	shelf	AT	1.7	0.95
+ant	stack	supply	shelf	AT	1.7	0.95  on
 mother	push	stroller	desert	AT	1.9	1.22  in
-artist	assemble	art	dump	AT	2.1	1.45
-dog	dig	hole	stadium	AT	2.55	1.36
-student	hear	lecture	subway	AT	2.25	1.13
+artist	assemble	art	dump	AT	2.1	1.45  at
+dog	dig	hole	stadium	AT	2.55	1.36  in
+student	hear	lecture	subway	AT	2.25	1.13  in
 teenager	hear	music	classroom	AT	4.55	1.53  in
 traveller	check	watch	prison	AT	1.75	1.13  in
 jockey	ride	horse	hospital	AT	1.3	0.46  at
-gardener	gather	grass	savannah	AT	3.0	1.84
-housewife	clean	table	armory	AT	2.05	1.16
+gardener	gather	grass	savannah	AT	3.0	1.84  in
+housewife	clean	table	armory	AT	2.05	1.16  in
 child	throw	snowball	theater	AT	1.55	0.67  in
 truck	plow	snow	shop	AT	1.5	0.59  in
 gardener	decorate	garden	skyscraper	AT	2.2	1.4  in
 comedian	entertain	audience	submarine	AT	1.65	0.96    in
-animal	find	food	supermarket	AT	2.75	1.84
+animal	find	food	supermarket	AT	2.75	1.84  in
 dog	chase	ball	museum	AT	1.6	0.73  in
 driver	hear	horn	library	AT	2.15	1.62  in
 painter	decorate	wall	restroom	AT	3.75	1.84  in
 journalist	write	article	forest	AT	2.35	1.06  in
 soldier	hang	rifle	terrace	AT	2.35	1.49  in
-spectator	hear	speech	barn	AT	2.1	1.09
-biologist	use	microscope	bookshop	AT	1.75	1.18
-painter	paint	picture	barracks	AT	2.45	1.36
+spectator	hear	speech	barn	AT	2.1	1.09  at
+biologist	use	microscope	bookshop	AT	1.75	1.18  in
+painter	paint	picture	barracks	AT	2.45	1.36  in
 waiter	open	bottle	battlefield	AT	1.5	1.16  in
-student	wear	jeans	swimming-pool	AT	1.55	0.59
+student	wear	jeans	swimming-pool	AT	1.55	0.59  in
 musician	hold	guitar	kitchen	AT	3.3	1.65  in
 undertaker	dig	grave	park	AT	2.15	1.42  at
-artist	hang	picture	factory	AT	2.3	1.1
+artist	hang	picture	factory	AT	2.3	1.1 in
 truck	hit	car	beach	AT	2.0	1.34  at
-housemaid	clean	dish	cinema	AT	1.35	0.73
+housemaid	clean	dish	cinema	AT	1.35	0.73  at
 thief	grab	money	nursery	AT	2.35	1.24  in
-cheerleader	shake	flag	garage	AT	2.05	1.36
-child	pick	flower	canyon	AT	2.85	1.01
+cheerleader	shake	flag	garage	AT	2.05	1.36  in
+child	pick	flower	canyon	AT	2.85	1.01  in
 student	celebrate	graduation	cemetery	AT	1.4	0.58  in
 sculptor	carve	stone	discotheque	AT	1.45	0.5 at
-student	use	computer	helicopter	AT	1.7	0.9
+student	use	computer	helicopter	AT	1.7	0.9 in
 cook	check	grocery	church	AT	2.05	1.32  in
-fisherman	check	net	airplane	AT	1.55	0.59
-mechanic	fix	tire	bakery	AT	1.75	1.09
+fisherman	check	net	airplane	AT	1.55	0.59  in
+mechanic	fix	tire	bakery	AT	1.75	1.09  at
 policeman	examine	car	desert	AT	2.75	1.7  in
