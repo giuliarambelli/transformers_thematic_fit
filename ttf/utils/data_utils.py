@@ -3,6 +3,8 @@ import pandas as pd
 from pickle import load, dump
 logger = logging.getLogger(__name__)
 
+roles = ["LOCATION", "TIME", "RECIPIENT", "INSTRUMENT"]
+
 
 def load_data_sequences(path1, path2):
 	df = pd.read_csv(path1, sep="\t", header=None, names=["dataset", "sequence", "sentence",
@@ -11,6 +13,18 @@ def load_data_sequences(path1, path2):
 	tokenized_sentences = load(fp, encoding="utf-8")
 	fp.close()
 	return df, tokenized_sentences
+
+
+def get_thematic_role(columns):
+	if any(c in columns for c in roles):
+		return list(set(roles).intersection(set(columns)))[0]
+	else:
+		if 'OBJECT' not in columns:
+			return 'VERB'
+		else:
+			return 'OBJECT'
+
+
 
 
 class VectorsDict(dict):
