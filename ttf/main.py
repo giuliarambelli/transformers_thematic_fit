@@ -30,10 +30,10 @@ def _run_transformers_mlm(args):
     data_sequences_path = args.input_file_data_sequences
     outdir = outils.check_dir(args.output_dir)
     models = [models_dict[m] for m in args.model]
-    name = args.name
+    #name = args.name
 
     if os.path.isfile(data_sequences_path):
-        transformers_mlm.build_model(data_sequences_path, outdir, models, name)  # don't check whether the input files exist
+        transformers_mlm.build_model(data_sequences_path, outdir, models)  # don't check whether the input files exist
     else:
         logger.info('Input path {} does not exist'.format(data_sequences_path))
 
@@ -68,7 +68,7 @@ def main():
                                               ' sequence of the dataset')
     parser_transformers_mlm.add_argument('-m', '--model', choices=['bert-base', 'bert-large', 'roberta-large', 'gpt2-medium'],
                                          nargs='+', default=['bert-large'], help='transformer models')
-    parser_transformers_mlm.add_argument('-n', '--name', required=True, help='dataset name')
+    #parser_transformers_mlm.add_argument('-n', '--name', required=True, help='dataset name')
     parser_transformers_mlm.set_defaults(func=_run_transformers_mlm)
 
     parser_evaluation = subparsers.add_parser('evaluation', help='compute evaluation measures')

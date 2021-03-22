@@ -107,7 +107,7 @@ painter	paint	picture	napkin	AT	3.1	2.32
 hairstylist	flip	hair	fork	AT	1.3	0.9
 porter	carry	bag	tractor	AT	1.1	0.3
 child	cross	park	truck	AT	1.8	1.44
-soldier	cross	river	lifeboard	AT	4.15	2.35
+soldier	cross	river	lifeboat	AT	4.15	2.35
 farmer	plow	field	bicycle	AT	2.45	2.25
 hairstylist	fix	hair	plaster	AT	3.55	2.77
 fisherman	catch	fish	hammer	AT	1.2	0.4

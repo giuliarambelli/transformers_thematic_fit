@@ -68,16 +68,16 @@ politician	sign	agreement	parliament	T	6.05	1.2
 gardener	push	mower	garden	T	6.05	1.91  in
 guest	hold	drink	bar	T	6.05	1.2 in
 businessman	read	report	office	T	6.65	0.57  in
-turist	read	map	street	T	6.2	1.63  in
+tourist	read	map	street	T	6.2	1.63  in
 illusionist	perform	trick	circus	T	6.1	1.41
 soldier	throw	bomb	battlefield	T	6.45	0.92  in
 librarian	stack	books	shelf	T	6.4	0.58  on
 champion	hold	cup	podium	T	6.5	0.87  on
 porter	stack	suitcases	lobby	T	5.0	2.43  in
-deejay	mix	music	discoteque	T	6.25	1.61  at
+deejay	mix	music	discotheque	T	6.25	1.61  at
 athlete	win	cup	stadium	T	5.45	1.63  in
 violinist	wear	tuxedo	theater	T	5.35	1.88  in
-turist	ride	camel	desert	T	5.25	1.64  in
+tourist	ride	camel	desert	T	5.25	1.64  in
 spectator	watch	game	stadium	T	6.9	0.44  at
 hairstylist	wash	hair	salon	T	5.75	1.41  at
 lumberjack	stack	wood	truck	T	5.35	1.49  on
@@ -104,7 +104,7 @@ nurse	wash	infant	hospital	T	6.15	1.56  at
 binman	pick	trash	street	T	6.25	1.13  in
 student	pass	exam	university	T	6.35	1.01  at
 singer	record	song	studio	T	6.95	0.22
-smuggler	sell	weapon	black_market	T	6.1	0.94
+smuggler	sell	weapon	black-market	T	6.1	0.94
 soldier	wear	helmet	battlefield	T	6.8	0.4  in
 surfer	wear	swimsuit	beach	T	6.5	0.92  at
 bodybuilder	lift	weight	gym	T	5.25	2.28
@@ -158,7 +158,7 @@ musician	entertain	crowd	mountain	AT	3.05	1.94
 demonstrator	carry	flag	bar	AT	3.35	2.5 in
 singer	begin	performance	supermarket	AT	2.35	1.56
 soldier	carry	rifle	cinema	AT	1.4	0.58
-fisherman	catch	fish	swimming_pool	AT	3.5	2.56
+fisherman	catch	fish	swimming-pool	AT	3.5	2.56
 engineer	complete	project	restaurant	AT	2.95	1.83  at
 mechanic	assemble	bicycle	theater	AT	3.05	2.46  in
 president	deliver	speech	mountain	AT	2.45	1.8 in
@@ -217,7 +217,7 @@ customer	read	menu	stadium	AT	3.75	2.09
 child	visit	grandmother	barracks	AT	2.7	1.68
 pyromaniac	start	fire	beach	AT	2.5	1.96  at
 violinist	wear	tuxedo	workshop	AT	3.3	2.53
-nurse	push	wheelchair	discoteque	AT	1.95	0.92
+nurse	push	wheelchair	discotheque	AT	1.95	0.92
 guard	tie	prisoner	tobacconist	AT	3.05	2.04
 author	sign	book	battlefield	AT	2.1	0.94  in
 hairstylist	wash	hair	bar	AT	1.75	1.09  in
@@ -233,7 +233,7 @@ singer	perform	music	battlefield	AT	2.2	1.44  in
 surfer	wear	swimsuit	clinic	AT	2.0	0.89
 champion	hold	cup	hospital	AT	2.85	1.98  at
 student	read	book	grocery	AT	3.95	2.06
-turist	read	map	classroom	AT	1.8	0.93  in
+tourist	read	map	classroom	AT	1.8	0.93  in
 illusionist	perform	trick	office	AT	3.2	1.36  in
 farmer	use	shovel	parliament	AT	1.9	1.79
 nurse	wash	infant	airport	AT	2.8	2.06  at
@@ -247,13 +247,13 @@ chemist	sell	drug	museum	AT	2.25	1.37  in
 passenger	pull	suitcase	library	AT	2.25	1.51  in
 skater	ride	skateboard	savannah	AT	1.95	1.12
 binman	pick	trash	lake	AT	2.95	1.66
-violinist	play	violin	swimming_pool	AT	1.8	1.25
+violinist	play	violin	swimming-pool	AT	1.8	1.25
 demonstrator	throw	stone	lake	AT	3.1	1.79
 lumberjack	stack	wood	university	AT	2.7	1.71  at
 businessman	wear	tie	zoo	AT	3.05	1.69  at
 teacher	use	blackboard	pharmacy	AT	1.35	0.73
 guard	open	jail	restaurant	AT	2.8	2.34  at
-turist	ride	camel	beach	AT	2.7	1.58  at
+tourist	ride	camel	beach	AT	2.7	1.58  at
 soldier	throw	bomb	circus	AT	1.5	0.92
 terrorist	release	hostage	lake	AT	3.3	1.82
 porter	stack	suitcases	playground	AT	2.1	1.22
@@ -283,7 +283,7 @@ spectator	hear	speech	barn	AT	2.1	1.09
 biologist	use	microscope	bookshop	AT	1.75	1.18
 painter	paint	picture	barracks	AT	2.45	1.36
 waiter	open	bottle	battlefield	AT	1.5	1.16  in
-student	wear	jeans	swimmin_pool	AT	1.55	0.59
+student	wear	jeans	swimming-pool	AT	1.55	0.59
 musician	hold	guitar	kitchen	AT	3.3	1.65  in
 undertaker	dig	grave	park	AT	2.15	1.42  at
 artist	hang	picture	factory	AT	2.3	1.1
