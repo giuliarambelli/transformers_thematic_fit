@@ -86,68 +86,68 @@ teacher	use	blackboard	classroom	T	6.9	0.3  in
 singer	perform	music	stage	T	6.6	0.97  on
 doctor	sew	wound	clinic	T	5.65	1.42  in
 chemist	sell	drug	pharmacy	T	5.6	1.74  at
-climber	use	rope	mountain	T	6.3	1.42
+climber	use	rope	mountain	T	6.3	1.42  on
 professor	open	congress	university	T	5.1	1.79  at
 violinist	play	violin	theater	T	5.4	2.03  in
 passenger	pass	check	airport	T	4.15	2.22  at
 sailor	mop	deck	boat	T	6.3	1.23  on
-surgeon	perform	surgery	hospital	T	6.45	1.32
+surgeon	perform	surgery	hospital	T	6.45	1.32  at
 passenger	pull	suitcase	station	T	6.25	1.13  at
 waiter	prepare	drink	bar	T	6.15	1.62  in
-farmer	pick	vegetables	greenhouse	T	4.75	2.14
+farmer	pick	vegetables	greenhouse	T	4.75	2.14  in
 guard	open	jail	prison	T	6.35	0.91  in
 terrorist	release	hostage	desert	T	4.15	1.31  in
-cameraman	record	video	set	T	6.35	1.01
-customer	read	menu	restaurant	T	6.65	0.91
-nurse	push	wheelchair	hospital	T	5.9	1.37
+cameraman	record	video	set	T	6.35	1.01  on
+customer	read	menu	restaurant	T	6.65	0.91  at
+nurse	push	wheelchair	hospital	T	5.9	1.37  at
 nurse	wash	infant	hospital	T	6.15	1.56  at
 binman	pick	trash	street	T	6.25	1.13  in
 student	pass	exam	university	T	6.35	1.01  at
-singer	record	song	studio	T	6.95	0.22
-smuggler	sell	weapon	black-market	T	6.1	0.94
+singer	record	song	studio	T	6.95	0.22  in
+smuggler	sell	weapon	black-market	T	6.1	0.94 on
 soldier	wear	helmet	battlefield	T	6.8	0.4  in
 surfer	wear	swimsuit	beach	T	6.5	0.92  at
-bodybuilder	lift	weight	gym	T	5.25	2.28
-dog	pull	sled	mountain	T	4.4	1.91
-child	throw	snowball	courtyard	T	5.25	1.92
+bodybuilder	lift	weight	gym	T	5.25	2.28  at
+dog	pull	sled	mountain	T	4.4	1.91  up
+child	throw	snowball	courtyard	T	5.25	1.92  in
 undertaker	dig	grave	cemetery	T	6.55	0.97  in
-student	wear	jeans	pub	T	6.05	0.86
-housewife	clean	table	kitchen	T	6.95	0.22
-mechanic	fix	tire	garage	T	6.65	0.65
+student	wear	jeans	pub	T	6.05	0.86  in
+housewife	clean	table	kitchen	T	6.95	0.22  in
+mechanic	fix	tire	garage	T	6.65	0.65  in
 dog	dig	hole	garden	T	6.45	0.8  in
-artist	hang	picture	gallery	T	6.55	0.86
+artist	hang	picture	gallery	T	6.55	0.86  in
 musician	hold	guitar	stage	T	6.8	0.4 on
 journalist	write	article	newsroom	T	6.6	0.49  in
 dog	chase	ball	park	T	6.5	0.59  at
-soldier	hang	rifle	armory	T	6.0	0.77
-painter	paint	picture	square	T	5.8	0.98
+soldier	hang	rifle	armory	T	6.0	0.77  in
+painter	paint	picture	square	T	5.8	0.98  in
 gardener	gather	grass	garden	T	6.7	0.56  in
-cheerleader	shake	flag	stadium	T	5.95	1.24
-sculptor	carve	stone	workshop	T	5.85	1.53
-teenager	hear	music	bus	T	5.95	0.8
-ant	stack	supply	burrow	T	5.2	1.83
-mother	push	stroller	sidewalk	T	5.6	1.85
-spectator	hear	speech	auditorium	T	6.4	0.97
+cheerleader	shake	flag	stadium	T	5.95	1.24  in
+sculptor	carve	stone	workshop	T	5.85	1.53  in
+teenager	hear	music	bus	T	5.95	0.8 on
+ant	stack	supply	burrow	T	5.2	1.83  in
+mother	push	stroller	sidewalk	T	5.6	1.85  on
+spectator	hear	speech	auditorium	T	6.4	0.97  in
 gardener	decorate	garden	mansion	T	4.9	1.79  in
-cook	check	grocery	pantry	T	5.65	1.62
+cook	check	grocery	pantry	T	5.65	1.62  in
 artist	assemble	art	museum	T	6.05	0.74  in
-painter	decorate	wall	mansion	T	5.45	1.4
-biologist	use	microscope	laboratory	T	6.65	0.48
+painter	decorate	wall	mansion	T	5.45	1.4 in
+biologist	use	microscope	laboratory	T	6.65	0.48  in
 fisherman	check	net	boat	T	6.75	0.7 on
 student	celebrate	graduation	restaurant	T	5.2	1.6 at
 comedian	entertain	audience	theater	T	6.4	1.36  in
 truck	plow	snow	street	T	5.7	1.42  in
-truck	hit	car	highway	T	5.45	1.24
-jockey	ride	horse	racetrack	T	6.35	0.85
-housemaid	clean	dish	kitchen	T	6.9	0.3
-driver	hear	horn	crossroad	T	5.85	1.11
+truck	hit	car	highway	T	5.45	1.24  on
+jockey	ride	horse	racetrack	T	6.35	0.85  on
+housemaid	clean	dish	kitchen	T	6.9	0.3 in
+driver	hear	horn	crossroad	T	5.85	1.11  at
 child	pick	flower	park	T	6.3	0.84  at
 student	use	computer	library	T	6.55	1.32  in
 student	hear	lecture	university	T	6.65	0.48  at
-thief	grab	money	supermarket	T	5.55	1.24
+thief	grab	money	supermarket	T	5.55	1.24  in
 animal	find	food	dump	T	5.6	1.5 in
-policeman	examine	car	parking	T	5.9	0.7
-traveller	check	watch	platform	T	5.5	1.83
+policeman	examine	car	parking	T	5.9	0.7 in
+traveller	check	watch	platform	T	5.5	1.83  at
 waiter	open	bottle	restaurant	T	6.8	0.4 at
 guide	describe	monument	bar	AT	2.85	2.06  in
 philologist	examine	book	pub	AT	3.05	1.72
