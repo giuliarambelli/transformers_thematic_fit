@@ -46,8 +46,8 @@ def _correlation(df, output_location, path_data):
 	scores = df['mean_rat']
 	probs = df['computed_score']
 	print(spearmanr(scores, probs))
-	scores_for_regr = scores.reshape(-1, 1)
-	probs_for_regr = scores.reshape(-1, 1)
+	scores_for_regr = scores.values.reshape(-1, 1)
+	probs_for_regr = scores.values.reshape(-1, 1)
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
 	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
@@ -73,7 +73,6 @@ def rank(df, group_dict, delim=';'):
 """
 
 def evaluation(data_path, etype, thresh, output_plot):
-	print("Exec functions..")
 	acc_functions = {'simple': _simple_accuracy, 'diff': _accuracy_with_thresh, 'corr': _correlation}
 
 	data = pd.read_csv(data_path, sep='\t')
