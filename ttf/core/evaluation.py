@@ -30,10 +30,10 @@ def _simple_accuracy(df, group_dict):
 				else:
 					a = 0
 				if "baseline_score" in list(df.columns):
-				if df['baseline_score'][idx[0]] < df['baseline_score'][idx[1]]:
-						b = 1
-					else:
-						b = 0
+					if df['baseline_score'][idx[0]] < df['baseline_score'][idx[1]]:
+							b = 1
+						else:
+							b = 0
 			pairs.append(tup)
 			scores.append(a)
 			if "baseline_score" in list(df.columns):
@@ -59,7 +59,7 @@ def _accuracy_with_thresh(df, group_dict):
 			pairs.append(tup)
 			diffs.append(a)
 			if "baseline_score" in list(df.columns):
-				bline_diff(b)
+				bline_diff.append(b)
 	return pairs, diffs, bline_diff
 
 
@@ -90,7 +90,7 @@ def _correlation(df, output_location, path_data):
 		plt.xlabel('human typicality scores')
 		plt.ylabel('model probabilities')
 		plt.title("Actuals vs Regression Line")
-		plt.savefig(os.path.join(output_location, os.path.basename(path_data) + ""baseline + ".correl.png"))
+		plt.savefig(os.path.join(output_location, os.path.basename(path_data) + "baseline" + ".correl.png"))
 
 
 """
@@ -113,6 +113,7 @@ def evaluation(data_path, etype, thresh, output_plot):
 
 	data = pd.read_csv(data_path, sep='\t')
 	data_covered = data.dropna()
+	print("Coverage: {}/{}".format(len(data), len(data_covered)))
 
 	if etype == 'corr':
 		acc_functions[etype](data_covered, output_plot, data_path)
