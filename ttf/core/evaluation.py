@@ -32,8 +32,8 @@ def _simple_accuracy(df, group_dict):
 				if "baseline_score" in list(df.columns):
 					if df['baseline_score'][idx[0]] < df['baseline_score'][idx[1]]:
 							b = 1
-						else:
-							b = 0
+					else:
+						b = 0
 			pairs.append(tup)
 			scores.append(a)
 			if "baseline_score" in list(df.columns):
