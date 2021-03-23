@@ -139,7 +139,7 @@ class TransformerModel:
         probabilities_baseline = []
         new_attention_mask = []
         for mask, id, sent in zip(inputs["attention_mask"], list_dependents_indexes, list_masked_sentences):
-            mask = np.array([0 for elem in mask])
+            mask_array = np.array([0 for elem in mask])
             mask_array[id] = 1
             new_attention_mask.append(tf.convert_to_tensor(mask_array))
         inputs["attention_mask"] = tf.convert_to_tensor(new_attention_mask)
