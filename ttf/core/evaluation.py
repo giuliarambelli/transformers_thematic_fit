@@ -19,22 +19,25 @@ def _simple_accuracy(df, group_dict):
 					a = 1
 				else:
 					a = 0
-				if df['baseline_score'][idx[0]]>df['baseline_score'][idx[1]]:
-					b = 1
-				else:
-					b = 0
+				if "baseline_score" in list(df.columns):
+					if df['baseline_score'][idx[0]]>df['baseline_score'][idx[1]]:
+						b = 1
+					else:
+						b = 0
 			else:
 				if df['computed_score'][idx[0]] < df['computed_score'][idx[1]]:
 					a = 1
 				else:
 					a = 0
+				if "baseline_score" in list(df.columns):
 				if df['baseline_score'][idx[0]] < df['baseline_score'][idx[1]]:
-					b = 1
-				else:
-					b = 0
+						b = 1
+					else:
+						b = 0
 			pairs.append(tup)
 			scores.append(a)
-			bline_scores.append(b)
+			if "baseline_score" in list(df.columns):
+				bline_scores.append(b)
 
 	return pairs, scores, bline_scores
 
@@ -47,13 +50,16 @@ def _accuracy_with_thresh(df, group_dict):
 		if len(idx) == 2:
 			if df['typicality'][idx[0]] == 'T':
 				a = df['computed_score'][idx[0]] - df['computed_score'][idx[1]]
-				b = df['baseline_score'][idx[0]] - df['baseline_score'][idx[1]]
+				if "baseline_score" in list(df.columns):
+					b = df['baseline_score'][idx[0]] - df['baseline_score'][idx[1]]
 			else:
 				a = df['computed_score'][idx[1]] - df['computed_score'][idx[0]]
-				b = df['baseline_score'][idx[1]] - df['baseline_score'][idx[0]]
+				if "baseline_score" in list(df.columns):
+					b = df['baseline_score'][idx[1]] - df['baseline_score'][idx[0]]
 			pairs.append(tup)
 			diffs.append(a)
-			bline_diff(b)
+			if "baseline_score" in list(df.columns):
+				bline_diff(b)
 	return pairs, diffs, bline_diff
 
 
@@ -74,6 +80,17 @@ def _correlation(df, output_location, path_data):
 	plt.ylabel('model probabilities')
 	plt.title("Actuals vs Regression Line")
 	plt.savefig(os.path.join(output_location,os.path.basename(path_data)+".correl.png"))
+	if "baseline_score" in list(df.columns):
+		scores_for_regr = np.array(scores).reshape(-1, 1)
+		b_probs_for_regr = np.array(bline_probs).reshape(-1, 1)
+		regr = LinearRegression().fit(scores_for_regr, b_probs_for_regr)
+		b_probs_predicted = regr.predict(scores_for_regr)
+		plt.plot(scores_for_regr, b_probs_for_regr, 'o', color='black')
+		plt.plot(scores_for_regr, b_probs_predicted, color='blue')
+		plt.xlabel('human typicality scores')
+		plt.ylabel('model probabilities')
+		plt.title("Actuals vs Regression Line")
+		plt.savefig(os.path.join(output_location, os.path.basename(path_data) + ""baseline + ".correl.png"))
 
 
 """
@@ -117,8 +134,9 @@ def evaluation(data_path, etype, thresh, output_plot):
 			accs = [l_func(i) for i in accs]
 		accuracy = sum(accs)/len(accs)
 		print('Accuracy: {}'.format(accuracy))
-		bline_accuracy = sum(bline_accs)/len(bline_accs)
-		print('Baseline accuracy: {}'.format(bline_accuracy))
+		if "baseline_score" in list(data.columns):
+			bline_accuracy = sum(bline_accs)/len(bline_accs)
+			print('Baseline accuracy: {}'.format(bline_accuracy))
 
 if __name__ == '__main__':
    evaluation('../../datasets/DTFit/sdm_result/TypicalityRatings_Triples.sdm-res', 'corr', 0.1, '../../')

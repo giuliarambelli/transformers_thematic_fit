@@ -69,7 +69,7 @@ def main():
                                          help='path to data (human scores, sentences selected for each'
                                               ' sequence of the dataset')
     parser_transformers_mlm.add_argument('-m', '--model', choices=['bert-base', 'bert-large', 'roberta-large', 'gpt2-medium'],
-                                         nargs='+', default=['bert-large'], help='transformer models')
+                                         nargs='+', default=['bert-base', 'bert-large', 'roberta-large', 'gpt2-medium'], help='transformer models')
     parser_transformers_mlm.add_argument('-b', '--baseline', choices=['y', 'n'], default='n', help='add baseline results')
     #parser_transformers_mlm.add_argument('-n', '--name', required=True, help='dataset name')
     parser_transformers_mlm.set_defaults(func=_run_transformers_mlm)
