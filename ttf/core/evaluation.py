@@ -46,7 +46,10 @@ def _accuracy_with_thresh(df, group_dict):
 def _correlation(df, output_location, path_data):
 	scores = df['mean_rat']
 	probs = df['computed_score']
-	print(spearmanr(scores, probs))
+	print("Model:  ", spearmanr(scores, probs))
+	if "baseline_score" in list(df.columns):
+		bline_probs = df['baseline_score']
+		print("Baseline:  ", spearmanr(scores, bline_probs))
 	scores_for_regr = np.array(scores).reshape(-1, 1)
 	probs_for_regr = np.array(probs).reshape(-1, 1)
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)

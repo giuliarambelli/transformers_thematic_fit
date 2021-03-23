@@ -136,7 +136,26 @@ class TransformerModel:
                 for word, index in zip(predictions, idxs_predictions):
                     string_predicted_fillers += word.replace("Ġ", "")+"_("+str(all_probabilities[index])+")"+";"
                 predicted_fillers.append(string_predicted_fillers)
-        return probabilities_fillers, predicted_fillers
+        probabilities_baseline = []
+        new_attention_mask = []
+        for mask, id, sent in zip(inputs["attention_mask"], list_dependents_indexes, list_masked_sentences):
+            mask = np.array([0 for elem in mask])
+            mask_array[id] = 1
+            new_attention_mask.append(tf.convert_to_tensor(mask_array))
+        inputs["attention_mask"] = tf.convert_to_tensor(new_attention_mask)
+        outputs = self.mlm_model(inputs)[0]
+        for batch_elem, target_word, dep_index in zip(range(outputs.shape[0]), list_target_words,
+                                                      list_dependents_indexes):
+            if target_word is None:
+                probabilities_baseline.append(None)
+            else:
+                if (self.model_name.startswith("bert")) or (self.model_name.startswith("roberta")):
+                    all_probabilities = tf.nn.softmax(outputs[batch_elem, dep_index]).numpy()
+                if self.model_name.startswith("gpt"):
+                    all_probabilities = tf.nn.softmax(outputs[batch_elem, dep_index - 1]).numpy()
+                probabilities_baseline.append(all_probabilities[self.tokenizer.convert_tokens_to_ids(target_word)])
+        return probabilities_fillers, predicted_fillers, probabilities_baseline
+
 
     def compute_fillers_scores(self, data_sequences, role, batch_dimension=64):
         num_sentences = len(data_sequences)
@@ -146,6 +165,7 @@ class TransformerModel:
             num_batches = num_sentences // batch_dimension + 1
         total_scores = []
         total_best_fillers = []
+        total_bline_scores = []
         for batch in range(num_batches):
             print()
             logger.info("Processing batch {} of {} . Progress: {} ...".format(batch + 1, num_batches,
@@ -154,27 +174,30 @@ class TransformerModel:
             if batch != num_batches - 1:
                 target_words, masked_sentences, positions_dependents = self.\
                     prepare_input(data_sequences[batch * batch_dimension: (batch + 1) * batch_dimension], role)
-                scores = self.compute_filler_probability(target_words, masked_sentences, positions_dependents)
+                scores, best_fillers, bline_scores = self.compute_filler_probability(target_words, masked_sentences, positions_dependents)
             else:
                 target_words, masked_sentences, positions_dependents = self.\
                     prepare_input(data_sequences[batch * batch_dimension:], role)
-                scores, best_fillers = self.compute_filler_probability(target_words, masked_sentences,
+                scores, best_fillers, bline_scores = self.compute_filler_probability(target_words, masked_sentences,
                                                                        positions_dependents)
             total_scores.extend(scores)
             total_best_fillers.extend(best_fillers)
-        return total_scores, total_best_fillers
+            total_bline_scores.extend(bline_scores)
+        return total_scores, total_best_fillers, total_bline_scores
 
 
-def build_model(path_data, output_directory, transformers):
+def build_model(path_data, output_directory, transformers, baseline):
     #data = load_data_sequences(path_data) #GIULIA: la funzione prende 2 file, non avendo più il pile in pickle non dovremmo importare solo un file csv classico?
     data = pd.read_csv(path_data, sep='\t')
     #thematic_role = os.path.basename(path_data).split("_")[1].split(".")[0]  # funziona solo se lasciamo i nomi dei file con le frasi come sono adesso
     thematic_role = get_thematic_role(list(data.columns))
     for transformer in transformers:
         model = TransformerModel(transformer)
-        model_fillers_scores, model_completions = model.compute_fillers_scores(data, thematic_role, BATCH_SIZE)
+        model_fillers_scores, model_completions, baseline_scores = model.compute_fillers_scores(data, thematic_role, BATCH_SIZE, baseline)
         data["computed_score"] = model_fillers_scores
         data["best_completions"] = model_completions
+        if baseline == "y":
+            data["baseline_score"] = baseline_scores
         out_path = os.path.join(output_directory, os.path.basename(path_data).split('.')[0]+'_transformers_mlm_{}.txt'.format(transformer))
         data.to_csv(out_path, index=None, sep='\t', mode='a')
         #data.to_csv("{}/{}_transformers_mlm_{}_{}.txt".
