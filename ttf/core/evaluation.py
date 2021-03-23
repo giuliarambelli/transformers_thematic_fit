@@ -10,6 +10,7 @@ roles = ["LOCATION", "TIME", "RECIPIENT", "INSTRUMENT"]
 def _simple_accuracy(df, group_dict):
 	pairs = []
 	scores = []
+	bline_scores = []
 	for tup, idx in group_dict.items():
 		if len(idx) == 2:
 			#print(df.loc[[idx[0]]])
@@ -18,29 +19,42 @@ def _simple_accuracy(df, group_dict):
 					a = 1
 				else:
 					a = 0
+				if df['baseline_score'][idx[0]]>df['baseline_score'][idx[1]]:
+					b = 1
+				else:
+					b = 0
 			else:
 				if df['computed_score'][idx[0]] < df['computed_score'][idx[1]]:
 					a = 1
 				else:
 					a = 0
+				if df['baseline_score'][idx[0]] < df['baseline_score'][idx[1]]:
+					b = 1
+				else:
+					b = 0
 			pairs.append(tup)
 			scores.append(a)
+			bline_scores.append(b)
 
-	return pairs, scores
+	return pairs, scores, bline_scores
 
 
 def _accuracy_with_thresh(df, group_dict):
 	diffs = []
 	pairs = []
+	bline_diff = []
 	for tup, idx in group_dict.items():
 		if len(idx) == 2:
 			if df['typicality'][idx[0]] == 'T':
 				a = df['computed_score'][idx[0]] - df['computed_score'][idx[1]]
+				b = df['baseline_score'][idx[0]] - df['baseline_score'][idx[1]]
 			else:
 				a = df['computed_score'][idx[1]] - df['computed_score'][idx[0]]
+				b = df['baseline_score'][idx[1]] - df['baseline_score'][idx[0]]
 			pairs.append(tup)
 			diffs.append(a)
-	return pairs, diffs
+			bline_diff(b)
+	return pairs, diffs, bline_diff
 
 
 def _correlation(df, output_location, path_data):
@@ -97,12 +111,14 @@ def evaluation(data_path, etype, thresh, output_plot):
 			else:
 				groups = data_covered.groupby(['SUBJECT', 'VERB']).groups
 
-		tuples, accs = acc_functions[etype](data_covered, groups)
+		tuples, accs, bline_accs = acc_functions[etype](data_covered, groups)
 		if etype == 'diff':
 			l_func = lambda x: 1 if x > thresh else 0
 			accs = [l_func(i) for i in accs]
 		accuracy = sum(accs)/len(accs)
-		print(accuracy)
+		print('Accuracy: {}'.format(accuracy))
+		bline_accuracy = sum(bline_accs)/len(bline_accs)
+		print('Baseline accuracy: {}'.format(bline_accuracy))
 
 if __name__ == '__main__':
    evaluation('../../datasets/DTFit/sdm_result/TypicalityRatings_Triples.sdm-res', 'corr', 0.1, '../../')
