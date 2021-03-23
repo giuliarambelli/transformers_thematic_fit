@@ -193,7 +193,7 @@ def build_model(path_data, output_directory, transformers, baseline):
     thematic_role = get_thematic_role(list(data.columns))
     for transformer in transformers:
         model = TransformerModel(transformer)
-        model_fillers_scores, model_completions, baseline_scores = model.compute_fillers_scores(data, thematic_role, BATCH_SIZE, baseline)
+        model_fillers_scores, model_completions, baseline_scores = model.compute_fillers_scores(data, thematic_role, BATCH_SIZE)
         data["computed_score"] = model_fillers_scores
         data["best_completions"] = model_completions
         if baseline == "y":
