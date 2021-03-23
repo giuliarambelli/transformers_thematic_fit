@@ -80,6 +80,7 @@ def _correlation(df, output_location, path_data):
 	plt.ylabel('model probabilities')
 	plt.title("Actuals vs Regression Line")
 	plt.savefig(os.path.join(output_location,os.path.basename(path_data)+".correl.png"))
+	plt.close()
 	if "baseline_score" in list(df.columns):
 		scores_for_regr = np.array(scores).reshape(-1, 1)
 		b_probs_for_regr = np.array(bline_probs).reshape(-1, 1)
@@ -91,6 +92,7 @@ def _correlation(df, output_location, path_data):
 		plt.ylabel('model probabilities')
 		plt.title("Actuals vs Regression Line")
 		plt.savefig(os.path.join(output_location, os.path.basename(path_data) + "baseline" + ".correl.png"))
+		plt.close()
 
 
 """
