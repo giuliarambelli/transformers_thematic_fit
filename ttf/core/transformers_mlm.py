@@ -154,12 +154,6 @@ class TransformerModel:
                 if self.model_name.startswith("gpt"):
                     all_probabilities = tf.nn.softmax(outputs[batch_elem, dep_index - 1]).numpy()
                 probabilities_baseline.append(all_probabilities[self.tokenizer.convert_tokens_to_ids(target_word)])
-                idxs_predictions = (-(np.array(all_probabilities))).argsort()[:N_PREDICTIONS]
-                predictions = self.tokenizer.convert_ids_to_tokens([int(index) for index in idxs_predictions])
-                string_predicted_fillers = ""
-                for word, index in zip(predictions, idxs_predictions):
-                    string_predicted_fillers += word.replace("Ġ", "") + "_(" + str(all_probabilities[index]) + ")" + ";"
-                print(string_predicted_fillers)
         return probabilities_fillers, predicted_fillers, probabilities_baseline
 
 
