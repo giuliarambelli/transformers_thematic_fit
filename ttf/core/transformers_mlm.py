@@ -155,7 +155,7 @@ class TransformerModel:
                 if self.model_name.startswith("gpt"):
                     all_probabilities = tf.nn.softmax(outputs[batch_elem, 0]).numpy()
                 probabilities_baseline.append(all_probabilities[self.tokenizer.convert_tokens_to_ids(target_word)])
-        return np.log([float(n) for n in probabilities_fillers]), predicted_fillers, np.log([float(n) for n in probabilities_baseline])
+        return [np.log(n) if n is not None else None for n in probabilities_fillers], predicted_fillers, [np.log(n) if n is not None else None for n in probabilities_fillers]
 
 
     def compute_fillers_scores(self, data_sequences, role, batch_dimension=64):
