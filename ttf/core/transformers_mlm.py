@@ -40,6 +40,7 @@ class TransformerModel:
         sentences_with_mask = []
         dependents_indices = []
         for i in range(len(d_sequences)):
+            print(i)
             sent = d_sequences["sentence"][i]
             if th_role != "Agent":
                 id_dep = len(sent.split(" ")) - 2
