@@ -152,7 +152,7 @@ class TransformerModel:
                 if (self.model_name.startswith("bert")) or (self.model_name.startswith("roberta")):
                     all_probabilities = tf.nn.softmax(outputs[batch_elem, dep_index]).numpy()
                 if self.model_name.startswith("gpt"):
-                    all_probabilities = tf.nn.softmax(outputs[batch_elem, dep_index - 1]).numpy()
+                    all_probabilities = tf.nn.softmax(outputs[batch_elem, 0]).numpy()
                 probabilities_baseline.append(all_probabilities[self.tokenizer.convert_tokens_to_ids(target_word)])
         return probabilities_fillers, predicted_fillers, probabilities_baseline
 
