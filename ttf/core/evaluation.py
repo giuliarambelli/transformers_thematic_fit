@@ -109,13 +109,17 @@ def rank(df, group_dict, delim=';'):
 				diff_rank = df['probability'][idx[1]] - df['probability'][idx[0]]
 """
 
-def evaluation(data_path, etype, thresh, output_plot):
+def evaluation(data_path, etype, thresh, output_plot, selected_idxs=None):
 	print("Exec functions..", data_path)
 	acc_functions = {'simple': _simple_accuracy, 'diff': _accuracy_with_thresh, 'corr': _correlation}
 
 	data = pd.read_csv(data_path, sep='\t')
-	data_covered = data.dropna()
-	print("Coverage: {}/{}".format(len(data), len(data_covered)))
+	if selected_idxs:
+		not_given = set([i for i in data.index]).difference(set(selected_idxs))
+		data_covered = data.drop(list(not_given))
+	else:
+		data_covered = data.dropna()
+	print("Coverage: {}/{}".format(len(data_covered),len(data)))
 
 	if etype == 'corr':
 		acc_functions[etype](data_covered, output_plot, data_path)
