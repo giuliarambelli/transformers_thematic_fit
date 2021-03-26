@@ -134,6 +134,8 @@ def evaluation(data_path, etype, thresh, output_plot, selected_idxs=None):
 			# TRIPLES
 			else:
 				groups = data_covered.groupby(['SUBJECT', 'VERB']).groups
+				if 'sbj' in os.path.basename(data_path).lower():
+					groups = data_covered.groupby(['VERB','SUBJECT']).groups
 
 		tuples, accs, bline_accs = acc_functions[etype](data_covered, groups)
 		if etype == 'diff':
