@@ -1,6 +1,8 @@
 import argparse
 import os
 import logging.config
+import pandas as pd
+from ast import literal_eval
 
 from ttf.core import transformers_mlm
 from ttf.core.tuples_to_sentences import to_sentences
@@ -45,8 +47,11 @@ def _evaluation(args):
     eval_type = args.eval
     thresh = args.thresh
     out_dir = args.output_dir
+    common_idx = pd.read_csv(args.common_idx_path, sep='\t')
     for input_file in outils.get_filenames(data_paths):
-        evaluation(input_file, eval_type, thresh, out_dir)
+        i = common_idx.loc[common_idx['name'] == os.path.basename(input_file).split('.')[0]].index
+        pairs = literal_eval(common_idx['pairs'][i].values[0])
+        evaluation(input_file, eval_type, thresh, out_dir, pairs)
 
 
 def main():
@@ -81,6 +86,7 @@ def main():
                                    help='output folder')
     parser_evaluation.add_argument('-t', '--thresh', default=0, help='threshold for probabilities difference')
     parser_evaluation.add_argument('-o', '--output-dir', default='results/', help='output folder')
+    parser_evaluation.add_argument('-c', '--common-idx-path', help='path to common indexes file')
     parser_evaluation.set_defaults(func=_evaluation)
 
     args = parser.parse_args()

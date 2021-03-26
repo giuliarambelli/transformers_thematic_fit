@@ -1,3 +1,5 @@
+import itertools
+
 from scipy.stats import spearmanr
 import os
 import numpy as np
@@ -7,14 +9,15 @@ import matplotlib.pyplot as plt
 
 roles = ["LOCATION", "TIME", "RECIPIENT", "INSTRUMENT"]
 
-def _simple_accuracy(df, group_dict):
+
+def _simple_accuracy(df, selected_pairs):
 	pairs = []
 	scores = []
 	bline_scores = []
-	for tup, idx in group_dict.items():
+	for idx in selected_pairs:
 		if len(idx) == 2:
 			#print(df.loc[[idx[0]]])
-			if df['typicality'][idx[0]] == 'T':
+			if df['typicality'][idx[0]] in ['T','P']:
 				if df['computed_score'][idx[0]] > df['computed_score'][idx[1]]:
 					a = 1
 				else:
@@ -34,21 +37,22 @@ def _simple_accuracy(df, group_dict):
 							b = 1
 					else:
 						b = 0
-			pairs.append(tup)
+			pairs.append(idx)
 			scores.append(a)
 			if "baseline_score" in list(df.columns):
 				bline_scores.append(b)
 
+
 	return pairs, scores, bline_scores
 
 
-def _accuracy_with_thresh(df, group_dict):
+def _accuracy_with_thresh(df, selected_pairs):
 	diffs = []
 	pairs = []
 	bline_diff = []
-	for tup, idx in group_dict.items():
+	for idx in pairs:
 		if len(idx) == 2:
-			if df['typicality'][idx[0]] == 'T':
+			if df['typicality'][idx[0]] in ['T','P']:
 				a = df['computed_score'][idx[0]] - df['computed_score'][idx[1]]
 				if "baseline_score" in list(df.columns):
 					b = df['baseline_score'][idx[0]] - df['baseline_score'][idx[1]]
@@ -56,10 +60,11 @@ def _accuracy_with_thresh(df, group_dict):
 				a = df['computed_score'][idx[1]] - df['computed_score'][idx[0]]
 				if "baseline_score" in list(df.columns):
 					b = df['baseline_score'][idx[1]] - df['baseline_score'][idx[0]]
-			pairs.append(tup)
+			pairs.append(idx)
 			diffs.append(a)
 			if "baseline_score" in list(df.columns):
 				bline_diff.append(b)
+
 	return pairs, diffs, bline_diff
 
 
@@ -109,18 +114,33 @@ def rank(df, group_dict, delim=';'):
 				diff_rank = df['probability'][idx[1]] - df['probability'][idx[0]]
 """
 
-def evaluation(data_path, etype, thresh, output_plot, selected_idxs=None):
+def evaluation(data_path, etype, thresh, output_plot, selected_idxs):
+	#todo: gestire caso in cui non si passa lista coppie
 	print("Exec functions..", data_path)
 	acc_functions = {'simple': _simple_accuracy, 'diff': _accuracy_with_thresh, 'corr': _correlation}
 
 	data = pd.read_csv(data_path, sep='\t')
+	data_covered = data[data.index.isin(list(itertools.chain(*selected_idxs)))]
+	if etype == 'corr':
+		acc_functions[etype](data_covered, output_plot, data_path)
+	else:
+		tuples, accs, bline_accs = acc_functions[etype](data_covered, selected_idxs)
+		if etype == 'diff':
+			l_func = lambda x: 1 if x > thresh else 0
+			accs = [l_func(i) for i in accs]
+		accuracy = sum(accs) / len(accs)
+		print('Accuracy: {}'.format(accuracy))
+		if "baseline_score" in list(data.columns):
+			bline_accuracy = sum(bline_accs) / len(bline_accs)
+			print('Baseline accuracy: {}'.format(bline_accuracy))
+	"""
 	if selected_idxs:
 		not_given = set([i for i in data.index]).difference(set(selected_idxs))
 		data_covered = data.drop(list(not_given))
 	else:
 		data_covered = data.dropna(subset=['computed_score'])
 	print("Coverage: {}/{}".format(len(data_covered),len(data)))
-
+	
 	if etype == 'corr':
 		acc_functions[etype](data_covered, output_plot, data_path)
 	else:
@@ -146,6 +166,11 @@ def evaluation(data_path, etype, thresh, output_plot, selected_idxs=None):
 		if "baseline_score" in list(data.columns):
 			bline_accuracy = sum(bline_accs)/len(bline_accs)
 			print('Baseline accuracy: {}'.format(bline_accuracy))
-
+	"""
 if __name__ == '__main__':
-   evaluation('../../datasets/DTFit/sdm_result/TypicalityRatings_Triples.sdm-res', 'corr', 0.1, '../../')
+	from ast import literal_eval
+	common_idx = pd.read_csv('/home/giulia.rambelli/transformers_thematic_fit/ttf/utils/dtfit_common_pairs.txt', sep='\t')
+	i = common_idx.loc[common_idx['name'] == 'TypicalityRatings_Instr'].index
+	pairs = literal_eval(common_idx['pairs'][i].values[0])
+
+	evaluation('../../datasets/DTFit/sdm_result/TypicalityRatings_Instr.sdm-res', 'simple', 0, '../../', pairs)
