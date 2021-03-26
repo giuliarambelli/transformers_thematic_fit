@@ -118,7 +118,7 @@ def evaluation(data_path, etype, thresh, output_plot, selected_idxs=None):
 		not_given = set([i for i in data.index]).difference(set(selected_idxs))
 		data_covered = data.drop(list(not_given))
 	else:
-		data_covered = data.dropna()
+		data_covered = data.dropna(subset=['computed_score'])
 	print("Coverage: {}/{}".format(len(data_covered),len(data)))
 
 	if etype == 'corr':
