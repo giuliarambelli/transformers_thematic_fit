@@ -27,16 +27,17 @@ def _tuples_to_sentences(args):
 
 
 def _run_transformers_mlm(args):
-    data_sequences_path = args.input_path
+    data_paths = args.input_path
     outdir = outils.check_dir(args.output_dir)
     models = [models_dict[m] for m in args.model]
     bline = args.baseline
     #name = args.name
 
-    if os.path.isfile(data_sequences_path):
-        transformers_mlm.build_model(data_sequences_path, outdir, models, bline)  # don't check whether the input files exist
-    else:
-        logger.info('Input path {} does not exist'.format(data_sequences_path))
+    #if os.path.isfile(data_sequences_path):
+    for input_file in outils.get_filenames(data_paths):
+        transformers_mlm.build_model(input_file, outdir, models, bline)  # don't check whether the input files exist
+    #else:
+    #    logger.info('Input path {} does not exist'.format(data_sequences_path))
 
 
 def _evaluation(args):
@@ -65,7 +66,7 @@ def main():
                                                     help='Predict the probability of a role'
                                                          ' filler given a context')
     parser_transformers_mlm.add_argument('-o', '--output-dir', default='results/', help='output folder')
-    parser_transformers_mlm.add_argument('-i', '--input-path', required=True,
+    parser_transformers_mlm.add_argument('-i', '--input-path', required=True, nargs='+',
                                          help='path to data (human scores, sentences selected for each'
                                               ' sequence of the dataset')
     parser_transformers_mlm.add_argument('-m', '--model', choices=['bert-base', 'bert-large', 'roberta-large', 'gpt2-medium'],
