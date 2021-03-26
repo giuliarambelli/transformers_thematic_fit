@@ -27,7 +27,7 @@ def _tuples_to_sentences(args):
 
 
 def _run_transformers_mlm(args):
-    data_sequences_path = args.input_file_data_sequences
+    data_sequences_path = args.input_path
     outdir = outils.check_dir(args.output_dir)
     models = [models_dict[m] for m in args.model]
     bline = args.baseline
@@ -65,7 +65,7 @@ def main():
                                                     help='Predict the probability of a role'
                                                          ' filler given a context')
     parser_transformers_mlm.add_argument('-o', '--output-dir', default='results/', help='output folder')
-    parser_transformers_mlm.add_argument('-ids', '--input-file-data-sequences', required=True,
+    parser_transformers_mlm.add_argument('-i', '--input-path', required=True,
                                          help='path to data (human scores, sentences selected for each'
                                               ' sequence of the dataset')
     parser_transformers_mlm.add_argument('-m', '--model', choices=['bert-base', 'bert-large', 'roberta-large', 'gpt2-medium'],
