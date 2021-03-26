@@ -121,6 +121,7 @@ def evaluation(data_path, etype, thresh, output_plot, selected_idxs):
 
 	data = pd.read_csv(data_path, sep='\t')
 	data_covered = data[data.index.isin(list(itertools.chain(*selected_idxs)))]
+	print("Coverage: {}/{}".format(len(data_covered), len(data)))
 	if etype == 'corr':
 		acc_functions[etype](data_covered, output_plot, data_path)
 	else:
