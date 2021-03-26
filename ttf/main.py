@@ -46,7 +46,7 @@ def _evaluation(args):
     data_paths = args.input_path
     eval_type = args.eval
     thresh = args.thresh
-    out_dir = args.output_dir
+    out_dir = outils.check_dir(args.output_dir)
     common_idx = pd.read_csv(args.common_idx_path, sep='\t')
     for input_file in outils.get_filenames(data_paths):
         i = common_idx.loc[common_idx['name'] == os.path.basename(input_file).split('.')[0]].index
