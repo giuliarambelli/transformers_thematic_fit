@@ -16,14 +16,17 @@ def load_data_sequences(path1, path2):
 	return df, tokenized_sentences
 
 
-def get_thematic_role(columns):
+def get_thematic_role(columns,sbj=False):
 	if any(c in columns for c in roles):
 		return list(set(roles).intersection(set(columns)))[0]
 	else:
 		if 'OBJECT' not in columns:
 			return 'VERB'
 		else:
-			return 'OBJECT'
+			if sbj:
+				return 'SUBJECT'
+			else:
+				return 'OBJECT'
 
 
 
