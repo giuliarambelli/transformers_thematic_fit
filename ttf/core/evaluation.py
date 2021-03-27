@@ -75,8 +75,8 @@ def _correlation(df, output_location, path_data):
 	if "baseline_score" in list(df.columns):
 		bline_probs = df['baseline_score']
 		print("Baseline:  ", spearmanr(scores, bline_probs))
-	scores_for_regr = np.log(np.array(scores)).reshape(-1, 1)
-	probs_for_regr = np.log(np.array(probs)).reshape(-1, 1)
+	scores_for_regr = np.array(scores).reshape(-1, 1)
+	probs_for_regr = np.array(probs).reshape(-1, 1)
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
 	#----Analysis of errors
@@ -84,12 +84,12 @@ def _correlation(df, output_location, path_data):
 	for n_item in range(len(df)):
 		residuals[list(df["sentence"])[n_item]] = (np.abs(probs_predicted[n_item][0] - probs_for_regr[n_item][0]), probs_predicted[n_item][0], probs_for_regr[n_item][0])
 	residuals = dict(sorted(residuals.items(), key=lambda x: x[1][0], reverse=True))
-	for item in list(residuals.keys())[0:15]:
+	for item in list(residuals.keys())[0:25]:
 		print("Sentence: {}    Error: {}".format(item, residuals[item]))
 
 
-	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
-	plt.plot(scores_for_regr, probs_predicted, color='blue')
+	plt.plot(np.log(scores_for_regr), np.log(probs_for_regr), 'o', color='black')
+	plt.plot(np.log(scores_for_regr), np.log(probs_predicted), color='blue')
 	plt.xlabel('human typicality scores')
 	plt.ylabel('model probabilities')
 	plt.title("Actuals vs Regression Line")
