@@ -83,7 +83,7 @@ def _correlation(df, output_location, path_data):
 	residuals = {}
 	for n_item in range(len(df)):
 		residuals[list(df["sentence"])[n_item]] = np.abs(probs_predicted[n_item][0] - probs_for_regr[n_item][0])
-	residuals = sorted(residuals.items(), key=lambda x: x[1], reverse=True)
+	residuals = dict(sorted(residuals.items(), key=lambda x: x[1], reverse=True))
 	for item in list(residuals.keys())[0:15]:
 		print("Sentence: {}    Error: {}".format(item, residuals[item]))
 
