@@ -199,7 +199,7 @@ def build_model(path_data, output_directory, transformers, baseline):
         data["best_completions"] = model_completions
         if baseline == "y":
             data["baseline_score"] = baseline_scores
-        out_path = os.path.join(output_directory, os.path.basename(path_data).split('.')[0]+'_transformers_mlm_{}.txt'.format(transformer))
+        out_path = os.path.join(output_directory, os.path.basename(path_data).split('.')[0]+'.transformers_mlm_{}.txt'.format(transformer))
         data.to_csv(out_path, index=None, sep='\t', mode='a')
         #data.to_csv("{}/{}_transformers_mlm_{}_{}.txt".
         #            format(output_directory, name, transformer, thematic_role), index=None, sep='\t', mode='a')

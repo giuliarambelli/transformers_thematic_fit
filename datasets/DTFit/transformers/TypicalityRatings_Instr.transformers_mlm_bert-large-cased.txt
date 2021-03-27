@@ -1,0 +1,201 @@
+SUBJECT	VERB	OBJECT	INSTRUMENT	typicality	mean_rat	std_rat	sentence	computed_score	best_completions	baseline_score
+gardener	cut	grass	mower	T	6.65	0.65	The gardener cut the grass with the mower .			
+waiter	deliver	drink	tray	T	6.8	0.4	The waiter delivered the drink with the tray .	0.02844339609146118	wine_(0.0460075);bill_(0.04145197);champagne_(0.036046155);coffee_(0.035556007);check_(0.03457887);	1.4457217730523553e-05
+mechanic	assemble	bicycle	wrench	T	4.9	2.49	The mechanic assembled the bicycle with the wrench .			
+carver	build	sculpture	chisel	T	5.85	1.98	The carver built the sculpture with the chisel .			
+mechanic	check	tire	compressor	T	6.35	0.79	The mechanic checked the tire with the compressor .			
+housemaid	clean	window	cloth	T	6.7	0.56	The housemaid cleaned the window with the cloth .	0.04536210745573044	rag_(0.097742766);soap_(0.094136275);handkerchief_(0.08966643);brush_(0.046443243);cloth_(0.045362107);	8.08385229902342e-05
+hairstylist	flip	hair	hairbrush	T	6.65	0.73	The hairstylist flipped the hair with the hairbrush .			
+policeman	capture	thief	gun	T	5.95	1.02	The policeman captured the thief with the gun .	0.12754343450069427	gun_(0.12754343);money_(0.086741984);knife_(0.045356125);pistol_(0.02863067);key_(0.025326183);	0.00048338479246012866
+painter	paint	picture	brush	T	5.95	2.01	The painter painted the picture with the brush .	0.009066931903362274	child_(0.024294028);sun_(0.024097202);sword_(0.015554398);angels_(0.009530155);brush_(0.009066932);	8.414074841311958e-07
+archer	release	arrow	bow	T	6.35	1.8	The archer released the arrow with the bow .	0.39267483353614807	bow_(0.39267483);arrow_(0.10706331);string_(0.03704232);sword_(0.022634447);stick_(0.015470425);	0.0001271768705919385
+chemist	mix	substance	centrifuge	T	4.85	1.88	The chemist mixed the substance with the centrifuge .			
+botanist	examine	plant	microscope	T	6.5	0.74	The botanist examined the plant with the microscope .			
+philologist	examine	book	magnifier	T	6.35	0.96	The philologist examined the book with the magnifier .			
+mother	hang	laundry	clothespin	T	6.25	1.41	The mother hung the laundry with the clothespin .			
+mason	fix	wall	plaster	T	6.0	1.58	The mason fixed the wall with the plaster .	0.014078808948397636	hammer_(0.11042225);bricks_(0.08134933);mortar_(0.065214776);stone_(0.06318489);stones_(0.057832543);	1.535980914013635e-06
+porter	carry	bag	elevator	T	5.0	2.21	The porter carried the bag with the elevator .	0.0003191133728250861	others_(0.15613268);food_(0.038346272);wine_(0.0327036);luggage_(0.026719382);rest_(0.019021397);	2.9723636544076726e-05
+policeman	hit	demonstrator	baton	T	5.1	2.12	The policeman hit the demonstrator with the baton .			
+cook	mix	ingredient	ladle	T	6.25	1.37	The cook mixed the ingredient with the ladle .			
+waiter	open	bottle	corkscrew	T	6.45	1.36	The waiter opened the bottle with the corkscrew .			
+fisherman	catch	fish	net	T	6.8	0.4	The fisherman caught the fish with the net .	0.1530752182006836	net_(0.15307522);hook_(0.13696432);spear_(0.072367005);knife_(0.06867716);nets_(0.058187522);	4.859805994783528e-05
+gardener	gather	grass	rake	T	6.8	0.4	The gardener gathered the grass with the rake .			
+child	cross	park	bicycle	T	6.2	1.03	The child crossed the park with the bicycle .	0.004953304305672646	woman_(0.09051454);man_(0.060448434);others_(0.045124337);dog_(0.03227848);boy_(0.02608159);	1.333256750513101e-05
+mason	mix	cement	trowel	T	6.0	1.45	The mason mixed the cement with the trowel .			
+pyromaniac	start	fire	gasoline	T	5.75	2.05	The pyromaniac started the fire with the gasoline .	0.058592554181814194	gasoline_(0.058592554);rope_(0.031000618);gun_(0.022942396);gas_(0.017474273);lamp_(0.015352925);	2.032350948866224e-06
+milkman	carry	bottle	van	T	6.7	0.56	The milkman carried the bottle with the van .	0.00024718334316276014	others_(0.27407047);rest_(0.037413485);milk_(0.032386027);food_(0.023559514);other_(0.021243831);	0.0011419423390179873
+lumberjack	cut	tree	saw	T	6.6	1.32	The lumberjack cut the tree with the saw .	0.02020973153412342	axe_(0.618798);knife_(0.12923408);saw_(0.020209732);axes_(0.015675211);rope_(0.01436015);	8.618504944024608e-05
+climber	face	wall	rope	T	6.7	0.64	The climber faced the wall with the rope .	0.010756580159068108	flashlight_(0.16003148);rifle_(0.07791766);torch_(0.06765266);knife_(0.037637506);axe_(0.03298829);	2.675757605175022e-05
+soldier	fight	enemy	rifle	T	6.8	0.51	The soldier fought the enemy with the rifle .	0.22986911237239838	sword_(0.30639642);rifle_(0.22986911);knife_(0.09070459);weapon_(0.039987758);axe_(0.03904971);	0.00035352291888557374
+cobbler	fix	shoe	glue	T	6.45	0.67	The cobbler fixed the shoe with the glue .			
+cyclist	fix	bike	screwdriver	T	5.25	1.41	The cyclist fixed the bike with the screwdriver .			
+housemaid	wash	floor	mop	T	6.7	0.64	The housemaid washed the floor with the mop .			
+housemaid	clean	dish	sponge	T	6.75	0.54	The housemaid cleaned the dish with the sponge .			
+butcher	carve	meat	knife	T	6.35	1.53	The butcher carved the meat with the knife .	0.7917324304580688	knife_(0.79173243);knives_(0.058498763);axe_(0.04271021);sword_(0.014284846);blade_(0.011558881);	9.523682820145041e-05
+author	sign	book	pen	T	6.65	0.57	The author signed the book with the pen .	0.002415131311863661	title_(0.08076364);initials_(0.026330633);date_(0.025055846);name_(0.021833263);author_(0.021510037);	2.1959906007396057e-05
+confectioner	decorate	cake	spatula	T	6.55	0.67	The confectioner decorated the cake with the spatula .			
+hairstylist	fix	hair	hairdryer	T	6.25	1.67	The hairstylist fixed the hair with the hairdryer .			
+photographer	capture	image	camera	T	6.9	0.3	The photographer captured the image with the camera .	0.299570232629776	camera_(0.29957023);lens_(0.13046804);mirror_(0.047700677);microphone_(0.039352406);phone_(0.034577314);	8.485731086693704e-05
+soldier	cross	river	truck	T	4.65	2.29	The soldier crossed the river with the truck .	0.003814167343080044	others_(0.10055349);woman_(0.034408875);other_(0.032522723);girl_(0.032065872);boat_(0.030422395);	3.569363252609037e-05
+hairstylist	wash	hair	shampoo	T	6.55	1.32	The hairstylist washed the hair with the shampoo .			
+scoutmaster	assemble	tent	hammer	T	4.95	2.2	The scoutmaster assembled the tent with the hammer .	4.599781095748767e-05	others_(0.098058276);boys_(0.05251986);horses_(0.037306927);supplies_(0.02631369);staff_(0.023021972);	2.5991278107539983e-06
+illustrator	draw	picture	pencil	T	6.5	1.36	The illustrator drew the picture with the pencil .	0.19044242799282074	pencil_(0.19044243);pen_(0.1534202);brush_(0.047651034);chalk_(0.030589579);knife_(0.016534843);	5.546649504140078e-07
+surgeon	perform	surgery	lancet	T	5.1	2.32	The surgeon performed the surgery with the lancet .			
+veterinarian	examine	dog	stethoscope	T	6.2	1.21	The veterinarian examined the dog with the stethoscope .			
+guard	open	jail	key	T	6.15	1.11	The guard opened the jail with the key .	0.6234294772148132	key_(0.6234295);keys_(0.06512834);door_(0.01856501);lock_(0.0106095765);gun_(0.010136085);	4.094490941497497e-05
+general	gather	soldier	trumpet	T	5.35	1.82	The general gathered the soldier with the trumpet .	0.0008629271760582924	rifle_(0.07236534);sword_(0.049334757);gun_(0.02183845);knife_(0.01964325);girl_(0.019101063);	5.9628919188980944e-06
+barber	cut	beard	razor	T	6.65	0.96	The barber cut the beard with the razor .	0.4887900948524475	razor_(0.4887901);knife_(0.29307094);brush_(0.02924295);needle_(0.021373756);axe_(0.019701546);	1.1851259387185564e-06
+postman	deliver	mail	bicycle	T	4.5	1.66	The postman delivered the mail with the bicycle .	0.0028068579267710447	letter_(0.05125099);note_(0.030284058);envelope_(0.025461128);address_(0.02525564);money_(0.023670107);	1.8498574718250893e-05
+cook	clean	fish	knife	T	6.45	0.92	The cook cleaned the fish with the knife .	0.12890417873859406	knife_(0.12890418);water_(0.0858587);cloth_(0.052888148);straw_(0.036646113);soap_(0.033872955);	9.523682820145041e-05
+farmer	plow	field	tractor	T	6.85	0.48	The farmer plowed the field with the tractor .	0.5659564733505249	tractor_(0.5659565);axe_(0.029865036);bucket_(0.017014183);dogs_(0.015244944);hammer_(0.013801599);	1.400933979311958e-05
+climber	climb	rock	rope	T	6.9	0.3	The climber climbed the rock with the rope .	0.11677143722772598	rope_(0.11677144);torch_(0.07054671);axe_(0.031909686);spear_(0.023022557);ladder_(0.022731606);	2.675757605175022e-05
+porter	carry	bag	van	T	3.75	1.87	The porter carried the bag with the van .	0.0006095595308579504	others_(0.15613268);food_(0.038346272);wine_(0.0327036);luggage_(0.026719382);rest_(0.019021397);	0.0011419423390179873
+waiter	clear	table	cloth	T	5.9	1.41	The waiter cleared the table with the cloth .	0.0002416457427898422	drinks_(0.10561152);rest_(0.053376142);food_(0.045136865);others_(0.037928555);dishes_(0.03524719);	3.0785227863816544e-05
+astronaut	reach	moon	shuttle	T	5.3	2.35	The astronaut reached the moon with the shuttle .	0.006264695432037115	spacecraft_(0.21544978);rocket_(0.059590507);comet_(0.042615447);crew_(0.03913561);satellite_(0.03832438);	3.023368481080979e-05
+cook	flip	pancake	spatula	T	6.15	1.24	The cook flipped the pancake with the spatula .			
+musician	touch	instrument	plectrum	T	5.8	1.63	The musician touched the instrument with the plectrum .			
+goalkeeper	grab	ball	hand	T	6.5	1.32	The goalkeeper grabbed the ball with the hand .	0.041374411433935165	ball_(0.23571856);foot_(0.10917737);arm_(0.05172142);hand_(0.04137441);feet_(0.03778935);	2.1814128558617085e-05
+businessman	read	report	laptop	T	6.4	0.66	The businessman read the report with the laptop .	0.0013681898126378655	others_(0.099473685);clerk_(0.047323253);newspaper_(0.022802446);reporter_(0.016593246);other_(0.016151924);	7.303167512873188e-05
+hairstylist	fix	hair	gel	T	6.25	0.7	The hairstylist fixed the hair with the gel .	0.0245131216943264	brush_(0.30186483);comb_(0.12327753);razor_(0.034170307);clip_(0.02796679);elastic_(0.026439767);	1.9538190827006474e-05
+student	send	email	laptop	T	6.6	0.58	The student sent the email with the laptop .	0.0004472070431802422	message_(0.046575833);note_(0.039788377);results_(0.039772555);picture_(0.036442433);letter_(0.02833585);	7.303167512873188e-05
+mother	prepare	food	microwave	T	6.2	0.81	The mother prepared the food with the microwave .	8.314941078424454e-05	knife_(0.060632113);child_(0.059710205);children_(0.059340872);baby_(0.03314612);father_(0.029526014);	1.3770850273431279e-06
+crew	load	container	crane	T	5.1	1.97	The crew loaded the container with the crane .	0.00046223774552345276	cargo_(0.070456535);explosives_(0.036679022);fuel_(0.024332507);bomb_(0.017219571);equipment_(0.014384843);	6.074237171560526e-05
+policeman	capture	thief	taser	T	6.0	0.77	The policeman captured the thief with the taser .			
+guest	hang	coat	hanger	T	6.3	0.84	The guest hung the coat with the hanger .			
+receiver	catch	baseball	glove	T	5.55	1.75	The receiver caught the baseball with the glove .	0.08970335870981216	bat_(0.3301266);ball_(0.22750089);glove_(0.08970336);baseball_(0.044272933);pitcher_(0.027403885);	5.490470812219428e-06
+spectator	watch	game	binoculars	T	6.15	0.96	The spectator watched the game with the binoculars .			
+policeman	examine	car	flashlight	T	5.7	1.19	The policeman examined the car with the flashlight .	0.07461144775152206	flashlight_(0.07461145);camera_(0.06640758);gun_(0.05410459);rifle_(0.037668966);shotgun_(0.03295534);	7.77756667957874e-06
+carpenter	fix	chair	nail	T	6.15	1.24	The carpenter fixed the chair with the nail .	0.027590233832597733	table_(0.04390018);hammer_(0.039494738);nail_(0.027590234);rope_(0.024776509);floor_(0.022496922);	5.205422439757967e-06
+guard	tie	prisoner	rope	T	4.1	1.55	The guard tied the prisoner with the rope .	0.6319803595542908	rope_(0.63198036);ropes_(0.11931089);cord_(0.021100454);string_(0.019468332);belt_(0.018364782);	1.6477470126119442e-05
+confectioner	spread	icing	spatula	T	5.9	1.89	The confectioner spread the icing with the spatula .			
+musician	entertain	crowd	violin	T	6.35	0.79	The musician entertained the crowd with the violin .	0.01883642002940178	music_(0.27362263);song_(0.17692234);songs_(0.06114541);melody_(0.035655156);flute_(0.026319414);	8.383102795050945e-06
+mechanic	fix	tire	patch	T	5.85	1.28	The mechanic fixed the tire with the patch .	0.00013459134788718075	truck_(0.053246945);car_(0.042252354);pump_(0.030141156);hose_(0.022705235);tractor_(0.019671435);	2.926650267909281e-05
+volunteer	bring	food	truck	T	5.65	1.01	The volunteer brought the food with the truck .	0.013663800433278084	car_(0.04091903);bus_(0.040086962);food_(0.02593328);dog_(0.025269393);kids_(0.023206793);	3.569363252609037e-05
+mother	prepare	food	burner	T	5.55	1.99	The mother prepared the food with the burner .			
+firefighter	fight	fire	hydrant	T	6.4	0.73	The firefighter fought the fire with the hydrant .			
+footballer	hit	ball	foot	T	6.5	1.32	The footballer hit the ball with the foot .	0.06471295654773712	ball_(0.32221603);stick_(0.07847013);foot_(0.06471296);feet_(0.032213446);bat_(0.030565467);	0.00020593716180883348
+teacher	explain	exercise	slides	T	6.05	0.86	The teacher explained the exercise with the slides .	0.0007818678859621286	students_(0.17831118);student_(0.10225526);children_(0.05315016);teacher_(0.038994107);child_(0.031126134);	2.4905746158765396e-06
+waiter	bring	glass	tray	T	6.45	0.67	The waiter brought the glass with the tray .	0.002478243550285697	wine_(0.37403023);champagne_(0.06349052);tea_(0.035324685);rest_(0.03429786);coffee_(0.03190571);	1.4457217730523553e-05
+child	draw	flower	pencil	T	6.5	0.59	The child drew the flower with the pencil .	0.1368681937456131	pencil_(0.1368682);stick_(0.08459945);pen_(0.06227618);knife_(0.056665376);brush_(0.037076253);	5.546649504140078e-07
+sailor	face	ocean	boat	T	6.25	1.04	The sailor faced the ocean with the boat .	0.017687922343611717	ship_(0.043100297);sword_(0.032016963);woman_(0.03183085);bow_(0.026731664);sun_(0.023463055);	2.1915679099038243e-05
+guard	tie	prisoner	handcuffs	T	6.7	0.46	The guard tied the prisoner with the handcuffs .			
+demonstrator	throw	stone	hand	T	5.05	1.69	The demonstrator threw the stone with the hand .	0.0036862778943032026	others_(0.09299382);other_(0.05972625);hammer_(0.03282681);knife_(0.02376605);gun_(0.018752985);	1.2281795534363482e-05
+mother	decorate	house	flower	T	5.8	0.98	The mother decorated the house with the flower .	0.0011945369187742472	paintings_(0.13734922);furniture_(0.04632993);painting_(0.035579752);flowers_(0.022699555);pictures_(0.016691169);	1.6251733541139401e-06
+mover	move	furniture	van	T	6.4	0.86	The mover moved the furniture with the van .	0.010024024173617363	car_(0.026284605);floor_(0.024869323);furniture_(0.019367306);others_(0.017508386);boxes_(0.017224621);	0.0011419423390179873
+journalist	write	article	computer	T	6.7	0.56	The journalist wrote the article with the computer .	0.001514682313427329	money_(0.018652227);story_(0.018462034);letter_(0.017587604);book_(0.014218829);children_(0.01183349);	4.5358097850112244e-05
+pyromaniac	start	fire	matchstick	T	6.35	1.19	The pyromaniac started the fire with the matchstick .			
+sweeper	clean	street	broom	T	6.4	1.07	The sweeper cleaned the street with the broom .			
+dog	dig	hole	paw	T	6.75	0.54	The dog dug the hole with the paw .			
+skier	gain	speed	poles	T	6.2	1.21	The skier gained the speed with the poles .	0.009026587009429932	wind_(0.07962146);pole_(0.019961702);stick_(0.016488401);rope_(0.014363312);speed_(0.014165032);	8.269190061582776e-07
+deejay	mix	music	console	T	6.45	0.8	The deejay mixed the music with the console .	4.091906248504529e-06	words_(0.25075987);lyrics_(0.13320842);dance_(0.0382484);song_(0.031755734);vocals_(0.020967912);	1.4738554909854429e-06
+tailor	sew	dress	needle	T	6.45	0.97	The tailor sewed the dress with the needle .	0.03372797742486	fabric_(0.035277613);needle_(0.033727977);ribbons_(0.023571962);ribbon_(0.019628076);silk_(0.018692574);	4.486039870243985e-06
+surfer	catch	wave	board	T	6.35	1.53	The surfer caught the wave with the board .	0.01795264333486557	paddle_(0.07643335);pole_(0.05435273);stick_(0.033991475);net_(0.031891406);hook_(0.029495856);	7.169865421019495e-05
+waiter	mix	drink	shaker	T	5.9	1.45	The waiter mixed the drink with the shaker .			
+singer	perform	music	guitar	T	6.3	0.84	The singer performed the music with the guitar .	0.004219879861921072	band_(0.33909708);orchestra_(0.11363009);dancers_(0.10901396);audience_(0.051206406);group_(0.03543363);	3.2455565815325826e-05
+painter	decorate	wall	brush	T	6.45	0.67	The painter decorated the wall with the brush .	0.0004541068628896028	painting_(0.07125427);picture_(0.03777042);portrait_(0.02837198);paintings_(0.02365739);inscription_(0.016059326);	8.414074841311958e-07
+soldier	dig	trench	shovel	T	5.95	1.07	The soldier dug the trench with the shovel .			
+dog	carry	ball	mouth	T	6.8	0.4	The dog carried the ball with the mouth .	4.340423402027227e-05	ball_(0.28595662);bat_(0.041830175);stick_(0.031223647);football_(0.029661017);players_(0.022651805);	5.5635096032347064e-06
+butcher	cut	meat	machete	T	3.85	1.82	The butcher cut the meat with the machete .			
+farmer	plow	field	hoe	T	5.15	1.53	The farmer plowed the field with the hoe .			
+barber	cut	hair	scissors	T	6.9	0.3	The barber cut the hair with the scissors .			
+chauffeur	carry	passenger	limousine	T	6.4	1.11	The chauffeur carried the passenger with the limousine .			
+gardener	gather	grass	helicopter	AT	1.6	1.36	The gardener gathered the grass with the helicopter .	0.00013816627324558794	dogs_(0.046956718);tractor_(0.041763928);brush_(0.03843227);bucket_(0.036259465);tools_(0.030987548);	7.726020703557879e-05
+hairstylist	wash	hair	beer	AT	1.6	1.43	The hairstylist washed the hair with the beer .	0.00022231081675272435	brush_(0.4244619);soap_(0.07686565);towel_(0.062042523);water_(0.060567465);brushes_(0.050366573);	1.9809263903880492e-05
+soldier	fight	enemy	spoon	AT	1.6	1.36	The soldier fought the enemy with the spoon .	6.203583325259387e-05	sword_(0.30639642);rifle_(0.22986911);knife_(0.09070459);weapon_(0.039987758);axe_(0.03904971);	1.159825870900022e-07
+housemaid	clean	window	chisel	AT	3.75	2.74	The housemaid cleaned the window with the chisel .			
+painter	paint	picture	napkin	AT	3.1	2.32	The painter painted the picture with the napkin .	7.129149889806286e-05	child_(0.024294028);sun_(0.024097202);sword_(0.015554398);angels_(0.009530155);brush_(0.009066932);	5.64240417588735e-06
+hairstylist	flip	hair	fork	AT	1.3	0.9	The hairstylist flipped the hair with the fork .	0.002511300379410386	brush_(0.47897208);comb_(0.06025762);clip_(0.02879448);razor_(0.015836488);remote_(0.014602286);	1.8420058040646836e-05
+porter	carry	bag	tractor	AT	1.1	0.3	The porter carried the bag with the tractor .	4.432646164787002e-05	others_(0.15613268);food_(0.038346272);wine_(0.0327036);luggage_(0.026719382);rest_(0.019021397);	7.808721420587972e-06
+child	cross	park	truck	AT	1.8	1.44	The child crossed the park with the truck .	0.0016426783986389637	woman_(0.09051454);man_(0.060448434);others_(0.045124337);dog_(0.03227848);boy_(0.02608159);	3.569363252609037e-05
+soldier	cross	river	lifeboat	AT	4.15	2.35	The soldier crossed the river with the lifeboat .			
+farmer	plow	field	bicycle	AT	2.45	2.25	The farmer plowed the field with the bicycle .	0.0001338664151262492	tractor_(0.5659565);axe_(0.029865036);bucket_(0.017014183);dogs_(0.015244944);hammer_(0.013801599);	1.9331209841766395e-05
+hairstylist	fix	hair	plaster	AT	3.55	2.77	The hairstylist fixed the hair with the plaster .	0.00019536062609404325	brush_(0.30186483);comb_(0.12327753);razor_(0.034170307);clip_(0.02796679);elastic_(0.026439767);	3.754917088372167e-06
+fisherman	catch	fish	hammer	AT	1.2	0.4	The fisherman caught the fish with the hammer .	0.005519580561667681	net_(0.15307522);hook_(0.13696432);spear_(0.072367005);knife_(0.06867716);nets_(0.058187522);	2.5991278107539983e-06
+gardener	cut	grass	knife	AT	2.55	2.09	The gardener cut the grass with the knife .	0.2033885419368744	axe_(0.22679983);knife_(0.20338854);tractor_(0.04648598);axes_(0.04470628);tools_(0.036743917);	0.0001247915206477046
+author	sign	book	needle	AT	1.4	1.32	The author signed the book with the needle .	0.00010185132850892842	title_(0.08076364);initials_(0.026330633);date_(0.025055846);name_(0.021833263);author_(0.021510037);	1.754406525833474e-06
+general	gather	soldier	stick	AT	2.6	1.98	The general gathered the soldier with the stick .	0.0006436656112782657	rifle_(0.07236534);sword_(0.049334757);gun_(0.02183845);knife_(0.01964325);girl_(0.019101063);	0.00010298351116944104
+photographer	capture	image	brush	AT	1.95	1.75	The photographer captured the image with the brush .	0.004404323175549507	camera_(0.29957023);lens_(0.13046804);mirror_(0.047700677);microphone_(0.039352406);phone_(0.034577314);	8.414074841311958e-07
+barber	cut	beard	machete	AT	1.15	0.36	The barber cut the beard with the machete .			
+mechanic	assemble	bicycle	tape	AT	3.0	1.84	The mechanic assembled the bicycle with the tape .	0.0008581243455410004	engine_(0.050483327);tools_(0.03928523);wheels_(0.03587049);motor_(0.028518377);frame_(0.026674079);	1.4986863789090421e-05
+waiter	deliver	drink	van	AT	2.25	1.84	The waiter delivered the drink with the van .	7.516733148804633e-06	wine_(0.0460075);bill_(0.04145197);champagne_(0.036046155);coffee_(0.035556007);check_(0.03457887);	0.0009043831378221512
+climber	climb	rock	ladder	AT	3.45	2.33	The climber climbed the rock with the ladder .	0.022731605917215347	rope_(0.11677144);torch_(0.07054671);axe_(0.031909686);spear_(0.023022557);ladder_(0.022731606);	1.1936723240069114e-05
+lumberjack	cut	tree	scissors	AT	2.45	2.25	The lumberjack cut the tree with the scissors .			
+butcher	carve	meat	lancet	AT	3.5	2.16	The butcher carved the meat with the lancet .			
+mechanic	check	tire	microscope	AT	1.1	0.3	The mechanic checked the tire with the microscope .			
+guard	open	jail	lighter	AT	1.55	1.43	The guard opened the jail with the lighter .	0.0003475613484624773	key_(0.6234295);keys_(0.06512834);door_(0.01856501);lock_(0.0106095765);gun_(0.010136085);	0.0009638001210987568
+carver	build	sculpture	pencil	AT	2.9	2.02	The carver built the sculpture with the pencil .	0.0003163325600326061	stone_(0.06632769);stones_(0.057410046);tools_(0.037422683);clay_(0.034955338);materials_(0.03175192);	5.568400069932977e-07
+archer	release	arrow	rope	AT	4.75	2.41	The archer released the arrow with the rope .	0.005215859040617943	bow_(0.39267483);arrow_(0.10706331);string_(0.03704232);sword_(0.022634447);stick_(0.015470425);	2.675757605175022e-05
+illustrator	draw	picture	sponge	AT	4.15	2.59	The illustrator drew the picture with the sponge .			
+mason	mix	cement	spoon	AT	3.45	2.48	The mason mixed the cement with the spoon .	7.637095222889911e-07	stone_(0.1467909);water_(0.087961435);lime_(0.08594438);concrete_(0.07228551);clay_(0.0679329);	1.5967845001796377e-07
+climber	face	wall	shovel	AT	2.6	2.11	The climber faced the wall with the shovel .			
+cobbler	fix	shoe	fork	AT	2.45	2.18	The cobbler fixed the shoe with the fork .	0.0029824250377714634	string_(0.03625558);hammer_(0.027653694);heel_(0.025651503);nail_(0.024869615);belt_(0.022282757);	1.8420058040646836e-05
+housemaid	wash	floor	flag	AT	2.75	2.43	The housemaid washed the floor with the flag .	6.724237755406648e-05	soap_(0.16868216);water_(0.1432252);towel_(0.03516143);cloth_(0.02769214);rag_(0.026820108);	8.309006807394326e-05
+chemist	mix	substance	trowel	AT	3.9	2.34	The chemist mixed the substance with the trowel .			
+veterinarian	examine	dog	telescope	AT	1.15	0.36	The veterinarian examined the dog with the telescope .	0.003001032629981637	camera_(0.081761815);doctor_(0.07025311);needle_(0.03543788);flashlight_(0.027614582);nurse_(0.02316165);	3.325895158923231e-05
+policeman	capture	thief	fork	AT	2.1	1.76	The policeman captured the thief with the fork .	8.670776878716424e-05	gun_(0.12754343);money_(0.086741984);knife_(0.045356125);pistol_(0.02863067);key_(0.025326183);	1.6612035324214958e-05
+confectioner	decorate	cake	stapler	AT	1.8	1.66	The confectioner decorated the cake with the stapler .			
+scoutmaster	assemble	tent	glue	AT	2.9	1.64	The scoutmaster assembled the tent with the glue .			
+botanist	examine	plant	hammer	AT	2.05	1.86	The botanist examined the plant with the hammer .	0.0006065858178772032	camera_(0.038689695);doctor_(0.0344813);others_(0.030396517);bird_(0.021264857);eye_(0.018028913);	2.9616837764478987e-06
+milkman	carry	bottle	helicopter	AT	2.4	2.35	The milkman carried the bottle with the helicopter .	1.948321732925251e-05	others_(0.27407047);rest_(0.037413485);milk_(0.032386027);food_(0.023559514);other_(0.021243831);	7.726020703557879e-05
+postman	deliver	mail	airplane	AT	2.05	1.56	The postman delivered the mail with the airplane .	0.0004329761432018131	letter_(0.05125099);note_(0.030284058);envelope_(0.025461128);address_(0.02525564);money_(0.023670107);	1.1720719612640096e-06
+housemaid	clean	dish	hydrant	AT	4.15	2.65	The housemaid cleaned the dish with the hydrant .			
+waiter	open	bottle	pen	AT	1.85	1.8	The waiter opened the bottle with the pen .	0.0005322120268829167	glasses_(0.1498747);glass_(0.07471888);wine_(0.047052305);champagne_(0.0411867);others_(0.024759213);	2.1959906007396057e-05
+cook	clean	fish	sponge	AT	3.7	2.61	The cook cleaned the fish with the sponge .			
+policeman	hit	demonstrator	spoon	AT	2.15	1.88	The policeman hit the demonstrator with the spoon .	0.0003640020149759948	gun_(0.077349916);hammer_(0.056140054);rifle_(0.049177524);bat_(0.03920501);briefcase_(0.036670268);	2.8426231324374385e-07
+mother	hang	laundry	nails	AT	3.2	2.14	The mother hung the laundry with the nails .	9.643821977078915e-05	father_(0.11572758);others_(0.108229384);children_(0.084818915);men_(0.06398048);child_(0.037118338);	2.318316916216645e-07
+mason	fix	wall	hairdryer	AT	1.6	1.66	The mason fixed the wall with the hairdryer .			
+surgeon	perform	surgery	compass	AT	1.05	0.22	The surgeon performed the surgery with the compass .	0.00015736556088086218	patient_(0.27672368);surgeon_(0.021326026);child_(0.016360497);hand_(0.01478809);patients_(0.014600201);	3.1286759849535883e-07
+philologist	examine	book	stethoscope	AT	2.3	1.79	The philologist examined the book with the stethoscope .			
+cook	mix	ingredient	knife	AT	3.15	2.01	The cook mixed the ingredient with the knife .	0.0007917497423477471	water_(0.16950172);wine_(0.074585564);meat_(0.051864877);rice_(0.03729077);fish_(0.035292152);	9.523682820145041e-05
+cyclist	fix	bike	spoon	AT	2.7	2.26	The cyclist fixed the bike with the spoon .	0.00019195153436157852	bicycle_(0.029373879);pole_(0.02778412);rope_(0.023426639);chain_(0.017827164);hand_(0.016666712);	1.159825870900022e-07
+pyromaniac	start	fire	stone	AT	3.2	2.11	The pyromaniac started the fire with the stone .	0.0013690816704183817	gasoline_(0.058592554);rope_(0.031000618);gun_(0.022942396);gas_(0.017474273);lamp_(0.015352925);	0.00014277866284828633
+hairstylist	fix	hair	screwdriver	AT	1.5	1.32	The hairstylist fixed the hair with the screwdriver .			
+guard	tie	prisoner	necklace	AT	1.4	0.92	The guard tied the prisoner with the necklace .	9.783859422896057e-05	rope_(0.63198036);ropes_(0.11931089);cord_(0.021100454);string_(0.019468332);belt_(0.018364782);	1.5056378970257356e-06
+journalist	write	article	chisel	AT	1.35	0.73	The journalist wrote the article with the chisel .			
+child	draw	flower	scalpel	AT	1.05	0.22	The child drew the flower with the scalpel .			
+teacher	explain	exercise	foot	AT	2.05	1.56	The teacher explained the exercise with the foot .	4.2309115087846294e-05	students_(0.17831118);student_(0.10225526);children_(0.05315016);teacher_(0.038994107);child_(0.031126134);	0.00020593716180883348
+painter	decorate	wall	scalpel	AT	1.75	1.37	The painter decorated the wall with the scalpel .			
+confectioner	spread	icing	hose	AT	1.3	0.71	The confectioner spread the icing with the hose .	0.00021759234368801117	sugar_(0.051362302);cake_(0.045199603);syrup_(0.03668938);candles_(0.03190554);candle_(0.031724647);	6.123375351307914e-05
+mother	decorate	house	garbage	AT	1.15	0.36	The mother decorated the house with the garbage .	2.3138885808293708e-05	paintings_(0.13734922);furniture_(0.04632993);painting_(0.035579752);flowers_(0.022699555);pictures_(0.016691169);	5.421345576905878e-07
+mechanic	fix	tire	pencil	AT	1.5	0.87	The mechanic fixed the tire with the pencil .	0.00019537672051228583	truck_(0.053246945);car_(0.042252354);pump_(0.030141156);hose_(0.022705235);tractor_(0.019671435);	5.546649504140078e-07
+musician	touch	instrument	club	AT	1.65	1.35	The musician touched the instrument with the club .	0.0001284721220145002	fingers_(0.33891487);finger_(0.15675561);stick_(0.102181286);hand_(0.080050565);thumb_(0.0777665);	0.0004773177206516266
+carpenter	fix	chair	trowel	AT	2.3	1.71	The carpenter fixed the chair with the trowel .			
+astronaut	reach	moon	dirigible	AT	1.7	1.52	The astronaut reached the moon with the dirigible .			
+policeman	examine	car	telescope	AT	1.8	0.81	The policeman examined the car with the telescope .	0.010257278569042683	flashlight_(0.07461145);camera_(0.06640758);gun_(0.05410459);rifle_(0.037668966);shotgun_(0.03295534);	5.810621951241046e-05
+mother	prepare	food	bonfire	AT	2.5	1.6	The mother prepared the food with the bonfire .			
+cook	flip	pancake	shovel	AT	1.15	0.48	The cook flipped the pancake with the shovel .			
+dog	carry	ball	basket	AT	1.5	0.59	The dog carried the ball with the basket .	0.008155434392392635	ball_(0.28595662);bat_(0.041830175);stick_(0.031223647);football_(0.029661017);players_(0.022651805);	4.439217718754662e-06
+waiter	bring	glass	backpack	AT	1.2	0.4	The waiter brought the glass with the backpack .	1.7151864994957577e-06	wine_(0.37403023);champagne_(0.06349052);tea_(0.035324685);rest_(0.03429786);coffee_(0.03190571);	8.438589247816708e-06
+mother	prepare	food	kiln	AT	2.65	1.88	The mother prepared the food with the kiln .			
+guard	tie	prisoner	headphones	AT	1.5	1.32	The guard tied the prisoner with the headphones .			
+singer	perform	music	megaphone	AT	3.35	1.77	The singer performed the music with the megaphone .			
+waiter	mix	drink	drill	AT	1.2	0.51	The waiter mixed the drink with the drill .	9.417531146027613e-07	water_(0.18514234);coffee_(0.14352006);wine_(0.12930973);beer_(0.052939255);tea_(0.046421517);	5.290462468110491e-06
+firefighter	fight	fire	bottle	AT	1.65	0.73	The firefighter fought the fire with the bottle .	0.0006917951977811754	hose_(0.079931185);rope_(0.03121565);flames_(0.029161714);man_(0.021556396);ladder_(0.02146865);	1.2699578064712114e-06
+skier	gain	speed	oar	AT	1.85	1.8	The skier gained the speed with the oar .			
+goalkeeper	grab	ball	mouth	AT	1.3	0.46	The goalkeeper grabbed the ball with the mouth .	0.00018557283328846097	ball_(0.23571856);foot_(0.10917737);arm_(0.05172142);hand_(0.04137441);feet_(0.03778935);	5.5635096032347064e-06
+tailor	sew	dress	scalpel	AT	1.5	0.92	The tailor sewed the dress with the scalpel .			
+student	send	email	television	AT	1.6	0.8	The student sent the email with the television .	5.65489563086885e-06	message_(0.046575833);note_(0.039788377);results_(0.039772555);picture_(0.036442433);letter_(0.02833585);	1.6519907148904167e-05
+spectator	watch	game	magnifier	AT	3.25	2.07	The spectator watched the game with the magnifier .			
+butcher	cut	meat	razor	AT	1.65	1.24	The butcher cut the meat with the razor .	0.003804899984970689	knife_(0.8886443);knives_(0.046208713);axe_(0.012042749);blade_(0.00898557);fork_(0.007861795);	1.0400145811217953e-06
+sweeper	clean	street	sponge	AT	1.65	0.85	The sweeper cleaned the street with the sponge .			
+footballer	hit	ball	bat	AT	1.75	1.51	The footballer hit the ball with the bat .	0.030565466731786728	ball_(0.32221603);stick_(0.07847013);foot_(0.06471296);feet_(0.032213446);bat_(0.030565467);	2.3368342226604e-05
+porter	carry	bag	sled	AT	1.85	1.06	The porter carried the bag with the sled .			
+surfer	catch	wave	lifesaver	AT	2.15	1.42	The surfer caught the wave with the lifesaver .			
+chauffeur	carry	passenger	barrow	AT	1.35	0.65	The chauffeur carried the passenger with the barrow .			
+dog	dig	hole	tail	AT	1.5	0.81	The dog dug the hole with the tail .	0.007083453703671694	knife_(0.108965546);stick_(0.096490905);bucket_(0.02112619);sticks_(0.020322846);brush_(0.019250574);	3.7441459426190704e-05
+volunteer	bring	food	raft	AT	2.95	1.53	The volunteer brought the food with the raft .			
+waiter	clear	table	vacuum	AT	1.8	1.17	The waiter cleared the table with the vacuum .	3.0838738894090056e-05	drinks_(0.10561152);rest_(0.053376142);food_(0.045136865);others_(0.037928555);dishes_(0.03524719);	3.2134059892996447e-06
+demonstrator	throw	stone	catapult	AT	2.7	1.79	The demonstrator threw the stone with the catapult .			
+musician	entertain	crowd	flag	AT	2.45	1.16	The musician entertained the crowd with the flag .	3.772345371544361e-05	music_(0.27362263);song_(0.17692234);songs_(0.06114541);melody_(0.035655156);flute_(0.026319414);	0.00010477209434611723
+deejay	mix	music	phone	AT	3.1	1.7	The deejay mixed the music with the phone .	9.785559814190492e-05	words_(0.25075987);lyrics_(0.13320842);dance_(0.0382484);song_(0.031755734);vocals_(0.020967912);	9.166191011900082e-05
+mover	move	furniture	bicycle	AT	1.85	1.24	The mover moved the furniture with the bicycle .	0.00013124622637405992	car_(0.026284605);floor_(0.024869323);furniture_(0.019367306);others_(0.017508386);boxes_(0.017224621);	1.8498574718250893e-05
+farmer	plow	field	helicopter	AT	1.15	0.36	The farmer plowed the field with the helicopter .	0.00011831731535494328	tractor_(0.5659565);axe_(0.029865036);bucket_(0.017014183);dogs_(0.015244944);hammer_(0.013801599);	7.134872430469841e-05
+policeman	capture	thief	saber	AT	1.9	1.09	The policeman captured the thief with the saber .			
+crew	load	container	catapult	AT	1.7	0.95	The crew loaded the container with the catapult .			
+sailor	face	ocean	inflatable	AT	2.75	1.44	The sailor faced the ocean with the inflatable .			
+barber	cut	hair	laser	AT	1.35	0.91	The barber cut the hair with the laser .	0.0006941352039575577	brush_(0.26469192);razor_(0.2547533);comb_(0.09450806);knife_(0.06830824);pins_(0.04105456);	0.0004729648062493652
+businessman	read	report	telescope	AT	1.0	0.0	The businessman read the report with the telescope .	0.0002386380365351215	others_(0.099473685);clerk_(0.047323253);newspaper_(0.022802446);reporter_(0.016593246);other_(0.016151924);	5.810621951241046e-05
+receiver	catch	baseball	pincers	AT	1.15	0.48	The receiver caught the baseball with the pincers .			
+guest	hang	coat	glue	AT	1.2	0.4	The guest hung the coat with the glue .			
+soldier	dig	trench	spoon	AT	1.4	0.73	The soldier dug the trench with the spoon .	0.0005521323182620108	knife_(0.10161299);axe_(0.054409124);sword_(0.03839099);stick_(0.02472938);earth_(0.024309121);	1.159825870900022e-07
+pyromaniac	start	fire	magnifier	AT	4.6	1.69	The pyromaniac started the fire with the magnifier .			

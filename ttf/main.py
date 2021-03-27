@@ -1,6 +1,8 @@
 import argparse
 import os
 import logging.config
+import pandas as pd
+from ast import literal_eval
 
 from ttf.core import transformers_mlm
 from ttf.core.tuples_to_sentences import to_sentences
@@ -27,25 +29,29 @@ def _tuples_to_sentences(args):
 
 
 def _run_transformers_mlm(args):
-    data_sequences_path = args.input_file_data_sequences
+    data_paths = args.input_path
     outdir = outils.check_dir(args.output_dir)
     models = [models_dict[m] for m in args.model]
     bline = args.baseline
     #name = args.name
 
-    if os.path.isfile(data_sequences_path):
-        transformers_mlm.build_model(data_sequences_path, outdir, models, bline)  # don't check whether the input files exist
-    else:
-        logger.info('Input path {} does not exist'.format(data_sequences_path))
+    #if os.path.isfile(data_sequences_path):
+    for input_file in outils.get_filenames(data_paths):
+        transformers_mlm.build_model(input_file, outdir, models, bline)  # don't check whether the input files exist
+    #else:
+    #    logger.info('Input path {} does not exist'.format(data_sequences_path))
 
 
 def _evaluation(args):
     data_paths = args.input_path
     eval_type = args.eval
     thresh = args.thresh
-    out_dir = args.output_dir
+    out_dir = outils.check_dir(args.output_dir)
+    common_idx = pd.read_csv(args.common_idx_path, sep='\t')
     for input_file in outils.get_filenames(data_paths):
-        evaluation(input_file, eval_type, thresh, out_dir)
+        i = common_idx.loc[common_idx['name'] == os.path.basename(input_file).split('.')[0]].index
+        pairs = literal_eval(common_idx['pairs'][i].values[0])
+        evaluation(input_file, eval_type, thresh, out_dir, pairs)
 
 
 def main():
@@ -65,7 +71,7 @@ def main():
                                                     help='Predict the probability of a role'
                                                          ' filler given a context')
     parser_transformers_mlm.add_argument('-o', '--output-dir', default='results/', help='output folder')
-    parser_transformers_mlm.add_argument('-ids', '--input-file-data-sequences', required=True,
+    parser_transformers_mlm.add_argument('-i', '--input-path', required=True, nargs='+',
                                          help='path to data (human scores, sentences selected for each'
                                               ' sequence of the dataset')
     parser_transformers_mlm.add_argument('-m', '--model', choices=['bert-base', 'bert-large', 'roberta-large', 'gpt2-medium'],
@@ -80,6 +86,7 @@ def main():
                                    help='output folder')
     parser_evaluation.add_argument('-t', '--thresh', default=0, help='threshold for probabilities difference')
     parser_evaluation.add_argument('-o', '--output-dir', default='results/', help='output folder')
+    parser_evaluation.add_argument('-c', '--common-idx-path', help='path to common indexes file')
     parser_evaluation.set_defaults(func=_evaluation)
 
     args = parser.parse_args()

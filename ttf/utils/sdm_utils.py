@@ -52,7 +52,7 @@ def prepare_input_file(data_path, out_dir, sbj=False):
 	df.to_csv(out_path, sep="\t", index=False)
 
 
-def compute_sdm_function(data_path, sdm_outpath, out_dir, vecs):
+def compute_sdm_function(data_path, sdm_outpath, out_dir, vecs, sbj=False):
 	# load dataset
 	data_original = pd.read_csv(data_path, sep='\t')
 	# load sdm vecs
@@ -64,7 +64,7 @@ def compute_sdm_function(data_path, sdm_outpath, out_dir, vecs):
 	scores = []
 
 	for index, row in data_original.iterrows():
-		item, target_rel = tup_to_string(row, data_original.columns)
+		item, target_rel = tup_to_string(row, data_original.columns, sbj)
 		idx = groups[item][0]
 		#print(idx)
 		# GET LC and AC vecs for each example in the dataset
