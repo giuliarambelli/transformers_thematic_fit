@@ -192,7 +192,6 @@ def build_model(path_data, output_directory, transformers, baseline):
     data = pd.read_csv(path_data, sep='\t')
     #thematic_role = os.path.basename(path_data).split("_")[1].split(".")[0]  # funziona solo se lasciamo i nomi dei file con le frasi come sono adesso
     thematic_role = get_thematic_role(list(data.columns), os.path.basename(path_data).split('.')[0])
-    print(thematic_role)
     for transformer in transformers:
         model = TransformerModel(transformer)
         model_fillers_scores, model_completions, baseline_scores = model.compute_fillers_scores(data, thematic_role, BATCH_SIZE)
