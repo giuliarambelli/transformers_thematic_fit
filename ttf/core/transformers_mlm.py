@@ -135,7 +135,7 @@ class TransformerModel:
                 predictions = self.tokenizer.convert_ids_to_tokens([int(index) for index in idxs_predictions])
                 string_predicted_fillers = ""
                 for word, index in zip(predictions, idxs_predictions):
-                    string_predicted_fillers += word.replace("Ġ", "")+"_("+str(np.log(all_probabilities[index]))+")"+";"
+                    string_predicted_fillers += word.replace("Ġ", "")+"_("+str(all_probabilities[index])+")"+";"
                 predicted_fillers.append(string_predicted_fillers)
         probabilities_baseline = []
         new_attention_mask = []
@@ -155,7 +155,7 @@ class TransformerModel:
                 if self.model_name.startswith("gpt"):
                     all_probabilities = tf.nn.softmax(outputs[batch_elem, 0]).numpy()
                 probabilities_baseline.append(all_probabilities[self.tokenizer.convert_tokens_to_ids(target_word)])
-        return [np.log(n) if n is not None else None for n in probabilities_fillers], predicted_fillers, [np.log(n) if n is not None else None for n in probabilities_baseline]
+        return probabilities_fillers, predicted_fillers, probabilities_baseline
 
 
     def compute_fillers_scores(self, data_sequences, role, batch_dimension=64):

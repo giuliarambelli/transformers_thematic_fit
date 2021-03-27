@@ -71,7 +71,7 @@ def _correlation(df, output_location, path_data):
 		bline_probs = df['baseline_score']
 		print("Baseline:  ", spearmanr(scores, bline_probs))
 	scores_for_regr = np.log(np.array(scores)).reshape(-1, 1)
-	probs_for_regr = np.array(probs).reshape(-1, 1)
+	probs_for_regr = np.log(np.array(probs)).reshape(-1, 1)
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
 	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
@@ -83,7 +83,7 @@ def _correlation(df, output_location, path_data):
 	plt.close()
 	if "baseline_score" in list(df.columns):
 		scores_for_regr = np.log(np.array(scores)).reshape(-1, 1)
-		b_probs_for_regr = np.array(bline_probs).reshape(-1, 1)
+		b_probs_for_regr = np.log(np.array(bline_probs)).reshape(-1, 1)
 		regr = LinearRegression().fit(scores_for_regr, b_probs_for_regr)
 		b_probs_predicted = regr.predict(scores_for_regr)
 		plt.plot(scores_for_regr, b_probs_for_regr, 'o', color='black')
