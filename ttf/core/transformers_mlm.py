@@ -42,7 +42,7 @@ class TransformerModel:
         d_sequences = d_sequences.reset_index(drop=True)
         for i in range(len(d_sequences)):
             sent = d_sequences["sentence"][i]
-            if th_role != "Agent":
+            if th_role != "SUBJECT":
                 id_dep = len(sent.split(" ")) - 2
             else:
                 id_dep = 1
