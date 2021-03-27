@@ -75,8 +75,8 @@ def _correlation(df, output_location, path_data):
 	if "baseline_score" in list(df.columns):
 		bline_probs = df['baseline_score']
 		print("Baseline:  ", spearmanr(scores, bline_probs))
-	scores_for_regr = np.array(scores).reshape(-1, 1)
-	probs_for_regr = np.array(probs).reshape(-1, 1)
+	scores_for_regr = np.log(np.array(scores)).reshape(-1, 1)
+	probs_for_regr = np.log(np.array(probs)).reshape(-1, 1)
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
 	#----Analysis of errors
@@ -88,8 +88,8 @@ def _correlation(df, output_location, path_data):
 		print("Sentence: {}    Error: {}".format(item, residuals[item]))
 
 
-	plt.plot(np.log(scores_for_regr), np.log(probs_for_regr), 'o', color='black')
-	plt.plot(np.log(scores_for_regr), np.log(probs_predicted), color='blue')
+	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
+	plt.plot(scores_for_regr, probs_predicted, color='blue')
 	plt.xlabel('human typicality scores')
 	plt.ylabel('model probabilities')
 	plt.title("Actuals vs Regression Line")
