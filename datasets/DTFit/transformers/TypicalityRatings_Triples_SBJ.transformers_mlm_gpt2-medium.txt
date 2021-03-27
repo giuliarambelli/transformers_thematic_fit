@@ -1,0 +1,423 @@
+SUBJECT	VERB	OBJECT	typicality	mean_rat	std_rat	sentence	computed_score	best_completions	baseline_score
+woman	paint	toenail	T	6.1	1.51	The woman painted the toenail .	0.0009087478974834085	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.456031547306338e-06
+reporter	hold	camera	T	4.5	1.57	The reporter held the camera .	5.1738981710514054e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.730846169171855e-06
+programmer	use	computer	T	7.0	0.0	The programmer used the computer .	6.6061379584425595e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00014637447020504624
+mason	mix	cement	T	6.65	0.65	The mason mixed the cement .			
+lumberjack	use	saw	T	6.15	1.77	The lumberjack used the saw .			
+firefighter	fight	fire	T	7.0	0.0	The firefighter fought the fire .	1.2005370990664233e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	9.83404697763035e-06
+policeman	capture	thief	T	6.8	0.51	The policeman captured the thief .	1.492787941970164e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.263138933107257e-05
+knight	hold	sword	T	6.5	0.92	The knight held the sword .	8.35135597299086e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00020017701899632812
+deejay	mix	music	T	6.65	1.11	The deejay mixed the music .			
+librarian	climb	ladder	T	5.1	1.67	The librarian climbed the ladder .			
+photographer	use	camera	T	6.65	1.31	The photographer used the camera .	5.1907813030993566e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.5135257601505145e-05
+politician	sign	agreement	T	6.35	0.73	The politician signed the agreement .	4.1193146898876876e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.74838316727255e-06
+magician	read	hand	T	4.4	2.08	The magician read the hand .	7.904492122179363e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.5197436432099494e-07
+doctor	use	stethoscope	T	5.85	1.68	The doctor used the stethoscope .	0.00014859199291095138	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.219968392746523e-05
+bartender	shake	drink	T	6.25	1.37	The bartender shook the drink .	1.2119531675125472e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00027157930890098214
+dealer	check	car	T	5.9	0.94	The dealer checked the car .	9.287831744586583e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.5487410059431568e-06
+botanist	examine	plant	T	6.55	1.16	The botanist examined the plant .			
+porter	stack	suitcase	T	5.5	2.27	The porter stacked the suitcase .			
+climber	climb	rock	T	6.8	0.4	The climber climbed the rock .			
+skipper	assemble	sailboat	T	3.8	1.83	The skipper assembled the sailboat .			
+driver	hear	horn	T	5.75	1.79	The driver heard the horn .	0.00036155356792733073	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.002388626104220748
+sculptor	carve	stone	T	5.55	1.66	The sculptor carved the stone .			
+pilot	begin	race	T	4.8	2.23	The pilot began the race .	0.0001948970020748675	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0005743195069953799
+mother	hold	child	T	6.9	0.3	The mother held the child .	0.0007956017507240176	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.168668970625731e-06
+customer	read	menu	T	5.45	2.29	The customer read the menu .	5.702132693841122e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.1566352845402434e-05
+philologist	examine	book	T	6.2	1.25	The philologist examined the book .			
+confectioner	decorate	cake	T	6.05	1.36	The confectioner decorated the cake .			
+sweeper	clean	street	T	6.5	0.92	The sweeper cleaned the street .			
+cobbler	sew	shoe	T	6.6	0.49	The cobbler sewed the shoe .			
+surfer	catch	wave	T	7.0	0.0	The surfer caught the wave .			
+guard	tie	prisoner	T	4.8	2.29	The guard tied the prisoner .	4.482694930629805e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	8.6535283116973e-07
+producer	release	film	T	6.3	1.31	The producer released the film .	4.7527286369586363e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.6744550521252677e-05
+general	win	battle	T	6.1	1.04	The general won the battle .	0.00048412411706522107	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0008677735459059477
+horse	pull	cart	T	4.95	1.69	The horse pulled the cart .	9.08768197405152e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.9262906537042e-05
+butcher	sell	meat	T	6.95	0.22	The butcher sold the meat .	6.764552836102666e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.463154487486463e-05
+mechanic	fix	tire	T	6.45	0.86	The mechanic fixed the tire .	1.0986322195094544e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.093600066174986e-06
+footballer	chase	ball	T	5.75	1.95	The footballer chased the ball .	1.1275120414211415e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.173143525714295e-08
+artist	assemble	art	T	6.35	1.19	The artist assembled the art .	0.0002089783374685794	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0002582904417067766
+astronaut	reach	moon	T	5.4	1.83	The astronaut reached the moon .	1.2903144124720711e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.49042091127194e-06
+engineer	complete	project	T	6.25	1.48	The engineer completed the project .	3.0088616767898202e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00022786897898185998
+killer	pull	trigger	T	6.6	0.58	The killer pulled the trigger .	8.491033804602921e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.378103388560703e-05
+cheerleader	shake	flag	T	5.15	2.06	The cheerleader shook the flag .			
+surgeon	use	lancet	T	4.95	2.25	The surgeon used the lancet .	2.3076167053659447e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.4597514867491554e-06
+florist	sell	flower	T	6.15	1.74	The florist sold the flower .			
+player	gain	ball	T	5.45	1.16	The player gained the ball .	0.0003390177444089204	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0017904452979564667
+nanny	hear	baby	T	6.35	1.35	The nanny heard the baby .			
+barber	cut	hair	T	6.65	1.11	The barber cut the hair .			
+violinist	wear	tuxedo	T	5.9	0.89	The violinist wore the tuxedo .			
+child	throw	snowball	T	5.95	1.2	The child threw the snowball .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+mover	move	furniture	T	4.9	2.43	The mover moved the furniture .			
+dog	chase	ball	T	6.5	0.67	The dog chased the ball .	0.00018166257359553128	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.1162197703670245e-06
+hairstylist	flip	hair	T	6.35	0.65	The hairstylist flipped the hair .			
+cook	cut	fish	T	5.75	1.37	The cook cut the fish .	1.7100148397730663e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.8477594241849147e-05
+musician	read	music	T	6.35	1.39	The musician read the music .	3.355091394041665e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.966482952615479e-06
+passenger	buy	ticket	T	6.5	1.16	The passenger bought the ticket .	4.6773315261816606e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.3522767403628677e-06
+student	wear	glass	T	6.0	0.89	The student wore the glass .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+barber	use	razor	T	6.55	1.02	The barber used the razor .			
+player	enjoy	game	T	6.65	0.79	The player enjoyed the game .	0.0003390177444089204	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0017904452979564667
+mother	prepare	food	T	6.4	0.92	The mother prepared the food .	0.0007956017507240176	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.168668970625731e-06
+dog	carry	ball	T	6.0	1.38	The dog carried the ball .	0.00018166257359553128	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.1162197703670245e-06
+soldier	dig	trench	T	5.15	2.26	The soldier dug the trench .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+general	gather	soldier	T	5.9	1.87	The general gathered the soldier .	0.00048412411706522107	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0008677735459059477
+housemaid	clean	window	T	6.65	0.57	The housemaid cleaned the window .			
+cyclist	ride	bike	T	6.5	1.5	The cyclist rode the bike .	2.7376250727684237e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.292973479394277e-07
+waiter	mix	drink	T	5.4	1.53	The waiter mixed the drink .	1.249680917680962e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.725442406401271e-06
+hairstylist	fix	hair	T	6.85	0.36	The hairstylist fixed the hair .			
+player	touch	base	T	5.5	1.32	The player touched the base .	0.0003390177444089204	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0017904452979564667
+biker	wear	helmet	T	6.8	0.51	The biker wore the helmet .			
+musician	hold	guitar	T	6.55	0.5	The musician held the guitar .	3.355091394041665e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.966482952615479e-06
+truck	hit	car	T	4.0	1.7	The truck hit the car .	8.775485184742138e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.3062934815243352e-06
+spectator	enjoy	game	T	6.05	1.47	The spectator enjoyed the game .	3.483422005956527e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.2515850509516895e-05
+receiver	catch	baseball	T	4.75	2.28	The receiver caught the baseball .	2.1659041522070765e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.2971627408405766e-05
+mother	push	stroller	T	6.1	1.41	The mother pushed the stroller .	0.0007956017507240176	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.168668970625731e-06
+student	drink	coffee	T	4.95	1.66	The student drank the coffee .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+painter	mix	paint	T	6.35	1.59	The painter mixed the paint .	1.1052990885218605e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00023701609461568296
+child	chase	toy	T	6.1	1.34	The child chased the toy .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+comedian	entertain	audience	T	6.35	1.65	The comedian entertained the audience .	7.409345562336966e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.0794323063455522e-07
+woman	carry	bag	T	6.25	0.83	The woman carried the bag .	0.0009087478974834085	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.456031547306338e-06
+cook	flip	pancake	T	6.3	0.9	The cook flipped the pancake .	1.7100148397730663e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.8477594241849147e-05
+porter	carry	bag	T	5.1	2.53	The porter carried the bag .			
+gardener	gather	grass	T	5.65	1.74	The gardener gathered the grass .			
+lumberjack	cut	tree	T	6.55	1.32	The lumberjack cut the tree .			
+policeman	check	bag	T	5.55	1.5	The policeman checked the bag .	1.492787941970164e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.263138933107257e-05
+player	begin	match	T	5.7	1.49	The player began the match .	0.0003390177444089204	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0017904452979564667
+painter	complete	painting	T	6.35	1.49	The painter completed the painting .	1.1052990885218605e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00023701609461568296
+child	visit	grandmother	T	5.95	1.72	The child visited the grandmother .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+programmer	describe	software	T	5.55	1.63	The programmer described the software .	6.6061379584425595e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00014637447020504624
+child	draw	flower	T	4.95	1.72	The child drew the flower .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+poet	write	sonnet	T	5.8	1.33	The poet wrote the sonnet .	3.059241862501949e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.0299714378779754e-05
+president	deliver	speech	T	6.8	0.4	The president delivered the speech .	0.0016093561425805092	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.3094351238105446e-05
+climber	face	wall	T	5.5	2.04	The climber faced the wall .			
+child	pick	flower	T	5.4	1.46	The child picked the flower .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+model	face	camera	T	6.9	0.3	The model faced the camera .	0.0001465994428144768	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.3359894587192684e-05
+artist	hang	picture	T	5.5	1.63	The artist hung the picture .	0.0002089783374685794	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0002582904417067766
+roofer	climb	ladder	T	6.6	1.02	The roofer climbed the ladder .			
+mason	build	house	T	6.45	0.74	The mason built the house .			
+guide	describe	monument	T	5.9	1.58	The guide described the monument .	7.219783583423123e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.209032628452405e-05
+child	grab	frisbee	T	4.95	1.47	The child grabbed the frisbee .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+tourist	visit	museum	T	5.95	1.32	The tourist visited the museum .	8.17970976640936e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0003033701505046338
+mechanic	assemble	bicycle	T	4.5	2.09	The mechanic assembled the bicycle .	1.0986322195094544e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.093600066174986e-06
+cyclist	complete	race	T	6.25	1.22	The cyclist completed the race .	2.7376250727684237e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.292973479394277e-07
+assistant	help	cook	T	5.25	1.34	The assistant helped the cook .	5.180178413866088e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0018335840431973338
+butcher	use	knife	T	6.35	1.42	The butcher used the knife .	6.764552836102666e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.463154487486463e-05
+veterinarian	examine	dog	T	6.85	0.36	The veterinarian examined the dog .	4.318814717407804e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.9366410924703814e-05
+horse	draw	carriage	T	4.05	2.65	The horse drew the carriage .	9.08768197405152e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.9262906537042e-05
+swimmer	wear	goggles	T	6.2	1.4	The swimmer wore the goggles .			
+mechanic	check	tire	T	6.7	0.56	The mechanic checked the tire .	1.0986322195094544e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.093600066174986e-06
+scoutmaster	assemble	tent	T	4.7	2.24	The scoutmaster assembled the tent .			
+policeman	fight	crime	T	6.4	0.86	The policeman fought the crime .	1.492787941970164e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.263138933107257e-05
+painter	sign	paint	T	5.9	1.87	The painter signed the paint .	1.1052990885218605e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00023701609461568296
+carver	build	sculpture	T	6.05	1.77	The carver built the sculpture .			
+guard	open	jail	T	6.5	0.81	The guard opened the jail .	4.482694930629805e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	8.6535283116973e-07
+cook	check	grocery	T	6.2	1.21	The cook checked the grocery .	1.7100148397730663e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.8477594241849147e-05
+cook	mix	ingredient	T	6.15	1.59	The cook mixed the ingredient .	1.7100148397730663e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.8477594241849147e-05
+surfer	ride	wave	T	6.2	1.44	The surfer rode the wave .			
+spectator	hear	speech	T	4.4	1.83	The spectator heard the speech .	3.483422005956527e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.2515850509516895e-05
+tourist	ride	camel	T	4.55	1.47	The tourist rode the camel .	8.17970976640936e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0003033701505046338
+student	pass	exam	T	6.35	0.91	The student passed the exam .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+cook	clean	fish	T	6.1	0.77	The cook cleaned the fish .	1.7100148397730663e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.8477594241849147e-05
+gardener	cut	grass	T	6.5	0.74	The gardener cut the grass .			
+businessman	tie	necktie	T	6.5	0.67	The businessman tied the necktie .	2.142533048754558e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.1673532302202148e-08
+lumberjack	stack	wood	T	6.75	0.54	The lumberjack stacked the wood .			
+footballer	hit	ball	T	6.05	1.77	The footballer hit the ball .	1.1275120414211415e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.173143525714295e-08
+sailor	face	ocean	T	6.75	0.43	The sailor faced the ocean .	1.1275335964455735e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.688046697585378e-05
+illusionist	perform	trick	T	5.05	2.58	The illusionist performed the trick .			
+monkey	grab	banana	T	6.15	1.42	The monkey grabbed the banana .	2.5383107640664093e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	9.330232586535203e-08
+singer	begin	performance	T	6.5	1.02	The singer began the performance .	0.00011615522089414299	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.4219046938233078e-06
+fisherman	check	net	T	6.15	1.77	The fisherman checked the net .	7.834695679775905e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.672092927648919e-06
+cobbler	fix	shoe	T	6.25	1.18	The cobbler fixed the shoe .			
+fisherman	catch	fish	T	6.45	1.12	The fisherman caught the fish .	7.834695679775905e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.672092927648919e-06
+student	wear	jeans	T	5.6	1.24	The student wore the jeans .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+librarian	stack	book	T	6.5	0.67	The librarian stacked the book .			
+cyclist	fix	bike	T	6.1	0.89	The cyclist fixed the bike .	2.7376250727684237e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.292973479394277e-07
+nurse	wash	infant	T	6.45	0.8	The nurse washed the infant .	3.780672705033794e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00012636730389203876
+child	enjoy	ride	T	6.7	0.56	The child enjoyed the ride .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+mason	fix	roof	T	4.15	2.2	The mason fixed the roof .			
+dog	eat	bone	T	6.25	1.34	The dog ate the bone .	0.00018166257359553128	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.1162197703670245e-06
+businessman	wear	tie	T	6.55	1.12	The businessman wore the tie .	2.142533048754558e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.1673532302202148e-08
+child	climb	tree	T	5.2	1.21	The child climbed the tree .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+mother	hang	laundry	T	5.8	1.96	The mother hung the laundry .	0.0007956017507240176	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.168668970625731e-06
+cat	drink	milk	T	5.6	1.53	The cat drank the milk .	0.00010851168917724863	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.2482817510317545e-05
+coach	check	team	T	6.95	0.22	The coach checked the team .	0.00010505084355827421	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00010597649816190824
+footballer	deliver	kick	T	5.9	1.81	The footballer delivered the kick .	1.1275120414211415e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.173143525714295e-08
+surfer	wear	swimsuit	T	6.25	1.18	The surfer wore the swimsuit .			
+student	hear	lecture	T	6.75	0.54	The student heard the lecture .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+doctor	sew	wound	T	5.65	1.42	The doctor sewed the wound .	0.00014859199291095138	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.219968392746523e-05
+passenger	pull	suitcase	T	5.6	1.59	The passenger pulled the suitcase .	4.6773315261816606e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.3522767403628677e-06
+boxer	deliver	punch	T	6.15	1.65	The boxer delivered the punch .	7.719264431216288e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.184456313145347e-06
+speaker	entertain	audience	T	5.9	1.45	The speaker entertained the audience .	7.283574086613953e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.6166854897601297e-06
+baker	gather	bread	T	6.3	1.14	The baker gathered the bread .	3.297257535450626e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.9215314043540275e-06
+photographer	examine	camera	T	6.7	0.56	The photographer examined the camera .	5.1907813030993566e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.5135257601505145e-05
+ant	stack	supply	T	4.4	2.42	The ant stacked the supply .	4.447708124644123e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.9499582776916213e-05
+soldier	gather	flag	T	4.7	1.85	The soldier gathered the flag .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+policeman	push	demonstrator	T	4.6	2.2	The policeman pushed the demonstrator .	1.492787941970164e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.263138933107257e-05
+waiter	deliver	drink	T	6.35	1.53	The waiter delivered the drink .	1.249680917680962e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.725442406401271e-06
+goalkeeper	catch	ball	T	6.0	1.34	The goalkeeper caught the ball .	2.7089943614555523e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.9082808648818173e-06
+gardener	decorate	garden	T	6.3	1.05	The gardener decorated the garden .			
+undertaker	dig	grave	T	4.15	1.98	The undertaker dug the grave .			
+singer	start	concert	T	5.4	2.35	The singer started the concert .	0.00011615522089414299	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.4219046938233078e-06
+student	throw	frisbee	T	4.7	1.73	The student threw the frisbee .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+doctor	visit	patient	T	6.05	1.53	The doctor visited the patient .	0.00014859199291095138	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.219968392746523e-05
+soldier	hang	rifle	T	5.8	1.75	The soldier hung the rifle .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+goalkeeper	grab	ball	T	5.6	1.88	The goalkeeper grabbed the ball .	2.7089943614555523e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.9082808648818173e-06
+waiter	cut	cake	T	4.85	1.53	The waiter cut the cake .	1.249680917680962e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.725442406401271e-06
+priest	celebrate	marriage	T	6.5	1.32	The priest celebrated the marriage .	3.858726631733589e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.874085450661369e-06
+child	build	snowman	T	6.15	1.11	The child built the snowman .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+surgeon	perform	surgery	T	6.85	0.48	The surgeon performed the surgery .	2.3076167053659447e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.4597514867491554e-06
+butcher	cut	meat	T	6.75	0.7	The butcher cut the meat .	6.764552836102666e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.463154487486463e-05
+professor	deliver	lecture	T	6.6	0.73	The professor delivered the lecture .	0.00010024710354628041	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0008765319362282753
+soldier	hear	command	T	6.1	1.64	The soldier heard the command .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+soldier	cross	river	T	4.5	1.6	The soldier crossed the river .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+farmer	use	shovel	T	5.95	1.5	The farmer used the shovel .	3.373739673406817e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00026466528652235866
+student	wear	glass	T	5.55	1.36	The student wore the glass .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+smuggler	sell	weapon	T	6.5	0.5	The smuggler sold the weapon .			
+carpenter	grab	board	T	5.85	1.74	The carpenter grabbed the board .			
+breeder	sell	dog	T	6.25	0.94	The breeder sold the dog .			
+teacher	use	blackboard	T	5.95	1.99	The teacher used the blackboard .	9.766410221345723e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00011835798795800656
+photographer	capture	image	T	6.95	0.22	The photographer captured the image .	5.1907813030993566e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.5135257601505145e-05
+student	celebrate	graduation	T	6.7	0.56	The student celebrated the graduation .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+professor	open	congress	T	3.0	2.26	The professor opened the congress .	0.00010024710354628041	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0008765319362282753
+dealer	examine	car	T	6.4	0.8	The dealer examined the car .	9.287831744586583e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.5487410059431568e-06
+illustrator	decorate	book	T	6.3	0.78	The illustrator decorated the book .			
+patient	fight	cancer	T	5.65	1.01	The patient fought the cancer .	0.00011429333972046152	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.000245847535552457
+hiker	face	mountain	T	6.15	1.19	The hiker faced the mountain .			
+soldier	wear	uniform	T	6.9	0.3	The soldier wore the uniform .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+cheerleader	perform	dance	T	5.75	1.58	The cheerleader performed the dance .			
+biologist	use	microscope	T	6.7	0.64	The biologist used the microscope .	6.751147793693235e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0001182382256956771
+child	ride	bus	T	5.3	2.19	The child rode the bus .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+surgeon	examine	patient	T	6.05	1.56	The surgeon examined the patient .	2.3076167053659447e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.4597514867491554e-06
+cowboy	enjoy	ride	T	5.6	1.71	The cowboy enjoyed the ride .	1.0625827599142212e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.730693010264076e-05
+player	gather	ball	T	5.55	1.4	The player gathered the ball .	0.0003390177444089204	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0017904452979564667
+cowboy	ride	bull	T	5.7	1.0	The cowboy rode the bull .	1.0625827599142212e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.730693010264076e-05
+student	drink	beer	T	4.6	1.43	The student drank the beer .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+butcher	carve	meat	T	5.75	1.97	The butcher carved the meat .	6.764552836102666e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.463154487486463e-05
+traveller	check	bag	T	6.0	1.14	The traveller checked the bag .	6.412495167751331e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.61580311821308e-05
+soldier	release	prisoner	T	4.3	1.82	The soldier released the prisoner .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+gardener	push	mower	T	5.65	1.71	The gardener pushed the mower .			
+soldier	check	rifle	T	6.85	0.36	The soldier checked the rifle .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+student	enjoy	beer	T	4.7	2.05	The student enjoyed the beer .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+child	find	doll	T	5.65	1.53	The child found the doll .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+soldier	hold	flag	T	5.2	1.94	The soldier held the flag .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+dog	fetch	ball	T	5.5	2.09	The dog fetched the ball .	0.00018166257359553128	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.1162197703670245e-06
+child	open	present	T	6.7	0.64	The child opened the present .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+soldier	throw	bomb	T	5.8	0.81	The soldier threw the bomb .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+farmer	spray	pesticide	T	6.7	0.46	The farmer sprayed the pesticide .	3.373739673406817e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00026466528652235866
+programmer	load	file	T	6.65	0.48	The programmer loaded the file .	6.6061379584425595e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00014637447020504624
+child	throw	ball	T	6.35	0.57	The child threw the ball .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+boss	promise	promotion	T	5.95	1.36	The boss promised the promotion .	0.00012317205255385488	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	8.309575059683993e-05
+witness	report	crime	T	6.4	0.73	The witness reported the crime .	2.748025508481078e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.2397259524732362e-05
+professor	donate	book	T	4.8	1.83	The professor donated the book .	0.00010024710354628041	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0008765319362282753
+waiter	pour	wine	T	6.6	0.58	The waiter poured the wine .	1.249680917680962e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.725442406401271e-06
+nurse	hand	lancet	T	5.8	1.47	The nurse handed the lancet .	3.780672705033794e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00012636730389203876
+footballer	pass	ball	T	6.75	0.7	The footballer passed the ball .	1.1275120414211415e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.173143525714295e-08
+engineer	draw	turbine	T	5.4	1.43	The engineer drew the turbine .	3.0088616767898202e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00022786897898185998
+archeologist	examine	epigraph	T	5.5	1.72	The archeologist examined the epigraph .			
+child	write	conjugation	T	3.95	1.94	The child wrote the conjugation .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+doctor	write	diagnosis	T	6.8	0.4	The doctor wrote the diagnosis .	0.00014859199291095138	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.219968392746523e-05
+engineer	complete	painting	AT	1.85	1.11	The engineer completed the painting .	3.0088616767898202e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00022786897898185998
+sailor	face	wall	AT	2.1	1.81	The sailor faced the wall .	1.1275335964455735e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.688046697585378e-05
+businessman	tie	prisoner	AT	1.45	0.8	The businessman tied the prisoner .	2.142533048754558e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.1673532302202148e-08
+jockey	ride	wave	AT	1.6	1.2	The jockey rode the wave .			
+politician	sign	paint	AT	2.25	1.61	The politician signed the paint .	4.1193146898876876e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.74838316727255e-06
+spectator	hear	horn	AT	4.75	1.48	The spectator heard the horn .	3.483422005956527e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.2515850509516895e-05
+deejay	mix	ingredient	AT	2.1	1.3	The deejay mixed the ingredient .			
+mother	hang	rifle	AT	2.35	1.96	The mother hung the rifle .	0.0007956017507240176	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.168668970625731e-06
+goalkeeper	catch	fish	AT	1.65	1.39	The goalkeeper caught the fish .	2.7089943614555523e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.9082808648818173e-06
+surfer	flip	pancake	AT	2.55	1.94	The surfer flipped the pancake .			
+surgeon	examine	car	AT	1.2	0.4	The surgeon examined the car .	2.3076167053659447e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.4597514867491554e-06
+doctor	help	cook	AT	2.05	1.6	The doctor helped the cook .	0.00014859199291095138	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.219968392746523e-05
+driver	hear	baby	AT	3.25	1.7	The driver heard the baby .	0.00036155356792733073	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.002388626104220748
+referee	move	furniture	AT	1.7	0.78	The referee moved the furniture .	5.395417247200385e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00039418350206688046
+dealer	check	net	AT	2.95	2.04	The dealer checked the net .	9.287831744586583e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.5487410059431568e-06
+baker	gather	soldier	AT	1.0	0.0	The baker gathered the soldier .	3.297257535450626e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.9215314043540275e-06
+customer	read	music	AT	2.6	1.77	The customer read the music .	5.702132693841122e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.1566352845402434e-05
+firefighter	fight	crime	AT	2.05	1.4	The firefighter fought the crime .	1.2005370990664233e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	9.83404697763035e-06
+hairstylist	wash	infant	AT	2.85	2.26	The hairstylist washed the infant .			
+skipper	assemble	bicycle	AT	2.15	1.85	The skipper assembled the bicycle .			
+mechanic	fix	roof	AT	2.1	1.55	The mechanic fixed the roof .	1.0986322195094544e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.093600066174986e-06
+skier	gain	ball	AT	2.05	1.12	The skier gained the ball .			
+knight	hold	camera	AT	2.0	1.45	The knight held the camera .	8.35135597299086e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00020017701899632812
+general	win	toy	AT	1.55	0.92	The general won the toy .	0.00048412411706522107	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0008677735459059477
+singer	hold	sword	AT	1.5	0.74	The singer held the sword .	0.00011615522089414299	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.4219046938233078e-06
+programmer	describe	monument	AT	2.95	2.04	The programmer described the monument .	6.6061379584425595e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00014637447020504624
+player	pass	exam	AT	4.45	1.77	The player passed the exam .	0.0003390177444089204	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0017904452979564667
+cheerleader	shake	drink	AT	2.75	1.67	The cheerleader shook the drink .			
+librarian	climb	tree	AT	1.8	1.5	The librarian climbed the tree .			
+producer	release	prisoner	AT	1.6	0.97	The producer released the prisoner .	4.7527286369586363e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.6744550521252677e-05
+guard	open	present	AT	2.05	1.28	The guard opened the present .	4.482694930629805e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	8.6535283116973e-07
+barber	use	microscope	AT	1.2	0.6	The barber used the microscope .			
+painter	decorate	cake	AT	2.6	1.71	The painter decorated the cake .	1.1052990885218605e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00023701609461568296
+champion	hold	guitar	AT	2.95	1.83	The champion held the guitar .	2.8715137887047604e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00011500463733682409
+sculptor	carve	meat	AT	2.45	1.8	The sculptor carved the meat .			
+artist	assemble	tent	AT	2.0	1.1	The artist assembled the tent .	0.0002089783374685794	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0002582904417067766
+bartender	shake	flag	AT	2.05	1.6	The bartender shook the flag .	1.2119531675125472e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00027157930890098214
+cook	cut	grass	AT	3.35	2.01	The cook cut the grass .	1.7100148397730663e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.8477594241849147e-05
+killer	pull	cart	AT	2.5	1.94	The killer pulled the cart .	8.491033804602921e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.378103388560703e-05
+pilot	begin	performance	AT	2.4	1.88	The pilot began the performance .	0.0001948970020748675	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0005743195069953799
+horse	pull	suitcase	AT	1.55	1.36	The horse pulled the suitcase .	9.08768197405152e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.9262906537042e-05
+tailor	sew	wound	AT	1.6	1.11	The tailor sewed the wound .	3.2688913051970303e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.4424860239614645e-07
+athlete	win	toy	AT	3.15	2.26	The athlete won the toy .	2.0198769561829977e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.205753950576764e-06
+philologist	examine	camera	AT	2.3	1.27	The philologist examined the camera .			
+lumberjack	stack	book	AT	2.2	1.17	The lumberjack stacked the book .			
+butcher	use	camera	AT	2.05	1.53	The butcher used the camera .	6.764552836102666e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.463154487486463e-05
+carpenter	fix	shoe	AT	1.2	0.51	The carpenter fixed the shoe .			
+thief	grab	banana	AT	3.7	2.24	The thief grabbed the banana .	1.6487578250234947e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.0869081961573102e-05
+electrician	check	rifle	AT	1.9	1.55	The electrician checked the rifle .			
+smuggler	sell	flower	AT	2.4	1.83	The smuggler sold the flower .			
+student	hear	command	AT	4.45	1.75	The student heard the command .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+goalkeeper	hold	child	AT	2.7	1.65	The goalkeeper held the child .	2.7089943614555523e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.9082808648818173e-06
+scoutmaster	assemble	sailboat	AT	4.25	1.76	The scoutmaster assembled the sailboat .			
+teacher	use	knife	AT	2.85	1.19	The teacher used the knife .	9.766410221345723e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00011835798795800656
+chemist	sell	dog	AT	1.9	1.45	The chemist sold the dog .	4.374276613816619e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0005765078822150826
+gardener	push	demonstrator	AT	2.6	2.01	The gardener pushed the demonstrator .			
+lumberjack	use	lancet	AT	2.75	1.81	The lumberjack used the lancet .			
+gardener	cut	fish	AT	1.45	0.74	The gardener cut the fish .			
+barber	cut	cake	AT	2.1	1.51	The barber cut the cake .			
+child	eat	bone	AT	2.85	2.08	The child ate the bone .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+illustrator	decorate	garden	AT	3.0	1.73	The illustrator decorated the garden .			
+painter	mix	drink	AT	2.8	1.33	The painter mixed the drink .	1.1052990885218605e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00023701609461568296
+undertaker	dig	trench	AT	3.2	2.11	The undertaker dug the trench .			
+priest	celebrate	graduation	AT	3.85	2.2	The priest celebrated the graduation .	3.858726631733589e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.874085450661369e-06
+mason	fix	tire	AT	3.25	2.41	The mason fixed the tire .			
+hairstylist	fix	bike	AT	1.25	0.43	The hairstylist fixed the bike .			
+fisherman	catch	ball	AT	2.2	1.75	The fisherman caught the ball .	7.834695679775905e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.672092927648919e-06
+professor	wear	goggles	AT	4.7	1.95	The professor wore the goggles .	0.00010024710354628041	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0008765319362282753
+waiter	mix	cement	AT	1.5	1.12	The waiter mixed the cement .	1.249680917680962e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.725442406401271e-06
+teenager	hear	lecture	AT	4.65	2.06	The teenager heard the lecture .	6.326920265564695e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.306977077954798e-06
+secretary	write	sonnet	AT	3.55	2.44	The secretary wrote the sonnet .	8.899884414859116e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.257002350030234e-05
+child	build	sculpture	AT	3.95	1.88	The child built the sculpture .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+player	gather	grass	AT	2.4	1.8	The player gathered the grass .	0.0003390177444089204	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0017904452979564667
+guest	hang	laundry	AT	3.9	2.0	The guest hung the laundry .	6.401646533049643e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	6.274031960629145e-08
+goalkeeper	throw	bomb	AT	1.05	0.22	The goalkeeper threw the bomb .	2.7089943614555523e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.9082808648818173e-06
+tourist	ride	skate	AT	3.7	2.17	The tourist rode the skate .	8.17970976640936e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0003033701505046338
+cyclist	complete	project	AT	2.7	1.35	The cyclist completed the project .	2.7376250727684237e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.292973479394277e-07
+biker	wear	swimsuit	AT	2.1	1.45	The biker wore the swimsuit .			
+dog	pull	trigger	AT	2.8	2.54	The dog pulled the trigger .	0.00018166257359553128	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.1162197703670245e-06
+carver	build	house	AT	2.9	1.95	The carver built the house .			
+child	cut	tree	AT	1.75	1.44	The child cut the tree .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+professor	open	jail	AT	1.2	0.4	The professor opened the jail .	0.00010024710354628041	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0008765319362282753
+mechanic	assemble	art	AT	1.7	1.1	The mechanic assembled the art .	1.0986322195094544e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.093600066174986e-06
+soldier	fight	cancer	AT	3.1	1.87	The soldier fought the cancer .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+cook	clean	window	AT	2.3	1.68	The cook cleaned the window .	1.7100148397730663e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.8477594241849147e-05
+surfer	wear	tuxedo	AT	2.1	1.87	The surfer wore the tuxedo .			
+child	ride	bull	AT	2.0	1.55	The child rode the bull .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+gardener	gather	flag	AT	1.9	1.18	The gardener gathered the flag .			
+player	enjoy	beer	AT	4.5	1.43	The player enjoyed the beer .	0.0003390177444089204	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0017904452979564667
+biologist	use	razor	AT	3.3	1.65	The biologist used the razor .	6.751147793693235e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0001182382256956771
+surgeon	perform	dance	AT	2.4	1.46	The surgeon performed the dance .	2.3076167053659447e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.4597514867491554e-06
+hiker	face	camera	AT	3.95	2.09	The hiker faced the camera .			
+student	read	hand	AT	2.4	1.2	The student read the hand .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+surfer	wear	tie	AT	2.0	1.76	The surfer wore the tie .			
+soldier	throw	snowball	AT	1.8	0.98	The soldier threw the snowball .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+butcher	sell	weapon	AT	1.6	0.73	The butcher sold the weapon .	6.764552836102666e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.463154487486463e-05
+president	visit	grandmother	AT	4.45	1.77	The president visited the grandmother .	0.0016093561425805092	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.3094351238105446e-05
+traveller	check	team	AT	3.0	1.97	The traveller checked the team .	6.412495167751331e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.61580311821308e-05
+sailor	tie	necktie	AT	3.5	1.91	The sailor tied the necktie .	1.1275335964455735e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.688046697585378e-05
+patient	fight	fire	AT	1.95	1.4	The patient fought the fire .	0.00011429333972046152	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.000245847535552457
+soldier	wear	jeans	AT	3.85	1.8	The soldier wore the jeans .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+butcher	carve	stone	AT	2.3	1.79	The butcher carved the stone .	6.764552836102666e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.463154487486463e-05
+policeman	hit	ball	AT	2.7	1.27	The policeman hit the ball .	1.492787941970164e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.263138933107257e-05
+nurse	push	mower	AT	1.45	0.74	The nurse pushed the mower .	3.780672705033794e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00012636730389203876
+illustrator	draw	carriage	AT	5.15	1.8	The illustrator drew the carriage .			
+soldier	carry	ball	AT	1.7	1.45	The soldier carried the ball .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+child	drink	beer	AT	2.0	1.76	The child drank the beer .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+soldier	hang	picture	AT	3.2	2.23	The soldier hung the picture .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+footballer	deliver	lecture	AT	3.2	2.29	The footballer delivered the lecture .	1.1275120414211415e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.173143525714295e-08
+general	gather	bread	AT	1.85	1.39	The general gathered the bread .	0.00048412411706522107	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0008677735459059477
+soldier	release	film	AT	1.9	0.94	The soldier released the film .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+gardener	decorate	book	AT	2.05	1.69	The gardener decorated the book .			
+student	drink	milk	AT	4.9	1.67	The student drank the milk .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+footballer	hit	car	AT	2.3	1.42	The footballer hit the car .	1.1275120414211415e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.173143525714295e-08
+ant	stack	suitcase	AT	1.95	1.69	The ant stacked the suitcase .	4.447708124644123e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.9499582776916213e-05
+boxer	deliver	drink	AT	2.2	1.29	The boxer delivered the drink .	7.719264431216288e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.184456313145347e-06
+refugee	find	doll	AT	3.15	2.1	The refugee found the doll .	4.213255306240171e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.130976205691695e-06
+mechanic	check	grocery	AT	2.3	1.19	The mechanic checked the grocery .	1.0986322195094544e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.093600066174986e-06
+veterinarian	examine	plant	AT	2.2	1.57	The veterinarian examined the plant .	4.318814717407804e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.9366410924703814e-05
+farmer	use	computer	AT	2.55	1.4	The farmer used the computer .	3.373739673406817e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00026466528652235866
+doctor	sew	shoe	AT	1.6	1.16	The doctor sewed the shoe .	0.00014859199291095138	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.219968392746523e-05
+model	face	mountain	AT	2.75	1.61	The model faced the mountain .	0.0001465994428144768	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.3359894587192684e-05
+librarian	stack	supply	AT	3.85	2.1	The librarian stacked the supply .			
+photographer	capture	thief	AT	1.75	1.37	The photographer captured the thief .	5.1907813030993566e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.5135257601505145e-05
+dog	dig	grave	AT	2.6	1.59	The dog dug the grave .	0.00018166257359553128	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.1162197703670245e-06
+surfer	catch	baseball	AT	1.75	0.7	The surfer caught the baseball .			
+illusionist	perform	surgery	AT	1.5	1.36	The illusionist performed the surgery .			
+skater	ride	bus	AT	3.9	2.1	The skater rode the bus .			
+musician	read	menu	AT	2.45	1.2	The musician read the menu .	3.355091394041665e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.966482952615479e-06
+athlete	celebrate	marriage	AT	3.1	1.51	The athlete celebrated the marriage .	2.0198769561829977e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.205753950576764e-06
+footballer	chase	toy	AT	2.7	1.87	The footballer chased the toy .	1.1275120414211415e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.173143525714295e-08
+carpenter	grab	ball	AT	1.25	0.43	The carpenter grabbed the ball .			
+doctor	visit	museum	AT	2.95	1.5	The doctor visited the museum .	0.00014859199291095138	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.219968392746523e-05
+housemaid	clean	street	AT	2.9	1.34	The housemaid cleaned the street .			
+fisherman	check	car	AT	1.75	1.18	The fisherman checked the car .	7.834695679775905e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.672092927648919e-06
+violinist	wear	helmet	AT	3.05	2.54	The violinist wore the helmet .			
+player	reach	moon	AT	1.6	1.8	The player reached the moon .	0.0003390177444089204	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0017904452979564667
+policeman	examine	patient	AT	2.0	1.26	The policeman examined the patient .	1.492787941970164e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.263138933107257e-05
+photographer	use	stethoscope	AT	1.75	1.37	The photographer used the stethoscope .	5.1907813030993566e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.5135257601505145e-05
+doctor	use	shovel	AT	2.9	2.43	The doctor used the shovel .	0.00014859199291095138	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.219968392746523e-05
+cyclist	ride	skate	AT	2.1	1.34	The cyclist rode the skate .	2.7376250727684237e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.292973479394277e-07
+mother	hold	flag	AT	3.2	1.44	The mother held the flag .	0.0007956017507240176	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.168668970625731e-06
+painter	paint	toenail	AT	2.45	1.43	The painter painted the toenail .	1.1052990885218605e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00023701609461568296
+cook	buy	ticket	AT	3.0	1.38	The cook bought the ticket .	1.7100148397730663e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.8477594241849147e-05
+student	use	saw	AT	2.9	1.81	The student used the saw .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+businessman	wear	uniform	AT	4.15	2.43	The businessman wore the uniform .	2.142533048754558e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.1673532302202148e-08
+actor	win	battle	AT	2.6	1.5	The actor won the battle .	0.00031636594212614	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.899530879105441e-05
+receiver	catch	wave	AT	2.05	1.24	The receiver caught the wave .	2.1659041522070765e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	4.2971627408405766e-05
+cook	flip	hair	AT	2.5	2.11	The cook flipped the hair .	1.7100148397730663e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.8477594241849147e-05
+painter	sign	agreement	AT	3.65	1.77	The painter signed the agreement .	1.1052990885218605e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00023701609461568296
+pilot	start	concert	AT	1.6	1.36	The pilot started the concert .	0.0001948970020748675	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0005743195069953799
+monkey	grab	board	AT	2.15	1.62	The monkey grabbed the board .	2.5383107640664093e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	9.330232586535203e-08
+housemaid	clean	fish	AT	3.9	1.61	The housemaid cleaned the fish .			
+nanny	hear	speech	AT	3.2	1.86	The nanny heard the speech .			
+chemist	mix	music	AT	1.35	0.57	The chemist mixed the music .	4.374276613816619e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0005765078822150826
+climber	use	blackboard	AT	1.8	1.03	The climber used the blackboard .			
+student	begin	match	AT	3.5	1.75	The student began the match .	0.00023153243819251657	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0028779266867786646
+waiter	cut	hair	AT	1.45	0.5	The waiter cut the hair .	1.249680917680962e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.725442406401271e-06
+policeman	capture	image	AT	2.9	1.26	The policeman captured the image .	1.492787941970164e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.263138933107257e-05
+professor	deliver	kick	AT	1.65	1.42	The professor delivered the kick .	0.00010024710354628041	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0008765319362282753
+postman	deliver	punch	AT	2.7	2.15	The postman delivered the punch .			
+roofer	climb	rock	AT	2.15	1.46	The roofer climbed the rock .			
+tourist	visit	patient	AT	3.0	1.95	The tourist visited the patient .	8.17970976640936e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.0003033701505046338
+waiter	deliver	speech	AT	1.6	0.66	The waiter delivered the speech .	1.249680917680962e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.725442406401271e-06
+policeman	push	stroller	AT	2.6	2.01	The policeman pushed the stroller .	1.492787941970164e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.263138933107257e-05
+passenger	pass	ball	AT	2.05	1.63	The passenger passed the ball .	4.6773315261816606e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.3522767403628677e-06
+binman	pick	flower	AT	3.05	1.72	The binman picked the flower .			
+child	cross	river	AT	3.5	1.63	The child crossed the river .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+lumberjack	cut	meat	AT	3.3	2.08	The lumberjack cut the meat .			
+cook	mix	paint	AT	1.9	1.18	The cook mixed the paint .	1.7100148397730663e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.8477594241849147e-05
+cook	check	tire	AT	1.9	1.04	The cook checked the tire .	1.7100148397730663e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.8477594241849147e-05
+porter	stack	wood	AT	4.0	2.39	The porter stacked the wood .			
+singer	begin	race	AT	3.4	2.42	The singer began the race .	0.00011615522089414299	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.4219046938233078e-06
+painter	complete	race	AT	2.0	0.89	The painter completed the race .	1.1052990885218605e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00023701609461568296
+cyclist	fix	hair	AT	2.5	1.63	The cyclist fixed the hair .	2.7376250727684237e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.292973479394277e-07
+photographer	prepare	food	AT	2.7	1.58	The photographer prepared the food .	5.1907813030993566e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.5135257601505145e-05
+mason	build	snowman	AT	2.3	1.31	The mason built the snowman .			
+waiter	fetch	ball	AT	1.85	1.06	The waiter fetched the ball .	1.249680917680962e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.725442406401271e-06
+cat	drink	coffee	AT	1.45	0.8	The cat drank the coffee .	0.00010851168917724863	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.2482817510317545e-05
+surfer	ride	camel	AT	1.45	0.8	The surfer rode the camel .			
+musician	touch	base	AT	3.95	2.04	The musician touched the base .	3.355091394041665e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.966482952615479e-06
+guide	describe	software	AT	3.8	2.06	The guide described the software .	7.219783583423123e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.209032628452405e-05
+singer	perform	trick	AT	2.0	1.7	The singer performed the trick .	0.00011615522089414299	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.4219046938233078e-06
+child	open	congress	AT	1.5	0.67	The child opened the congress .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+soldier	gather	ball	AT	1.75	1.13	The soldier gathered the ball .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+surfer	grab	frisbee	AT	3.45	1.83	The surfer grabbed the frisbee .			
+speleologist	examine	book	AT	3.65	2.41	The speleologist examined the book .			
+climber	face	ocean	AT	2.35	1.15	The climber faced the ocean .			
+cowboy	ride	bike	AT	3.25	2.3	The cowboy rode the bike .	1.0625827599142212e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.730693010264076e-05
+blacksmith	pour	wine	AT	1.6	0.73	The blacksmith poured the wine .			
+soldier	throw	ball	AT	2.3	1.55	The soldier threw the ball .	5.351755316951312e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00017854786710813642
+demonstrator	throw	frisbee	AT	2.05	1.4	The demonstrator threw the frisbee .			
+billionaire	donate	book	AT	4.15	1.85	The billionaire donated the book .	6.47821871098131e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.3259895403905375e-08
+bartender	hand	lancet	AT	1.4	0.58	The bartender handed the lancet .	1.2119531675125472e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00027157930890098214
+porter	load	file	AT	2.8	1.17	The porter loaded the file .			
+dealer	sell	meat	AT	3.9	2.07	The dealer sold the meat .	9.287831744586583e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.5487410059431568e-06
+patient	report	crime	AT	2.25	1.18	The patient reported the crime .	0.00011429333972046152	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.000245847535552457
+hairstylist	spray	pesticide	AT	1.25	0.43	The hairstylist sprayed the pesticide .			
+priest	promise	promotion	AT	2.2	1.25	The priest promised the promotion .	3.858726631733589e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	3.874085450661369e-06
+engineer	draw	flower	AT	2.1	1.14	The engineer drew the flower .	3.0088616767898202e-05	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	0.00022786897898185998
+pupil	draw	turbine	AT	2.95	1.63	The pupil drew the turbine .	6.204922101460397e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	5.618302566290367e-06
+veterinarian	examine	epigraph	AT	1.55	0.8	The veterinarian examined the epigraph .	4.318814717407804e-06	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	1.9366410924703814e-05
+child	write	diagnosis	AT	1.05	0.22	The child wrote the diagnosis .	0.00017908989684656262	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	2.2084157535573468e-05
+archeologist	examine	dog	AT	1.6	0.92	The archeologist examined the dog .			
+doctor	write	conjugation	AT	3.05	1.47	The doctor wrote the conjugation .	0.00014859199291095138	first_(0.01005325);following_(0.008703583);U_(0.008388981);New_(0.0055503016);new_(0.005195323);	7.219968392746523e-05
