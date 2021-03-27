@@ -79,6 +79,15 @@ def _correlation(df, output_location, path_data):
 	probs_for_regr = np.log(np.array(probs)).reshape(-1, 1)
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
+	#----Analysis of errors
+	residuals = {}
+	for n_item in range(len(df)):
+		residuals[df["sentence"][n_item]] = np.abs(probs_predicted[n_item][0] - probs_for_regr[n_item][0])
+	residuals = sorted(residuals.items(), key=lambda x: x[1], reverse=True)
+	for item in list(residuals.keys())[0:15]:
+		print("Sentence: {}    Error: {}".format(item, residuals[item]))
+
+
 	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
 	plt.plot(scores_for_regr, probs_predicted, color='blue')
 	plt.xlabel('human typicality scores')
