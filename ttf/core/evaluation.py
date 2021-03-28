@@ -94,13 +94,13 @@ def _correlation(df, output_location, path_data):
 	residuals_negative = dict(sorted(residuals.items(), key=lambda x: x[1][0]))
 	print("Positive residuals")
 	print()
-	for item in list(residuals_positive.keys())[0:15]:
+	for item in list(residuals_positive.keys())[0:25]:
 		print("Sentence: {}    Human score: {}   Label: {}   Prob predicted: {}  Prob assigned: {}".format(item, residuals_positive[item][2], residuals_positive[item][1], residuals_positive[item][3], residuals_positive[item][4]))
 	print()
 	print()
 	print("Negative residuals")
 	print()
-	for item in list(residuals_negative.keys())[0:15]:
+	for item in list(residuals_negative.keys())[0:25]:
 		print("Sentence: {}    Human score: {}   Label: {}   Prob predicted: {}  Prob assigned: {}".format(item, residuals_negative[item][2], residuals_negative[item][1], residuals_negative[item][3], residuals_negative[item][4]))
 	print()
 	print()
