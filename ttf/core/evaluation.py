@@ -22,6 +22,9 @@ def _simple_accuracy(df, selected_pairs):
 					a = 1
 				else:
 					a = 0
+					print("Error. Sentence typical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[0]], df['mean_rat'][idx[0]], df['computed_score'][idx[0]]))
+					print("Sentence atypical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[1]], df['mean_rat'][idx[1]], df['computed_score'][idx[1]]))
+					print()
 				if "baseline_score" in list(df.columns):
 					if df['baseline_score'][idx[0]]>df['baseline_score'][idx[1]]:
 						b = 1
@@ -32,6 +35,9 @@ def _simple_accuracy(df, selected_pairs):
 					a = 1
 				else:
 					a = 0
+					print("Error. Sentence typical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[1]], df['mean_rat'][idx[1]], df['computed_score'][idx[1]]))
+					print("Sentence atypical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[0]], df['mean_rat'][idx[0]], df['computed_score'][idx[0]]))
+					print()
 				if "baseline_score" in list(df.columns):
 					if df['baseline_score'][idx[0]] < df['baseline_score'][idx[1]]:
 							b = 1
@@ -80,12 +86,24 @@ def _correlation(df, output_location, path_data):
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
 	#----Analysis of errors
+	labels = df['typicality']
 	residuals = {}
 	for n_item in range(len(df)):
-		residuals[list(df["sentence"])[n_item]] = (np.abs(probs_predicted[n_item][0] - probs_for_regr[n_item][0]), probs_predicted[n_item][0], probs_for_regr[n_item][0])
-	residuals = dict(sorted(residuals.items(), key=lambda x: x[1][0], reverse=True))
-	for item in list(residuals.keys())[0:25]:
-		print("Sentence: {}    Error: {}".format(item, residuals[item]))
+		residuals[list(df["sentence"])[n_item]] = (probs_for_regr[n_item][0] - probs_predicted[n_item][0], labels[n_item][i], scores[n_item][i], probs_predicted[n_item][0], probs_for_regr[n_item][0])
+	residuals_positive = dict(sorted(residuals.items(), key=lambda x: x[1][0], reverse=True))
+	residuals_negative = dict(sorted(residuals.items(), key=lambda x: x[1][0]))
+	print("Positive residuals")
+	print()
+	for item in list(residuals_positive.keys())[0:15]:
+		print("Sentence: {}    Human score: {}   Label: {}   Prob predicted: {}  Prob assigned: {}".format(item, residuals_positive[item][2], residuals_positive[item][1], residuals_positive[item][3], residuals_positive[item][4]))
+	print()
+	print()
+	print("Negative residuals")
+	print()
+	for item in list(residuals_negative.keys())[0:15]:
+		print("Sentence: {}    Human score: {}   Label: {}   Prob predicted: {}  Prob assigned: {}".format(item, residuals_negative[item][2], residuals_negative[item][1], residuals_negative[item][3], residuals_negative[item][4]))
+	print()
+	print()
 
 
 	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
