@@ -26,7 +26,7 @@ dict_mlm_models = {"bert-base-cased": TFBertForMaskedLM.from_pretrained('bert-ba
 
 BATCH_SIZE = 256
 
-N_PREDICTIONS = 5
+N_PREDICTIONS = 15
 
 
 class TransformerModel:
