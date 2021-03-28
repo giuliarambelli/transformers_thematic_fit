@@ -89,7 +89,7 @@ def _correlation(df, output_location, path_data):
 	labels = df['typicality']
 	residuals = {}
 	for n_item in range(len(df)):
-		residuals[list(df["sentence"])[n_item]] = (probs_for_regr[n_item][0] - probs_predicted[n_item][0], labels[n_item][i], scores[n_item][i], probs_predicted[n_item][0], probs_for_regr[n_item][0])
+		residuals[list(df["sentence"])[n_item]] = (probs_for_regr[n_item][0] - probs_predicted[n_item][0], list(labels)[n_item], list(scores)[n_item], probs_predicted[n_item][0], probs_for_regr[n_item][0])
 	residuals_positive = dict(sorted(residuals.items(), key=lambda x: x[1][0], reverse=True))
 	residuals_negative = dict(sorted(residuals.items(), key=lambda x: x[1][0]))
 	print("Positive residuals")
