@@ -10,7 +10,31 @@ import matplotlib.pyplot as plt
 roles = ["LOCATION", "TIME", "RECIPIENT", "INSTRUMENT"]
 
 
-def _simple_accuracy(df, selected_pairs):
+def _simple_accuracy(df, selected_pairs, path_data, output_location):
+	if os.path.basename(path_data).startswith("WangDurrettErk"):
+		log_scores = df['computed_score']
+		scores_plaus = []
+		scores_implaus = []
+		for idx in selected_pairs:
+			print(idx[0])
+			print(df['sentence'][idx[0]])
+			print(df['computed_score'][idx[0]])
+			print(idx[1])
+			print(df['sentence'][idx[1]])
+			print(df['computed_score'][idx[1]])
+			if df['typicality'][idx[0]] == 'P':
+				scores_plaus.append(df['computed_score'][idx[0]])
+				scores_implaus.append(df['computed_score'][idx[1]])
+			else:
+				scores_plaus.append(df['computed_score'][idx[1]])
+				scores_implaus.append(df['computed_score'][idx[0]])
+		plt.boxplot([scores_plaus, scores_implaus])
+		plt.xlabel('plausibility label')
+		plt.ylabel('model probabilities')
+		plt.title("Plausible vs implausible events")
+		plt.savefig(os.path.join(output_location, os.path.basename(path_data) + ".png"))
+		plt.close()
+
 	pairs = []
 	scores = []
 	bline_scores = []
@@ -152,7 +176,7 @@ def evaluation(data_path, etype, thresh, output_plot, selected_idxs):
 	if etype == 'corr':
 		acc_functions[etype](data_covered, output_plot, data_path)
 	else:
-		tuples, accs, bline_accs = acc_functions[etype](data_covered, selected_idxs)
+		tuples, accs, bline_accs = acc_functions[etype](data_covered, selected_idxs, data_path, output_plot)
 		if etype == 'diff':
 			l_func = lambda x: 1 if x > thresh else 0
 			accs = [l_func(i) for i in accs]
