@@ -16,11 +16,11 @@ def _simple_accuracy(df, selected_pairs, path_data, output_location):
 		scores_implaus = []
 		for idx in selected_pairs:
 			if df['typicality'][idx[0]] == 'P':
-				scores_plaus.append(np.log(df['computed_score'][idx[0]]))
-				scores_implaus.append(np.log(df['computed_score'][idx[1]]))
+				scores_plaus.append(df['computed_score'][idx[0]])
+				scores_implaus.append(df['computed_score'][idx[1]])
 			else:
-				scores_plaus.append(np.log(df['computed_score'][idx[1]]))
-				scores_implaus.append(np.log(df['computed_score'][idx[0]]))
+				scores_plaus.append(df['computed_score'][idx[1]])
+				scores_implaus.append(df['computed_score'][idx[0]])
 		plt.boxplot([scores_plaus, scores_implaus])
 		plt.xlabel('plausibility label')
 		plt.ylabel('model probabilities')
