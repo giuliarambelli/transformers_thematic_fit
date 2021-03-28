@@ -12,22 +12,15 @@ roles = ["LOCATION", "TIME", "RECIPIENT", "INSTRUMENT"]
 
 def _simple_accuracy(df, selected_pairs, path_data, output_location):
 	if os.path.basename(path_data).startswith("WangDurrettErk"):
-		log_scores = df['computed_score']
 		scores_plaus = []
 		scores_implaus = []
 		for idx in selected_pairs:
-			print(idx[0])
-			print(df['sentence'][idx[0]])
-			print(df['computed_score'][idx[0]])
-			print(idx[1])
-			print(df['sentence'][idx[1]])
-			print(df['computed_score'][idx[1]])
 			if df['typicality'][idx[0]] == 'P':
-				scores_plaus.append(df['computed_score'][idx[0]])
-				scores_implaus.append(df['computed_score'][idx[1]])
+				scores_plaus.append(np.log(df['computed_score'][idx[0]]))
+				scores_implaus.append(np.log(df['computed_score'][idx[1]]))
 			else:
-				scores_plaus.append(df['computed_score'][idx[1]])
-				scores_implaus.append(df['computed_score'][idx[0]])
+				scores_plaus.append(np.log(df['computed_score'][idx[1]]))
+				scores_implaus.append(np.log(df['computed_score'][idx[0]]))
 		plt.boxplot([scores_plaus, scores_implaus])
 		plt.xlabel('plausibility label')
 		plt.ylabel('model probabilities')
@@ -46,9 +39,10 @@ def _simple_accuracy(df, selected_pairs, path_data, output_location):
 					a = 1
 				else:
 					a = 0
-					print("Error. Sentence typical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[0]], df['mean_rat'][idx[0]], df['computed_score'][idx[0]]))
-					print("Sentence atypical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[1]], df['mean_rat'][idx[1]], df['computed_score'][idx[1]]))
-					print()
+					if not os.path.basename(path_data).startswith("WangDurrettErk"):
+						print("Error. Sentence typical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[0]], df['mean_rat'][idx[0]], df['computed_score'][idx[0]]))
+						print("Sentence atypical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[1]], df['mean_rat'][idx[1]], df['computed_score'][idx[1]]))
+						print()
 				if "baseline_score" in list(df.columns):
 					if df['baseline_score'][idx[0]]>df['baseline_score'][idx[1]]:
 						b = 1
@@ -59,9 +53,10 @@ def _simple_accuracy(df, selected_pairs, path_data, output_location):
 					a = 1
 				else:
 					a = 0
-					print("Error. Sentence typical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[1]], df['mean_rat'][idx[1]], df['computed_score'][idx[1]]))
-					print("Sentence atypical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[0]], df['mean_rat'][idx[0]], df['computed_score'][idx[0]]))
-					print()
+					if not os.path.basename(path_data).startswith("WangDurrettErk"):
+						print("Error. Sentence typical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[1]], df['mean_rat'][idx[1]], df['computed_score'][idx[1]]))
+						print("Sentence atypical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[0]], df['mean_rat'][idx[0]], df['computed_score'][idx[0]]))
+						print()
 				if "baseline_score" in list(df.columns):
 					if df['baseline_score'][idx[0]] < df['baseline_score'][idx[1]]:
 							b = 1
