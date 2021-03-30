@@ -23,9 +23,10 @@ def _tuples_to_sentences(args):
     data_paths = args.input_path
     out_path = outils.check_dir(args.output_dir)
     verb_inflection = args.verb_tense
+    sent_type = args.sent_type
 
     for input_file in outils.get_filenames(data_paths):
-        to_sentences(input_file, out_path, verb_inflection)
+        to_sentences(input_file, out_path, verb_inflection, sent_type)
 
 
 def _run_transformers_mlm(args):
@@ -64,6 +65,8 @@ def main():
     parser_build_sentences.add_argument('-i', '--input-path', nargs='+', required=True, help='input files')
     parser_build_sentences.add_argument('-v', '--verb-tense', choices=['VBD', 'VBZ'], default='VBD',
                                         help="inflection of the verb")
+    parser_build_sentences.add_argument('-s', '--sent-type', choices=['transitive','passive','cleft','question'],
+                                        default='transitive', help='Syntactic form of the sentence')
     parser_build_sentences.set_defaults(func=_tuples_to_sentences)
 
     # TRANSFORMERS MODELS - WORD PREDICTION TASK (BERT base and large, RoBERTa large, GPT2 medium)
