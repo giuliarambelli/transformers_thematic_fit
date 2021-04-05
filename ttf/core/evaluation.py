@@ -122,12 +122,14 @@ def _accuracy_with_thresh(df, selected_pairs):
 def _correlation(df, output_location, path_data):
 	scores = df['mean_rat']
 	if path_data.endswith("sdm-res"):
-		try:
-			lc_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["LC_sim"].iteritems()])
-			ac_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["AC_sim"].iteritems()])
-		except TypeError:
-			lc_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["LC_sim"].iteritems()])
-			ac_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["AC_sim"].iteritems()])
+		ser = df["LC_sim"].values
+		for n in ser:
+			if n is None:
+				print("Ok")
+		lc_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["LC_sim"].iteritems()])
+		ac_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["AC_sim"].iteritems()])
+		lc_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["LC_sim"].iteritems()])
+		ac_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["AC_sim"].iteritems()])
 		probs = []
 		for score in lc_scores:
 			print(score, type(score))
