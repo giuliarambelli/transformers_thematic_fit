@@ -108,7 +108,6 @@ def _correlation(df, output_location, path_data):
 	if path_data.endswith("sdm-res"):
 		lc_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["LC_sim"].iteritems()])
 		ac_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["AC_sim"].iteritems()])
-		print(ac_scores)
 		probs = []
 		for lc, ac in zip(lc_scores, ac_scores):
 			if (lc != 0) and (ac!= 0):
@@ -119,6 +118,7 @@ def _correlation(df, output_location, path_data):
 				probs.append(ac)
 			elif ac == 0:
 				probs.append(lc)
+		print(probs)
 	else:
 		probs = df['computed_score']
 	print("Model:  ", spearmanr(scores, probs))
