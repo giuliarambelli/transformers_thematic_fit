@@ -134,7 +134,6 @@ def _correlation(df, output_location, path_data):
 				probs.append(ac)
 			elif ac == 0:
 				probs.append(lc)
-		print(probs)
 	else:
 		probs = df['computed_score']
 	print("Model:  ", spearmanr(scores, probs))
