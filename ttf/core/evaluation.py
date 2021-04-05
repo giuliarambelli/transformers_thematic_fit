@@ -34,16 +34,17 @@ def _simple_accuracy(df, selected_pairs, path_data, output_location):
 	if path_data.endswith("sdm-res"):
 		lc_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["LC_sim"].iteritems()])
 		ac_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["AC_sim"].iteritems()])
-		probs = []
+		values_probs = []
 		for lc, ac in zip(lc_scores, ac_scores):
-			if (lc != 0) and (ac!= 0):
-				probs.append((lc + ac)/2)
+			if (lc != 0) and (ac != 0):
+				values_probs.append((lc + ac)/2)
 			elif (lc == 0) and (ac == 0):
-				probs.append(0)
+				values_probs.append(0)
 			elif lc == 0:
-				probs.append(ac)
+				values_probs.append(ac)
 			elif ac == 0:
-				probs.append(lc)
+				values_probs.append(lc)
+		probs = pd.Series(data=values_probs, index=df['computed_score'].index)
 		print(probs)
 	else:
 		probs = df['computed_score']
