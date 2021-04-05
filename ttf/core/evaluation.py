@@ -105,8 +105,8 @@ def _accuracy_with_thresh(df, selected_pairs):
 def _correlation(df, output_location, path_data):
 	scores = df['mean_rat']
 	if path_data.endswith("sdm-res"):
-		lc_scores = np.array([tup[1] for tup in df["LC_sim"].iteritems() if tup[1] is not None else 0])
-		ac_scores = np.array([tup[1] for tup in df["AC_sim"].iteritems() if tup[1] is not None else 0])
+		lc_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["LC_sim"].iteritems()])
+		ac_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["AC_sim"].iteritems()])
 		print(ac_scores)
 		probs = []
 		for lc, ac in zip(lc_scores, ac_scores):
