@@ -104,7 +104,22 @@ def _accuracy_with_thresh(df, selected_pairs):
 
 def _correlation(df, output_location, path_data):
 	scores = df['mean_rat']
-	probs = df['computed_score']
+	if path_data.endswith("sdm-res"):
+		lc_scores = np.array([tup[1] for tup in df["LC_sim"].iteritems() if tup[1] is not None else 0])
+		ac_scores = np.array([tup[1] for tup in df["AC_sim"].iteritems() if tup[1] is not None else 0])
+		print(ac_scores)
+		probs = []
+		for lc, ac in zip(lc_scores, ac_scores):
+			if (lc != 0) and (ac!= 0):
+				probs.append((lc + ac)/2)
+			elif (lc == 0) and (ac == 0):
+				probs.append(0)
+			elif lc == 0:
+				probs.append(ac)
+			elif ac == 0:
+				probs.append(lc)
+	else:
+		probs = df['computed_score']
 	print("Model:  ", spearmanr(scores, probs))
 	if "baseline_score" in list(df.columns):
 		bline_probs = df['baseline_score']
