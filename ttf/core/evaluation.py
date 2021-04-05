@@ -45,7 +45,6 @@ def _simple_accuracy(df, selected_pairs, path_data, output_location):
 			elif ac == 0:
 				values_probs.append(lc)
 		probs = pd.Series(data=values_probs, index=df['computed_score'].index)
-		print(probs)
 	else:
 		probs = df['computed_score']
 	bline_scores = []
@@ -123,8 +122,12 @@ def _accuracy_with_thresh(df, selected_pairs):
 def _correlation(df, output_location, path_data):
 	scores = df['mean_rat']
 	if path_data.endswith("sdm-res"):
-		lc_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["LC_sim"].iteritems()])
-		ac_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["AC_sim"].iteritems()])
+		try:
+			lc_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["LC_sim"].iteritems()])
+			ac_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["AC_sim"].iteritems()])
+		except TypeError:
+			lc_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["LC_sim"].iteritems()])
+			ac_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["AC_sim"].iteritems()])
 		probs = []
 		for lc, ac in zip(lc_scores, ac_scores):
 			if (lc != 0) and (ac!= 0):
