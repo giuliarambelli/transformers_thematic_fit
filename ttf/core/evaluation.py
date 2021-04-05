@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
+import math
 
 roles = ["LOCATION", "TIME", "RECIPIENT", "INSTRUMENT"]
 
@@ -105,8 +106,8 @@ def _accuracy_with_thresh(df, selected_pairs):
 def _correlation(df, output_location, path_data):
 	scores = df['mean_rat']
 	if path_data.endswith("sdm-res"):
-		lc_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["LC_sim"].iteritems()])
-		ac_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["AC_sim"].iteritems()])
+		lc_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["LC_sim"].iteritems()])
+		ac_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["AC_sim"].iteritems()])
 		print(ac_scores)
 		probs = []
 		for lc, ac in zip(lc_scores, ac_scores):
