@@ -124,7 +124,7 @@ def _correlation(df, output_location, path_data):
 	if path_data.endswith("sdm-res"):
 		ser = df["LC_sim"].values
 		for n in ser:
-			if n is None:
+			if n == "None":
 				print("Ok")
 		lc_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["LC_sim"].iteritems()])
 		ac_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["AC_sim"].iteritems()])
