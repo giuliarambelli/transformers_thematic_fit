@@ -123,12 +123,16 @@ def _correlation(df, output_location, path_data):
 	scores = df['mean_rat']
 	if path_data.endswith("sdm-res"):
 		try:
-			lc_scores = np.array([float(tup[1]) if not math.isnan(tup[1]) else 0 for tup in df["LC_sim"].iteritems()])
-			ac_scores = np.array([float(tup[1]) if not math.isnan(tup[1]) else 0 for tup in df["AC_sim"].iteritems()])
+			lc_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["LC_sim"].iteritems()])
+			ac_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["AC_sim"].iteritems()])
 		except TypeError:
-			lc_scores = np.array([float(tup[1]) if tup[1] is not None else 0 for tup in df["LC_sim"].iteritems()])
-			ac_scores = np.array([float(tup[1]) if tup[1] is not None else 0 for tup in df["AC_sim"].iteritems()])
+			lc_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["LC_sim"].iteritems()])
+			ac_scores = np.array([tup[1] if tup[1] is not None else 0 for tup in df["AC_sim"].iteritems()])
 		probs = []
+		for score in lc_scores:
+			print(score, type(score))
+		for score in ac_scores:
+			print(score, type(score))
 		for lc, ac in zip(lc_scores, ac_scores):
 			if (lc != 0) and (ac!= 0):
 				probs.append((lc + ac)/2)
