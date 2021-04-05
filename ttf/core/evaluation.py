@@ -56,11 +56,11 @@ def _simple_accuracy(df, selected_pairs, path_data, output_location):
 					a = 1
 				else:
 					a = 0
-					if (not os.path.basename(path_data).startswith("WangDurrettErk")) and (not os.path.basename(path_data).endswith("sdm-res")):
+					if (not os.path.basename(path_data).startswith("WangDurrettErk")) and (not (os.path.basename(path_data).endswith("sdm-res")) or (os.path.basename(path_data).endswith("sdm-model"))):
 						print("Error. Sentence typical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[0]], df['mean_rat'][idx[0]], df['computed_score'][idx[0]]))
 						print("Sentence atypical: {}  Human score: {}   Score assigned: {}".format(df['sentence'][idx[1]], df['mean_rat'][idx[1]], df['computed_score'][idx[1]]))
 						print()
-					if (os.path.basename(path_data).startswith("WangDurrettErk")) and (not os.path.basename(path_data).endswith("sdm-res")):
+					if (os.path.basename(path_data).startswith("WangDurrettErk")) and (not (os.path.basename(path_data).endswith("sdm-res")) or (os.path.basename(path_data).endswith("sdm-model"))):
 						print("Error. Sentence typical: {}  Score assigned: {}".format(df['sentence'][idx[0]], df['computed_score'][idx[0]]))
 						print("Sentence atypical: {}  Score assigned: {}".format(df['sentence'][idx[1]], df['computed_score'][idx[1]]))
 						print()
