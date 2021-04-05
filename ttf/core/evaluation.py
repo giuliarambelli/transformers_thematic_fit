@@ -114,24 +114,25 @@ def _correlation(df, output_location, path_data):
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
 	#----Analysis of errors
-	labels = df['typicality']
-	residuals = {}
-	for n_item in range(len(df)):
-		residuals[list(df["sentence"])[n_item]] = (probs_for_regr[n_item][0] - probs_predicted[n_item][0], list(labels)[n_item], list(scores)[n_item], probs_predicted[n_item][0], probs_for_regr[n_item][0])
-	residuals_positive = dict(sorted(residuals.items(), key=lambda x: x[1][0], reverse=True))
-	residuals_negative = dict(sorted(residuals.items(), key=lambda x: x[1][0]))
-	print("Positive residuals")
-	print()
-	for item in list(residuals_positive.keys())[0:25]:
-		print("Sentence: {}    Human score: {}   Label: {}   Prob predicted: {}  Prob assigned: {}".format(item, residuals_positive[item][2], residuals_positive[item][1], residuals_positive[item][3], residuals_positive[item][4]))
-	print()
-	print()
-	print("Negative residuals")
-	print()
-	for item in list(residuals_negative.keys())[0:25]:
-		print("Sentence: {}    Human score: {}   Label: {}   Prob predicted: {}  Prob assigned: {}".format(item, residuals_negative[item][2], residuals_negative[item][1], residuals_negative[item][3], residuals_negative[item][4]))
-	print()
-	print()
+	if "transformers" in os.path.basename(path_data):
+		labels = df['typicality']
+		residuals = {}
+		for n_item in range(len(df)):
+			residuals[list(df["sentence"])[n_item]] = (probs_for_regr[n_item][0] - probs_predicted[n_item][0], list(labels)[n_item], list(scores)[n_item], probs_predicted[n_item][0], probs_for_regr[n_item][0])
+		residuals_positive = dict(sorted(residuals.items(), key=lambda x: x[1][0], reverse=True))
+		residuals_negative = dict(sorted(residuals.items(), key=lambda x: x[1][0]))
+		print("Positive residuals")
+		print()
+		for item in list(residuals_positive.keys())[0:25]:
+			print("Sentence: {}    Human score: {}   Label: {}   Prob predicted: {}  Prob assigned: {}".format(item, residuals_positive[item][2], residuals_positive[item][1], residuals_positive[item][3], residuals_positive[item][4]))
+		print()
+		print()
+		print("Negative residuals")
+		print()
+		for item in list(residuals_negative.keys())[0:25]:
+			print("Sentence: {}    Human score: {}   Label: {}   Prob predicted: {}  Prob assigned: {}".format(item, residuals_negative[item][2], residuals_negative[item][1], residuals_negative[item][3], residuals_negative[item][4]))
+		print()
+		print()
 
 
 	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
