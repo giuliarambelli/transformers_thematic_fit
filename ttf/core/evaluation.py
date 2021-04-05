@@ -31,12 +31,28 @@ def _simple_accuracy(df, selected_pairs, path_data, output_location):
 
 	pairs = []
 	scores = []
+	if path_data.endswith("sdm-res"):
+		lc_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["LC_sim"].iteritems()])
+		ac_scores = np.array([tup[1] if not math.isnan(tup[1]) else 0 for tup in df["AC_sim"].iteritems()])
+		probs = []
+		for lc, ac in zip(lc_scores, ac_scores):
+			if (lc != 0) and (ac!= 0):
+				probs.append((lc + ac)/2)
+			elif (lc == 0) and (ac == 0):
+				probs.append(0)
+			elif lc == 0:
+				probs.append(ac)
+			elif ac == 0:
+				probs.append(lc)
+		print(probs)
+	else:
+		probs = df['computed_score']
 	bline_scores = []
 	for idx in selected_pairs:
 		if len(idx) == 2:
 			#print(df.loc[[idx[0]]])
 			if df['typicality'][idx[0]] in ['T','P']:
-				if df['computed_score'][idx[0]] > df['computed_score'][idx[1]]:
+				if probs[idx[0]] > probs[idx[1]]:
 					a = 1
 				else:
 					a = 0
@@ -55,7 +71,7 @@ def _simple_accuracy(df, selected_pairs, path_data, output_location):
 					else:
 						b = 0
 			else:
-				if df['computed_score'][idx[0]] < df['computed_score'][idx[1]]:
+				if probs[idx[0]] < probs[idx[1]]:
 					a = 1
 				else:
 					a = 0
