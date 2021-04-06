@@ -151,9 +151,9 @@ def _correlation(df, output_location, path_data):
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
 	#----Analysis of errors
-	probs_normalized = (np.array(probs) - np.amin(np.array(probs))) / (np.amax(np.array(probs)) - np.amin(np.array(probs)))
+	probs_normalized = (np.array(np.log(probs)) - np.amin(np.array(np.log(probs)))) / (np.amax(np.array(np.log(probs))) - np.amin(np.array(np.log(probs))))
 	print("Probs normalized: ", probs_normalized)
-	probs_normalized_for_regr = np.log(np.array(probs_normalized)).reshape(-1, 1)
+	probs_normalized_for_regr = np.array(probs_normalized).reshape(-1, 1)
 	regr = LinearRegression().fit(scores_for_regr, probs_normalized_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
 	residuals = []
