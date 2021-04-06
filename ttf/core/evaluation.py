@@ -7,6 +7,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 import math
+import seaborn as sns
 
 roles = ["LOCATION", "TIME", "RECIPIENT", "INSTRUMENT"]
 
@@ -170,13 +171,18 @@ def _correlation(df, output_location, path_data):
 		print()
 		print()
 
-
+	"""
 	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
 	plt.plot(scores_for_regr, probs_predicted, color='blue')
 	plt.xlabel('human typicality scores')
 	plt.ylabel('model probabilities')
 	plt.title("Actuals vs Regression Line")
 	plt.savefig(os.path.join(output_location,os.path.basename(path_data)+".correl.png"))
+	plt.close()
+	"""
+	sns.jointplot(scores_for_regr, probs_for_regr, x="human typicality scores", y="model probabilities", kind='reg', color='black')
+	sns.jointplot(scores_for_regr, probs_predicted, color='blue')
+	sns_plot.savefig(os.path.join(output_location,os.path.basename(path_data)+".correl.png"))
 	plt.close()
 	if "baseline_score" in list(df.columns):
 		scores_for_regr = np.log(np.array(scores)).reshape(-1, 1)
