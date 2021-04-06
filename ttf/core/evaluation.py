@@ -180,8 +180,8 @@ def _correlation(df, output_location, path_data):
 	plt.savefig(os.path.join(output_location,os.path.basename(path_data)+".correl.png"))
 	plt.close()
 	"""
-	sns.jointplot(scores_for_regr, probs_for_regr, x="human typicality scores", y="model probabilities", kind='reg', color='black')
-	sns.jointplot(scores_for_regr, probs_predicted, color='blue')
+	sns.jointplot(x=scores_for_regr, y=probs_for_regr, kind='reg', color='black')
+	sns.jointplot(y=probs_predicted, color='blue')
 	sns_plot.savefig(os.path.join(output_location,os.path.basename(path_data)+".correl.png"))
 	plt.close()
 	if "baseline_score" in list(df.columns):
