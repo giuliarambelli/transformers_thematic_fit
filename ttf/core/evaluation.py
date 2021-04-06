@@ -158,7 +158,7 @@ def _correlation(df, output_location, path_data):
 	probs_predicted = regr.predict(scores_for_regr)
 	residuals = []
 	for i in range(len(df)):
-		residuals.append(abs(probs_predicted[i][0]) - probs_normalized_for_regr[i][0])
+		residuals.append(abs(probs_predicted[i][0] - probs_normalized_for_regr[i][0]))
 	print("Sum of residuals: ", np.sum(residuals))
 
 
