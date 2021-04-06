@@ -151,6 +151,30 @@ def _correlation(df, output_location, path_data):
 	regr = LinearRegression().fit(scores_for_regr, probs_for_regr)
 	probs_predicted = regr.predict(scores_for_regr)
 	#----Analysis of errors
+	residuals = []
+	pos_neg = []
+	neg_residuals = []
+	pos_residuals = []
+	for i in range(len(df)):
+		residuals.append(abs(probs_predicted[i][0] - probs_for_regr[i][0]))
+		if probs_predicted[i][0] > probs_for_regr[i][0]:
+			pos_neg.append("neg")
+			neg_residuals.append(abs(probs_predicted[i][0] - probs_for_regr[i][0]))
+		if probs_predicted[i][0] < probs_for_regr[i][0]:
+			pos_neg.append("pos")
+			pos_residuals.append(abs(probs_predicted[i][0] - probs_for_regr[i][0]))
+		if probs_predicted[i][0] == probs_for_regr[i][0]:
+			pos_neg.append("same")
+	print("Residuals: ", residuals)
+	print("Number of positive residuals: ", pos_neg.count("pos"))
+	print("Number of negative residuals: ", pos_neg.count("neg"))
+	print("Mean of positive residuals: ", np.mean(pos_residuals))
+	print("Mean of negative residuals: ", np.mean(neg_residuals))
+
+
+
+
+	"""
 	if "transformers" in os.path.basename(path_data):
 		labels = df['typicality']
 		residuals = {}
@@ -170,6 +194,7 @@ def _correlation(df, output_location, path_data):
 			print("Sentence: {}    Human score: {}   Label: {}   Prob predicted: {}  Prob assigned: {}".format(item, residuals_negative[item][2], residuals_negative[item][1], residuals_negative[item][3], residuals_negative[item][4]))
 		print()
 		print()
+	"""
 
 	plt.plot(scores_for_regr, probs_for_regr, 'o', color='black')
 	plt.plot(scores_for_regr, probs_predicted, color='blue')
