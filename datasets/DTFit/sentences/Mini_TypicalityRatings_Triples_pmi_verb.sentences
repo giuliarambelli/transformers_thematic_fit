@@ -1,0 +1,69 @@
+SUBJECT	VERB	OBJECT	typicality	mean_rat	std_rat	sentence
+bodybuilder	lift	weight	T	6.45	1.66	The bodybuilder lifted the weight .
+bodybuilder	lift	ban	AT	6.45	1.66	The bodybuilder lifted the ban .
+skier	gain	speed	T	6.75	0.43	The skier gained the speed .
+skier	gain	yard	AT	6.75	0.43	The skier gained the yard .
+fighter	kick	opponent	T	5.55	1.77	The fighter kicked the opponent .
+fighter	kick	goal	AT	5.55	1.77	The fighter kicked the goal .
+confectioner	decorate	cake	T	6.05	1.36	The confectioner decorated the cake .
+confectioner	decorate	ceiling	AT	6.05	1.36	The confectioner decorated the ceiling .
+mechanic	fix	tire	T	6.45	0.86	The mechanic fixed the tire .
+mechanic	fix	bug	AT	6.45	0.86	The mechanic fixed the bug .
+artist	assemble	art	T	6.35	1.19	The artist assembled the art .
+artist	assemble	army	AT	6.35	1.19	The artist assembled the army .
+terrorist	release	hostage	T	3.45	1.77	The terrorist released the hostage .
+terrorist	release	album	AT	3.45	1.77	The terrorist released the album .
+mover	move	furniture	T	4.9	2.43	The mover moved the furniture .
+mover	move	capital	AT	4.9	2.43	The mover moved the capital .
+truck	hit	car	T	4.0	1.7	The truck hit the car .
+truck	hit	ball	AT	4.0	1.7	The truck hit the ball .
+gardener	gather	grass	T	5.65	1.74	The gardener gathered the grass .
+gardener	gather	army	AT	5.65	1.74	The gardener gathered the army .
+lumberjack	cut	tree	T	6.55	1.32	The lumberjack cut the tree .
+lumberjack	cut	scene	AT	6.55	1.32	The lumberjack cut the scene .
+mechanic	assemble	bicycle	T	4.5	2.09	The mechanic assembled the bicycle .
+mechanic	assemble	force	AT	4.5	2.09	The mechanic assembled the force .
+chemist	mix	substance	T	6.85	0.36	The chemist mixed the substance .
+chemist	mix	album	AT	6.85	0.36	The chemist mixed the album .
+nurse	push	wheelchair	T	5.9	1.37	The nurse pushed the wheelchair .
+nurse	push	ball	AT	5.9	1.37	The nurse pushed the ball .
+footballer	hit	ball	T	6.05	1.77	The footballer hit the ball .
+footballer	hit	chart	AT	6.05	1.77	The footballer hit the chart .
+fisherman	check	net	T	6.15	1.77	The fisherman checked the net .
+fisherman	check	ticket	AT	6.15	1.77	The fisherman checked the ticket .
+dog	eat	bone	T	6.25	1.34	The dog ate the bone .
+dog	eat	cake	AT	6.25	1.34	The dog ate the cake .
+child	cross	park	T	5.55	1.86	The child crossed the park .
+child	cross	border	AT	5.55	1.86	The child crossed the border .
+policeman	examine	car	T	5.95	1.36	The policeman examined the car .
+policeman	examine	manuscript	AT	5.95	1.36	The policeman examined the manuscript .
+professor	wear	tie	T	5.95	1.12	The professor wore the tie .
+professor	wear	costume	AT	5.95	1.12	The professor wore the costume .
+soldier	hear	command	T	6.1	1.64	The soldier heard the command .
+soldier	hear	case	AT	6.1	1.64	The soldier heard the case .
+smuggler	sell	weapon	T	6.5	0.5	The smuggler sold the weapon .
+smuggler	sell	property	AT	6.5	0.5	The smuggler sold the property .
+athlete	win	cup	T	5.15	1.82	The athlete won the cup .
+athlete	win	election	AT	5.15	1.82	The athlete won the election .
+soldier	throw	bomb	T	5.3	1.38	The soldier threw the bomb .
+soldier	throw	ball	AT	5.3	1.38	The soldier threw the ball .
+butcher	carve	meat	T	5.75	1.97	The butcher carved the meat .
+butcher	carve	statue	AT	5.75	1.97	The butcher carved the statue .
+child	find	doll	T	5.65	1.53	The child found the doll .
+child	find	species	AT	5.65	1.53	The child found the species .
+soldier	hold	flag	T	5.2	1.94	The soldier held the flag .
+soldier	hold	election	AT	5.2	1.94	The soldier held the election .
+child	open	present	T	6.7	0.64	The child opened the present .
+child	open	store	AT	6.7	0.64	The child opened the store .
+diplomat	carry	message	T	5.65	1.53	The diplomat carried the message .
+diplomat	carry	cargo	AT	5.65	1.53	The diplomat carried the cargo .
+spy	pass	information	T	6.35	0.73	The spy passed the information .
+spy	pass	exam	AT	6.35	0.73	The spy passed the exam .
+child	lend	pen	T	4.45	1.83	The child lent the pen .
+child	lend	money	T	4.45	1.83	The child lent the money .
+
+
+
+
+
+
